@@ -1,12 +1,14 @@
-import { useMemo, useState } from 'react';
-import { PracticeSession } from '../components/PracticeSession';
-import type { CharacterItem, MistakeRecord, PracticeStats } from '../types';
-import { renderStars } from '../utils/game';
-import { formatPinyin } from '../utils/pinyin';
-import { useSpeech } from '../hooks/useSpeech';
+import { useMemo, useState } from "react";
+import { PracticeSession } from "../components/PracticeSession";
+import type { GameStyle } from "../data/gameStyles";
+import type { CharacterItem, MistakeRecord, PracticeStats } from "../types";
+import { renderStars } from "../utils/game";
+import { formatPinyin } from "../utils/pinyin";
+import { useSpeech } from "../hooks/useSpeech";
 
 interface MistakeBookPageProps {
   mistakes: MistakeRecord[];
+  gameStyle: GameStyle;
   onBack: () => void;
   onClear: () => void;
   onRemove: (charId: number) => void;
@@ -29,19 +31,20 @@ function recordToItem(record: MistakeRecord): CharacterItem {
 function formatDate(value: string): string {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) {
-    return '未知时间';
+    return "未知时间";
   }
 
-  return date.toLocaleString('zh-CN', {
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
+  return date.toLocaleString("zh-CN", {
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
   });
 }
 
 export function MistakeBookPage({
   mistakes,
+  gameStyle,
   onBack,
   onClear,
   onRemove,
@@ -57,10 +60,17 @@ export function MistakeBookPage({
     () =>
       mistakes
         .filter((record) => !record.mastered)
-        .sort((a, b) => b.mistakeCount - a.mistakeCount || Date.parse(b.lastWrongAt) - Date.parse(a.lastWrongAt)),
+        .sort(
+          (a, b) =>
+            b.mistakeCount - a.mistakeCount ||
+            Date.parse(b.lastWrongAt) - Date.parse(a.lastWrongAt),
+        ),
     [mistakes],
   );
-  const masteredMistakes = useMemo(() => mistakes.filter((record) => record.mastered), [mistakes]);
+  const masteredMistakes = useMemo(
+    () => mistakes.filter((record) => record.mastered),
+    [mistakes],
+  );
 
   const startReview = () => {
     const nextItems = activeMistakes.slice(0, 3).map(recordToItem);
@@ -73,27 +83,40 @@ export function MistakeBookPage({
       <PracticeSession
         items={reviewItems}
         mode="review"
+        gameStyle={gameStyle}
         onCorrect={(item) => onReviewCorrect(item.id)}
         onExit={() => setReviewItems(null)}
         onFinish={setReviewResult}
         onWrong={onWrong}
         subtitle="优先复习最近、错得多的汉字。连续复习答对 2 次后，会自动标记为已掌握。"
-        title="错题复习"
+        title={gameStyle.reviewTitle}
       />
     );
   }
 
   if (reviewResult) {
     return (
-      <section className="result-page panel">
+      <section className={`result-page panel ${gameStyle.themeClass}`}>
         <p className="eyebrow">错题复习完成</p>
-        <h1>{reviewResult.wrongCharIds.length === 0 ? '复习得真棒！' : '又进步了一点！'}</h1>
-        <div className="result-stars">{renderStars(reviewResult.wrongCharIds.length === 0 ? 3 : 2)}</div>
+        <h1>
+          {reviewResult.wrongCharIds.length === 0
+            ? "复习得真棒！"
+            : "又进步了一点！"}
+        </h1>
+        <div className="result-stars">
+          {renderStars(reviewResult.wrongCharIds.length === 0 ? 3 : 2)}
+        </div>
         <p>
-          本次复习答对 {reviewResult.correct} 个，尝试 {reviewResult.attempts} 次，最好连续答对 {reviewResult.bestStreak} 个。
+          本次复习答对 {reviewResult.correct} 个，尝试 {reviewResult.attempts}{" "}
+          次，最好连续答对 {reviewResult.bestStreak} 个。
         </p>
         <div className="result-actions">
-          <button className="primary-button" disabled={activeMistakes.length === 0} onClick={startReview} type="button">
+          <button
+            className="primary-button"
+            disabled={activeMistakes.length === 0}
+            onClick={startReview}
+            type="button"
+          >
             继续复习
           </button>
           <button
@@ -128,14 +151,25 @@ export function MistakeBookPage({
         <div>
           <h2>今日复习建议</h2>
           <p>
-            还有 <strong>{activeMistakes.length}</strong> 个汉字需要巩固，已掌握 <strong>{masteredMistakes.length}</strong> 个。
+            还有 <strong>{activeMistakes.length}</strong> 个汉字需要巩固，已掌握{" "}
+            <strong>{masteredMistakes.length}</strong> 个。
           </p>
         </div>
         <div className="panel-actions">
-          <button className="primary-button" disabled={activeMistakes.length === 0} onClick={startReview} type="button">
-            🚂 复习 3 个错题
+          <button
+            className="primary-button"
+            disabled={activeMistakes.length === 0}
+            onClick={startReview}
+            type="button"
+          >
+            {gameStyle.icon} 复习 3 个错题
           </button>
-          <button className="ghost-button danger" disabled={mistakes.length === 0} onClick={onClear} type="button">
+          <button
+            className="ghost-button danger"
+            disabled={mistakes.length === 0}
+            onClick={onClear}
+            type="button"
+          >
             清空错题本
           </button>
         </div>
@@ -149,25 +183,49 @@ export function MistakeBookPage({
       ) : (
         <section className="mistake-list" aria-label="错题列表">
           {[...activeMistakes, ...masteredMistakes].map((record) => (
-            <article className={`mistake-card ${record.mastered ? 'mastered' : ''}`} key={record.charId}>
+            <article
+              className={`mistake-card ${record.mastered ? "mastered" : ""}`}
+              key={record.charId}
+            >
               <div className="mistake-character">{record.char}</div>
               <div className="mistake-content">
                 <div className="mistake-title-row">
                   <h2>{formatPinyin(record)}</h2>
-                  <span className={`status-pill ${record.mastered ? 'done' : 'todo'}`}>{record.mastered ? '已掌握' : '待复习'}</span>
+                  <span
+                    className={`status-pill ${record.mastered ? "done" : "todo"}`}
+                  >
+                    {record.mastered ? "已掌握" : "待复习"}
+                  </span>
                 </div>
-                <p>错误次数：{record.mistakeCount} 次 · 最近错误：{formatDate(record.lastWrongAt)}</p>
-                {record.wrongInputs.length > 0 && <p>曾输入：{record.wrongInputs.join('、')}</p>}
+                <p>
+                  错误次数：{record.mistakeCount} 次 · 最近错误：
+                  {formatDate(record.lastWrongAt)}
+                </p>
+                {record.wrongInputs.length > 0 && (
+                  <p>曾输入：{record.wrongInputs.join("、")}</p>
+                )}
                 <p className="tiny-note">来源：{record.source}</p>
               </div>
               <div className="mistake-actions">
-                <button className="secondary-button small" onClick={() => void speak(record.char, 3)} type="button">
+                <button
+                  className="secondary-button small"
+                  onClick={() => void speak(record.char, 3)}
+                  type="button"
+                >
                   听三遍
                 </button>
-                <button className="ghost-button small" onClick={() => onSetMastered(record.charId, !record.mastered)} type="button">
-                  {record.mastered ? '重新复习' : '标记掌握'}
+                <button
+                  className="ghost-button small"
+                  onClick={() => onSetMastered(record.charId, !record.mastered)}
+                  type="button"
+                >
+                  {record.mastered ? "重新复习" : "标记掌握"}
                 </button>
-                <button className="ghost-button small danger" onClick={() => onRemove(record.charId)} type="button">
+                <button
+                  className="ghost-button small danger"
+                  onClick={() => onRemove(record.charId)}
+                  type="button"
+                >
                   删除
                 </button>
               </div>

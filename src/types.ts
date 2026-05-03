@@ -1,5 +1,7 @@
 export type Page = "home" | "game" | "mistakes" | "progress";
 
+export type GameStyleId = "train" | "monster" | "garden" | "space";
+
 export interface CharacterItem {
   id: number;
   char: string;

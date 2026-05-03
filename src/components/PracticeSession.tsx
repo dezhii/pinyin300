@@ -1,13 +1,20 @@
-import { FormEvent, useEffect, useMemo, useRef, useState } from 'react';
-import { useSpeech } from '../hooks/useSpeech';
-import type { CharacterItem, PracticeStats } from '../types';
-import { formatPinyin, getPinyinHint, isCorrectPinyin, normalizePinyin } from '../utils/pinyin';
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { useSpeech } from "../hooks/useSpeech";
+import type { GameStyle } from "../data/gameStyles";
+import type { CharacterItem, PracticeStats } from "../types";
+import {
+  formatPinyin,
+  getPinyinHint,
+  isCorrectPinyin,
+  normalizePinyin,
+} from "../utils/pinyin";
 
 interface PracticeSessionProps {
   title: string;
   subtitle: string;
   items: CharacterItem[];
-  mode: 'level' | 'review';
+  mode: "level" | "review";
+  gameStyle: GameStyle;
   onCorrect: (item: CharacterItem) => void;
   onWrong: (item: CharacterItem, wrongInput: string) => void;
   onFinish: (stats: PracticeStats) => void;
@@ -15,7 +22,7 @@ interface PracticeSessionProps {
 }
 
 type Feedback = {
-  type: 'idle' | 'success' | 'error';
+  type: "idle" | "success" | "error";
   text: string;
 };
 
@@ -31,14 +38,18 @@ export function PracticeSession({
   subtitle,
   items,
   mode,
+  gameStyle,
   onCorrect,
   onWrong,
   onFinish,
   onExit,
 }: PracticeSessionProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [input, setInput] = useState('');
-  const [feedback, setFeedback] = useState<Feedback>({ type: 'idle', text: '听一听，再输入拼音。' });
+  const [input, setInput] = useState("");
+  const [feedback, setFeedback] = useState<Feedback>({
+    type: "idle",
+    text: "听一听，再输入拼音。",
+  });
   const [currentSolved, setCurrentSolved] = useState(false);
   const [wrongTimesForCurrent, setWrongTimesForCurrent] = useState(0);
   const [stats, setStats] = useState<PracticeStats>(DEFAULT_STATS);
@@ -47,21 +58,27 @@ export function PracticeSession({
   const { cancel, speak, supported } = useSpeech();
 
   const item = items[currentIndex];
-  const completionText = mode === 'level' ? '到站啦，查看星星' : '完成复习';
+  const completionText =
+    mode === "level" ? gameStyle.finishButtonText : "完成复习";
 
   const trainCars = useMemo(
     () =>
       items.map((car, index) => ({
         ...car,
-        status: index < currentIndex ? 'done' : index === currentIndex ? 'current' : 'locked',
+        status:
+          index < currentIndex
+            ? "done"
+            : index === currentIndex
+              ? "current"
+              : "locked",
       })),
     [currentIndex, items],
   );
 
   useEffect(() => {
     setCurrentIndex(0);
-    setInput('');
-    setFeedback({ type: 'idle', text: '听一听，再输入拼音。' });
+    setInput("");
+    setFeedback({ type: "idle", text: "听一听，再输入拼音。" });
     setCurrentSolved(false);
     setWrongTimesForCurrent(0);
     setStats(DEFAULT_STATS);
@@ -73,8 +90,8 @@ export function PracticeSession({
       return;
     }
 
-    setInput('');
-    setFeedback({ type: 'idle', text: '听一听，再输入拼音。' });
+    setInput("");
+    setFeedback({ type: "idle", text: "听一听，再输入拼音。" });
     setCurrentSolved(false);
     setWrongTimesForCurrent(0);
     inputRef.current?.focus();
@@ -103,7 +120,7 @@ export function PracticeSession({
 
     const rawInput = input.trim();
     if (!rawInput) {
-      setFeedback({ type: 'error', text: '先输入拼音，再按回车。' });
+      setFeedback({ type: "error", text: "先输入拼音，再按回车。" });
       inputRef.current?.focus();
       return;
     }
@@ -120,15 +137,23 @@ export function PracticeSession({
       setCurrentStreak(nextStreak);
       setStats(nextStats);
       setCurrentSolved(true);
-      setFeedback({ type: 'success', text: `答对啦！${item.char} 的拼音是 ${formatPinyin(item)}。` });
+      setFeedback({
+        type: "success",
+        text: `${gameStyle.successText}${item.char} 的拼音是 ${formatPinyin(item)}。`,
+      });
       onCorrect(item);
       return;
     }
 
     const nextWrongTimes = wrongTimesForCurrent + 1;
-    const nextWrongCharIds = stats.wrongCharIds.includes(item.id) ? stats.wrongCharIds : [...stats.wrongCharIds, item.id];
+    const nextWrongCharIds = stats.wrongCharIds.includes(item.id)
+      ? stats.wrongCharIds
+      : [...stats.wrongCharIds, item.id];
     const normalizedInput = normalizePinyin(rawInput);
-    const learningHint = nextWrongTimes >= 2 ? `正确拼音：${formatPinyin(item)}。再输入一遍巩固一下。` : getPinyinHint(item);
+    const learningHint =
+      nextWrongTimes >= 2
+        ? `正确拼音：${formatPinyin(item)}。再输入一遍巩固一下。`
+        : getPinyinHint(item);
 
     setWrongTimesForCurrent(nextWrongTimes);
     setCurrentStreak(0);
@@ -137,7 +162,10 @@ export function PracticeSession({
       attempts: stats.attempts + 1,
       wrongCharIds: nextWrongCharIds,
     });
-    setFeedback({ type: 'error', text: `“${normalizedInput || rawInput}” 还不对。${learningHint}` });
+    setFeedback({
+      type: "error",
+      text: `“${normalizedInput || rawInput}” 还不对。${learningHint}`,
+    });
     onWrong(item, rawInput);
     inputRef.current?.focus();
   };
@@ -156,23 +184,43 @@ export function PracticeSession({
   };
 
   return (
-    <section className="practice-page">
+    <section className={`practice-page ${gameStyle.themeClass}`}>
       <div className="page-topbar">
         <button className="ghost-button" onClick={onExit} type="button">
           ← 返回
         </button>
         <div>
-          <p className="eyebrow">拼音小火车</p>
+          <p className="eyebrow">{gameStyle.name}</p>
           <h1>{title}</h1>
           <p>{subtitle}</p>
         </div>
       </div>
 
-      <div className="train-track" aria-label="本关小火车">
+      <div className="train-track" aria-label={gameStyle.progressTitle}>
         {trainCars.map((car, index) => (
-          <div className={`train-car ${car.status}`} key={car.id}>
+          <div
+            className={`train-car ${car.status}`}
+            key={car.id}
+            title={
+              car.status === "done"
+                ? gameStyle.doneLabel
+                : car.status === "current"
+                  ? gameStyle.currentLabel
+                  : gameStyle.lockedLabel
+            }
+          >
             <span className="train-car-index">{index + 1}</span>
+            <span className="train-car-icon" aria-hidden="true">
+              {gameStyle.icon}
+            </span>
             <strong>{car.char}</strong>
+            <small>
+              {car.status === "done"
+                ? gameStyle.doneLabel
+                : car.status === "current"
+                  ? gameStyle.currentLabel
+                  : gameStyle.lockedLabel}
+            </small>
           </div>
         ))}
       </div>
@@ -180,15 +228,23 @@ export function PracticeSession({
       <div className="practice-card">
         <div className="character-stage">
           <span className="current-step">
-            第 {currentIndex + 1} / {items.length} 个汉字
+            第 {currentIndex + 1} / {items.length} 个{gameStyle.cardLabel}
           </span>
           <div className="big-character" aria-label={`当前汉字 ${item.char}`}>
             {item.char}
           </div>
-          <button className="listen-button" onClick={() => void speak(item.char, 3)} type="button">
+          <button
+            className="listen-button"
+            onClick={() => void speak(item.char, 3)}
+            type="button"
+          >
             🔊 再听三遍
           </button>
-          {!supported && <p className="tiny-note">当前浏览器不支持自动朗读，可以换用 Chrome、Edge 或 Safari。</p>}
+          {!supported && (
+            <p className="tiny-note">
+              当前浏览器不支持自动朗读，可以换用 Chrome、Edge 或 Safari。
+            </p>
+          )}
         </div>
 
         <form className="answer-panel" onSubmit={submitAnswer}>
@@ -211,12 +267,16 @@ export function PracticeSession({
               </button>
             ) : (
               <button className="primary-button" onClick={goNext} type="button">
-                {currentIndex >= items.length - 1 ? completionText : '下一节车厢'}
+                {currentIndex >= items.length - 1
+                  ? completionText
+                  : gameStyle.nextButtonText}
               </button>
             )}
           </div>
           <p className={`feedback ${feedback.type}`}>{feedback.text}</p>
-          <p className="tiny-note">小键盘提示：ü 可以输入成 v，例如 “lǜ” 可以打 “lv”。</p>
+          <p className="tiny-note">
+            小键盘提示：ü 可以输入成 v，例如 “lǜ” 可以打 “lv”。
+          </p>
         </form>
       </div>
     </section>

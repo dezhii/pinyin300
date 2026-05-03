@@ -1,29 +1,44 @@
-import { useEffect, useMemo, useState } from 'react';
-import { TOTAL_LEVELS } from './data/characters';
-import { GamePage } from './pages/GamePage';
-import { HomePage } from './pages/HomePage';
-import { MistakeBookPage } from './pages/MistakeBookPage';
-import { ProgressPage } from './pages/ProgressPage';
-import type { CharacterItem, GameProgress, MistakeRecord, Page, PracticeStats } from './types';
+import { useEffect, useMemo, useState } from "react";
+import { TOTAL_LEVELS } from "./data/characters";
+import { DEFAULT_GAME_STYLE_ID, getGameStyle } from "./data/gameStyles";
+import { GamePage } from "./pages/GamePage";
+import { HomePage } from "./pages/HomePage";
+import { MistakeBookPage } from "./pages/MistakeBookPage";
+import { ProgressPage } from "./pages/ProgressPage";
+import type {
+  CharacterItem,
+  GameProgress,
+  GameStyleId,
+  MistakeRecord,
+  Page,
+  PracticeStats,
+} from "./types";
 import {
   DEFAULT_PROGRESS,
   clearStorage,
+  loadGameStyleId,
   loadMistakes,
   loadProgress,
   recordMistake,
   recordReviewCorrect,
   removeMistake,
+  saveGameStyleId,
   saveMistakes,
   saveProgress,
   setMistakeMastered,
-} from './utils/storage';
-import './styles.css';
+} from "./utils/storage";
+import "./styles.css";
 
 export default function App() {
-  const [page, setPage] = useState<Page>('home');
+  const [page, setPage] = useState<Page>("home");
   const [currentLevel, setCurrentLevel] = useState(1);
+  const [gameStyleId, setGameStyleId] = useState<GameStyleId>(() =>
+    loadGameStyleId(),
+  );
   const [progress, setProgress] = useState<GameProgress>(() => loadProgress());
-  const [mistakes, setMistakes] = useState<MistakeRecord[]>(() => loadMistakes());
+  const [mistakes, setMistakes] = useState<MistakeRecord[]>(() =>
+    loadMistakes(),
+  );
 
   useEffect(() => {
     saveProgress(progress);
@@ -33,14 +48,26 @@ export default function App() {
     saveMistakes(mistakes);
   }, [mistakes]);
 
-  const activeMistakesCount = useMemo(() => mistakes.filter((record) => !record.mastered).length, [mistakes]);
-  const masteredMistakesCount = useMemo(() => mistakes.filter((record) => record.mastered).length, [mistakes]);
+  useEffect(() => {
+    saveGameStyleId(gameStyleId);
+  }, [gameStyleId]);
+
+  const gameStyle = useMemo(() => getGameStyle(gameStyleId), [gameStyleId]);
+
+  const activeMistakesCount = useMemo(
+    () => mistakes.filter((record) => !record.mastered).length,
+    [mistakes],
+  );
+  const masteredMistakesCount = useMemo(
+    () => mistakes.filter((record) => record.mastered).length,
+    [mistakes],
+  );
 
   const startLevel = (level: number) => {
     const safeLevel = Math.min(Math.max(level, 1), TOTAL_LEVELS);
     setCurrentLevel(safeLevel);
-    setPage('game');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setPage("game");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const completeLevel = (level: number, stats: PracticeStats) => {
@@ -48,7 +75,10 @@ export default function App() {
 
     setProgress((previous) => {
       const levelKey = String(level);
-      const nextUnlockedLevel = level >= TOTAL_LEVELS ? TOTAL_LEVELS : Math.max(previous.unlockedLevel, level + 1);
+      const nextUnlockedLevel =
+        level >= TOTAL_LEVELS
+          ? TOTAL_LEVELS
+          : Math.max(previous.unlockedLevel, level + 1);
 
       return {
         ...previous,
@@ -69,7 +99,9 @@ export default function App() {
   };
 
   const resetAll = () => {
-    const shouldReset = window.confirm('确定要清空学习进度和错题本吗？这个操作不能撤销。');
+    const shouldReset = window.confirm(
+      "确定要清空学习进度和错题本吗？这个操作不能撤销。",
+    );
     if (!shouldReset) {
       return;
     }
@@ -77,12 +109,13 @@ export default function App() {
     clearStorage();
     setProgress(DEFAULT_PROGRESS);
     setMistakes([]);
+    setGameStyleId(DEFAULT_GAME_STYLE_ID);
     setCurrentLevel(1);
-    setPage('home');
+    setPage("home");
   };
 
   const clearMistakeBook = () => {
-    const shouldClear = window.confirm('确定要清空错题本吗？学习进度会保留。');
+    const shouldClear = window.confirm("确定要清空错题本吗？学习进度会保留。");
     if (!shouldClear) {
       return;
     }
@@ -91,64 +124,95 @@ export default function App() {
   };
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell ${gameStyle.themeClass}`}>
       <header className="app-header">
-        <button className="brand-button" onClick={() => setPage('home')} type="button">
-          <span>🚂</span>
-          拼音小火车
+        <button
+          className="brand-button"
+          onClick={() => setPage("home")}
+          type="button"
+        >
+          <span>{gameStyle.icon}</span>
+          {gameStyle.name}
         </button>
         <nav aria-label="主导航">
-          <button className={page === 'home' ? 'nav-active' : ''} onClick={() => setPage('home')} type="button">
+          <button
+            className={page === "home" ? "nav-active" : ""}
+            onClick={() => setPage("home")}
+            type="button"
+          >
             首页
           </button>
-          <button className={page === 'progress' ? 'nav-active' : ''} onClick={() => setPage('progress')} type="button">
+          <button
+            className={page === "progress" ? "nav-active" : ""}
+            onClick={() => setPage("progress")}
+            type="button"
+          >
             关卡
           </button>
-          <button className={page === 'mistakes' ? 'nav-active' : ''} onClick={() => setPage('mistakes')} type="button">
+          <button
+            className={page === "mistakes" ? "nav-active" : ""}
+            onClick={() => setPage("mistakes")}
+            type="button"
+          >
             错题本
-            {activeMistakesCount > 0 && <span className="nav-badge">{activeMistakesCount}</span>}
+            {activeMistakesCount > 0 && (
+              <span className="nav-badge">{activeMistakesCount}</span>
+            )}
           </button>
         </nav>
       </header>
 
-      {page === 'home' && (
+      {page === "home" && (
         <HomePage
           activeMistakesCount={activeMistakesCount}
           masteredMistakesCount={masteredMistakesCount}
-          onOpenMistakes={() => setPage('mistakes')}
-          onOpenProgress={() => setPage('progress')}
+          gameStyle={gameStyle}
+          selectedGameStyleId={gameStyleId}
+          onOpenMistakes={() => setPage("mistakes")}
+          onOpenProgress={() => setPage("progress")}
+          onSelectGameStyle={setGameStyleId}
           onStart={() => startLevel(progress.unlockedLevel)}
           progress={progress}
         />
       )}
 
-      {page === 'game' && (
+      {page === "game" && (
         <GamePage
           level={currentLevel}
-          onBack={() => setPage('home')}
+          gameStyle={gameStyle}
+          onBack={() => setPage("home")}
           onComplete={completeLevel}
           onStartLevel={startLevel}
           onWrong={handleWrongAnswer}
         />
       )}
 
-      {page === 'mistakes' && (
+      {page === "mistakes" && (
         <MistakeBookPage
           mistakes={mistakes}
-          onBack={() => setPage('home')}
+          gameStyle={gameStyle}
+          onBack={() => setPage("home")}
           onClear={clearMistakeBook}
-          onRemove={(charId) => setMistakes((previous) => removeMistake(previous, charId))}
-          onReviewCorrect={(charId) => setMistakes((previous) => recordReviewCorrect(previous, charId))}
-          onSetMastered={(charId, mastered) => setMistakes((previous) => setMistakeMastered(previous, charId, mastered))}
+          onRemove={(charId) =>
+            setMistakes((previous) => removeMistake(previous, charId))
+          }
+          onReviewCorrect={(charId) =>
+            setMistakes((previous) => recordReviewCorrect(previous, charId))
+          }
+          onSetMastered={(charId, mastered) =>
+            setMistakes((previous) =>
+              setMistakeMastered(previous, charId, mastered),
+            )
+          }
           onWrong={handleWrongAnswer}
         />
       )}
 
-      {page === 'progress' && (
+      {page === "progress" && (
         <ProgressPage
           activeMistakesCount={activeMistakesCount}
-          onBack={() => setPage('home')}
-          onOpenMistakes={() => setPage('mistakes')}
+          onBack={() => setPage("home")}
+          onOpenMistakes={() => setPage("mistakes")}
           onReset={resetAll}
           onStartLevel={startLevel}
           progress={progress}

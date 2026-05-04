@@ -19,6 +19,7 @@ export interface MistakeRecord {
   pinyins: string[];
   answers: string[];
   source: string;
+  audio?: string;
   wrongInputs: string[];
   mistakeCount: number;
   correctReviewCount: number;

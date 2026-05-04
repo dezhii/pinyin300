@@ -2,7 +2,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "audio:manifest": "node scripts/generate-audio-manifest.mjs",
+    "audio:check": "node scripts/check-audio.mjs",
+    "print:a4": "node scripts/generate-printable-a4.mjs"
   },
   "dependencies": {
     "react": "18.3.1",

@@ -1,0 +1,4983 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小学常见 300 字拼音表 A4 打印版</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 10mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: #1f2933;
+      background: #eef2f7;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 24px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .toolbar h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .toolbar p {
+      margin: 4px 0 0;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    .toolbar button {
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 20px;
+      color: white;
+      background: linear-gradient(135deg, #ff7a1a, #ffb300);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .sheet {
+      display: flex;
+      flex-direction: column;
+      width: 190mm;
+      height: 277mm;
+      margin: 12mm auto;
+      padding: 0;
+      background: #ffffff;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.16);
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .sheet:last-child {
+      page-break-after: auto;
+      break-after: auto;
+    }
+
+    .sheet-header,
+    .sheet-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .sheet-header {
+      height: 18mm;
+      padding: 0 1mm 3mm;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .sheet-header p {
+      margin: 0 0 2mm;
+      color: #ff7a1a;
+      font-size: 10pt;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .sheet-header h1 {
+      margin: 0;
+      font-size: 17pt;
+    }
+
+    .sheet-range {
+      border-radius: 999px;
+      padding: 2mm 4mm;
+      color: #7c2d12;
+      background: #ffedd5;
+      font-size: 10pt;
+      font-weight: 900;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      gap: 2mm;
+      flex: 1;
+      padding: 3mm 0;
+    }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto auto;
+      align-items: center;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #dbe4ef;
+      border-radius: 2.6mm;
+      background: linear-gradient(180deg, #ffffff, #fffaf0);
+      text-align: center;
+      break-inside: avoid;
+      cursor: pointer;
+      transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+    }
+
+    .card:hover,
+    .card:focus-visible,
+    .card.playing {
+      border-color: #fb923c;
+      box-shadow: 0 8px 18px rgba(194, 65, 12, 0.14);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .card.playing::after {
+      content: "🔊";
+      position: absolute;
+      right: 2mm;
+      bottom: 2mm;
+      font-size: 9pt;
+    }
+
+    .card.polyphonic {
+      background: linear-gradient(180deg, #ffffff, #eef6ff);
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.3mm 1.8mm 0;
+      color: #94a3b8;
+      font-size: 6.8pt;
+      font-weight: 800;
+    }
+
+    .pinyin {
+      align-self: end;
+      margin-top: 1mm;
+      color: #c2410c;
+      font-size: 13.8pt;
+      font-weight: 900;
+      line-height: 1.05;
+    }
+
+    .hanzi {
+      align-self: center;
+      font-family: "KaiTi", "STKaiti", "SimKai", serif;
+      font-size: 23pt;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .other-pinyin {
+      min-height: 3.8mm;
+      padding-bottom: 0.2mm;
+      color: #475569;
+      font-size: 5.8pt;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .sound-hint {
+      min-height: 3.2mm;
+      padding-bottom: 0.8mm;
+      color: #94a3b8;
+      font-size: 5.6pt;
+      font-weight: 800;
+    }
+
+    .sheet-footer {
+      height: 7mm;
+      padding: 2mm 1mm 0;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+      font-size: 8.5pt;
+      font-weight: 800;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .toolbar {
+        display: none;
+      }
+
+      .sheet {
+        width: auto;
+        height: auto;
+        min-height: 277mm;
+        margin: 0;
+        box-shadow: none;
+      }
+
+      .card {
+        cursor: default;
+      }
+
+      .sound-hint {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside class="toolbar">
+    <div>
+      <h1>小学常见 300 字拼音表 · A4 打印版</h1>
+      <p>共 300 字，6 页。拼音在汉字上方；点击任一字卡，会朗读 3 次。打印时建议选择 A4、纵向、100% 比例。</p>
+    </div>
+    <button type="button" onclick="window.print()">打印 A4</button>
+  </aside>
+  
+  <section class="sheet">
+    <header class="sheet-header">
+      <div>
+        <p>小学常见 300 字拼音表</p>
+        <h1>第 1 页</h1>
+      </div>
+      <div class="sheet-range">001 - 050</div>
+    </header>
+    <main class="grid">
+      
+    <article
+      class="card"
+      data-char="一"
+      data-audio="/audio/hanzi/001_yi1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="一，yī，点击播放三遍"
+    >
+      <div class="meta"><span>001</span><span>第 1 关</span></div>
+      <div class="pinyin">yī</div>
+      <div class="hanzi">一</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="二"
+      data-audio="/audio/hanzi/002_er4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="二，èr，点击播放三遍"
+    >
+      <div class="meta"><span>002</span><span>第 1 关</span></div>
+      <div class="pinyin">èr</div>
+      <div class="hanzi">二</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="三"
+      data-audio="/audio/hanzi/003_san1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="三，sān，点击播放三遍"
+    >
+      <div class="meta"><span>003</span><span>第 1 关</span></div>
+      <div class="pinyin">sān</div>
+      <div class="hanzi">三</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="十"
+      data-audio="/audio/hanzi/004_shi2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="十，shí，点击播放三遍"
+    >
+      <div class="meta"><span>004</span><span>第 2 关</span></div>
+      <div class="pinyin">shí</div>
+      <div class="hanzi">十</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="木"
+      data-audio="/audio/hanzi/005_mu4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="木，mù，点击播放三遍"
+    >
+      <div class="meta"><span>005</span><span>第 2 关</span></div>
+      <div class="pinyin">mù</div>
+      <div class="hanzi">木</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="禾"
+      data-audio="/audio/hanzi/006_he2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="禾，hé，点击播放三遍"
+    >
+      <div class="meta"><span>006</span><span>第 2 关</span></div>
+      <div class="pinyin">hé</div>
+      <div class="hanzi">禾</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="上"
+      data-audio="/audio/hanzi/007_shang4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="上，shàng，点击播放三遍"
+    >
+      <div class="meta"><span>007</span><span>第 3 关</span></div>
+      <div class="pinyin">shàng</div>
+      <div class="hanzi">上</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="下"
+      data-audio="/audio/hanzi/008_xia4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="下，xià，点击播放三遍"
+    >
+      <div class="meta"><span>008</span><span>第 3 关</span></div>
+      <div class="pinyin">xià</div>
+      <div class="hanzi">下</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="土"
+      data-audio="/audio/hanzi/009_tu3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="土，tǔ，点击播放三遍"
+    >
+      <div class="meta"><span>009</span><span>第 3 关</span></div>
+      <div class="pinyin">tǔ</div>
+      <div class="hanzi">土</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="个"
+      data-audio="/audio/hanzi/010_ge4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="个，gè，点击播放三遍"
+    >
+      <div class="meta"><span>010</span><span>第 4 关</span></div>
+      <div class="pinyin">gè</div>
+      <div class="hanzi">个</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="八"
+      data-audio="/audio/hanzi/011_ba1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="八，bā，点击播放三遍"
+    >
+      <div class="meta"><span>011</span><span>第 4 关</span></div>
+      <div class="pinyin">bā</div>
+      <div class="hanzi">八</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="入"
+      data-audio="/audio/hanzi/012_ru4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="入，rù，点击播放三遍"
+    >
+      <div class="meta"><span>012</span><span>第 4 关</span></div>
+      <div class="pinyin">rù</div>
+      <div class="hanzi">入</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="大"
+      data-audio="/audio/hanzi/013_da4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="大，dà，点击播放三遍"
+    >
+      <div class="meta"><span>013</span><span>第 5 关</span></div>
+      <div class="pinyin">dà</div>
+      <div class="hanzi">大</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="天"
+      data-audio="/audio/hanzi/014_tian1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="天，tiān，点击播放三遍"
+    >
+      <div class="meta"><span>014</span><span>第 5 关</span></div>
+      <div class="pinyin">tiān</div>
+      <div class="hanzi">天</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="人"
+      data-audio="/audio/hanzi/015_ren2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="人，rén，点击播放三遍"
+    >
+      <div class="meta"><span>015</span><span>第 5 关</span></div>
+      <div class="pinyin">rén</div>
+      <div class="hanzi">人</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="火"
+      data-audio="/audio/hanzi/016_huo3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="火，huǒ，点击播放三遍"
+    >
+      <div class="meta"><span>016</span><span>第 6 关</span></div>
+      <div class="pinyin">huǒ</div>
+      <div class="hanzi">火</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="文"
+      data-audio="/audio/hanzi/017_wen2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="文，wén，点击播放三遍"
+    >
+      <div class="meta"><span>017</span><span>第 6 关</span></div>
+      <div class="pinyin">wén</div>
+      <div class="hanzi">文</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="六"
+      data-audio="/audio/hanzi/018_liu4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="六，liù，点击播放三遍"
+    >
+      <div class="meta"><span>018</span><span>第 6 关</span></div>
+      <div class="pinyin">liù</div>
+      <div class="hanzi">六</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="七"
+      data-audio="/audio/hanzi/019_qi1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="七，qī，点击播放三遍"
+    >
+      <div class="meta"><span>019</span><span>第 7 关</span></div>
+      <div class="pinyin">qī</div>
+      <div class="hanzi">七</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="儿"
+      data-audio="/audio/hanzi/020_er2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="儿，ér，点击播放三遍"
+    >
+      <div class="meta"><span>020</span><span>第 7 关</span></div>
+      <div class="pinyin">ér</div>
+      <div class="hanzi">儿</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="九"
+      data-audio="/audio/hanzi/021_jiu3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="九，jiǔ，点击播放三遍"
+    >
+      <div class="meta"><span>021</span><span>第 7 关</span></div>
+      <div class="pinyin">jiǔ</div>
+      <div class="hanzi">九</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="无"
+      data-audio="/audio/hanzi/022_wu2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="无，wú，点击播放三遍"
+    >
+      <div class="meta"><span>022</span><span>第 8 关</span></div>
+      <div class="pinyin">wú</div>
+      <div class="hanzi">无</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="口"
+      data-audio="/audio/hanzi/023_kou3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="口，kǒu，点击播放三遍"
+    >
+      <div class="meta"><span>023</span><span>第 8 关</span></div>
+      <div class="pinyin">kǒu</div>
+      <div class="hanzi">口</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="日"
+      data-audio="/audio/hanzi/024_ri4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="日，rì，点击播放三遍"
+    >
+      <div class="meta"><span>024</span><span>第 8 关</span></div>
+      <div class="pinyin">rì</div>
+      <div class="hanzi">日</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="中"
+      data-audio="/audio/hanzi/025_zhong1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="中，zhōng，点击播放三遍"
+    >
+      <div class="meta"><span>025</span><span>第 9 关</span></div>
+      <div class="pinyin">zhōng</div>
+      <div class="hanzi">中</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="了"
+      data-audio="/audio/hanzi/026_le5.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="了，le，点击播放三遍"
+    >
+      <div class="meta"><span>026</span><span>第 9 关</span></div>
+      <div class="pinyin">le</div>
+      <div class="hanzi">了</div>
+      <div class="other-pinyin">另：liǎo</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="子"
+      data-audio="/audio/hanzi/027_zi3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="子，zǐ，点击播放三遍"
+    >
+      <div class="meta"><span>027</span><span>第 9 关</span></div>
+      <div class="pinyin">zǐ</div>
+      <div class="hanzi">子</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="门"
+      data-audio="/audio/hanzi/028_men2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="门，mén，点击播放三遍"
+    >
+      <div class="meta"><span>028</span><span>第 10 关</span></div>
+      <div class="pinyin">mén</div>
+      <div class="hanzi">门</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="月"
+      data-audio="/audio/hanzi/029_yue4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="月，yuè，点击播放三遍"
+    >
+      <div class="meta"><span>029</span><span>第 10 关</span></div>
+      <div class="pinyin">yuè</div>
+      <div class="hanzi">月</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="不"
+      data-audio="/audio/hanzi/030_bu4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="不，bù，点击播放三遍"
+    >
+      <div class="meta"><span>030</span><span>第 10 关</span></div>
+      <div class="pinyin">bù</div>
+      <div class="hanzi">不</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="开"
+      data-audio="/audio/hanzi/031_kai1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="开，kāi，点击播放三遍"
+    >
+      <div class="meta"><span>031</span><span>第 11 关</span></div>
+      <div class="pinyin">kāi</div>
+      <div class="hanzi">开</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="四"
+      data-audio="/audio/hanzi/032_si4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="四，sì，点击播放三遍"
+    >
+      <div class="meta"><span>032</span><span>第 11 关</span></div>
+      <div class="pinyin">sì</div>
+      <div class="hanzi">四</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="五"
+      data-audio="/audio/hanzi/033_wu3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="五，wǔ，点击播放三遍"
+    >
+      <div class="meta"><span>033</span><span>第 11 关</span></div>
+      <div class="pinyin">wǔ</div>
+      <div class="hanzi">五</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="目"
+      data-audio="/audio/hanzi/034_mu4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="目，mù，点击播放三遍"
+    >
+      <div class="meta"><span>034</span><span>第 12 关</span></div>
+      <div class="pinyin">mù</div>
+      <div class="hanzi">目</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="耳"
+      data-audio="/audio/hanzi/035_er3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="耳，ěr，点击播放三遍"
+    >
+      <div class="meta"><span>035</span><span>第 12 关</span></div>
+      <div class="pinyin">ěr</div>
+      <div class="hanzi">耳</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="头"
+      data-audio="/audio/hanzi/036_tou2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="头，tóu，点击播放三遍"
+    >
+      <div class="meta"><span>036</span><span>第 12 关</span></div>
+      <div class="pinyin">tóu</div>
+      <div class="hanzi">头</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="米"
+      data-audio="/audio/hanzi/037_mi3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="米，mǐ，点击播放三遍"
+    >
+      <div class="meta"><span>037</span><span>第 13 关</span></div>
+      <div class="pinyin">mǐ</div>
+      <div class="hanzi">米</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="见"
+      data-audio="/audio/hanzi/038_jian4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="见，jiàn，点击播放三遍"
+    >
+      <div class="meta"><span>038</span><span>第 13 关</span></div>
+      <div class="pinyin">jiàn</div>
+      <div class="hanzi">见</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="白"
+      data-audio="/audio/hanzi/039_bai2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="白，bái，点击播放三遍"
+    >
+      <div class="meta"><span>039</span><span>第 13 关</span></div>
+      <div class="pinyin">bái</div>
+      <div class="hanzi">白</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="田"
+      data-audio="/audio/hanzi/040_tian2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="田，tián，点击播放三遍"
+    >
+      <div class="meta"><span>040</span><span>第 14 关</span></div>
+      <div class="pinyin">tián</div>
+      <div class="hanzi">田</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="电"
+      data-audio="/audio/hanzi/041_dian4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="电，diàn，点击播放三遍"
+    >
+      <div class="meta"><span>041</span><span>第 14 关</span></div>
+      <div class="pinyin">diàn</div>
+      <div class="hanzi">电</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="也"
+      data-audio="/audio/hanzi/042_ye3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="也，yě，点击播放三遍"
+    >
+      <div class="meta"><span>042</span><span>第 14 关</span></div>
+      <div class="pinyin">yě</div>
+      <div class="hanzi">也</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="长"
+      data-audio="/audio/hanzi/043_chang2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="长，cháng，点击播放三遍"
+    >
+      <div class="meta"><span>043</span><span>第 15 关</span></div>
+      <div class="pinyin">cháng</div>
+      <div class="hanzi">长</div>
+      <div class="other-pinyin">另：zhǎng</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="山"
+      data-audio="/audio/hanzi/044_shan1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="山，shān，点击播放三遍"
+    >
+      <div class="meta"><span>044</span><span>第 15 关</span></div>
+      <div class="pinyin">shān</div>
+      <div class="hanzi">山</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="出"
+      data-audio="/audio/hanzi/045_chu1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="出，chū，点击播放三遍"
+    >
+      <div class="meta"><span>045</span><span>第 15 关</span></div>
+      <div class="pinyin">chū</div>
+      <div class="hanzi">出</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="飞"
+      data-audio="/audio/hanzi/046_fei1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="飞，fēi，点击播放三遍"
+    >
+      <div class="meta"><span>046</span><span>第 16 关</span></div>
+      <div class="pinyin">fēi</div>
+      <div class="hanzi">飞</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="马"
+      data-audio="/audio/hanzi/047_ma3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="马，mǎ，点击播放三遍"
+    >
+      <div class="meta"><span>047</span><span>第 16 关</span></div>
+      <div class="pinyin">mǎ</div>
+      <div class="hanzi">马</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="鸟"
+      data-audio="/audio/hanzi/048_niao3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="鸟，niǎo，点击播放三遍"
+    >
+      <div class="meta"><span>048</span><span>第 16 关</span></div>
+      <div class="pinyin">niǎo</div>
+      <div class="hanzi">鸟</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="云"
+      data-audio="/audio/hanzi/049_yun2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="云，yún，点击播放三遍"
+    >
+      <div class="meta"><span>049</span><span>第 17 关</span></div>
+      <div class="pinyin">yún</div>
+      <div class="hanzi">云</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="公"
+      data-audio="/audio/hanzi/050_gong1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="公，gōng，点击播放三遍"
+    >
+      <div class="meta"><span>050</span><span>第 17 关</span></div>
+      <div class="pinyin">gōng</div>
+      <div class="hanzi">公</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+    </main>
+    <footer class="sheet-footer">
+      <span>拼音小火车 · 300 字 / 100 关</span>
+      <span>1 / 6</span>
+    </footer>
+  </section>
+
+  <section class="sheet">
+    <header class="sheet-header">
+      <div>
+        <p>小学常见 300 字拼音表</p>
+        <h1>第 2 页</h1>
+      </div>
+      <div class="sheet-range">051 - 100</div>
+    </header>
+    <main class="grid">
+      
+    <article
+      class="card"
+      data-char="车"
+      data-audio="/audio/hanzi/051_che1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="车，chē，点击播放三遍"
+    >
+      <div class="meta"><span>051</span><span>第 17 关</span></div>
+      <div class="pinyin">chē</div>
+      <div class="hanzi">车</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="牛"
+      data-audio="/audio/hanzi/052_niu2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="牛，niú，点击播放三遍"
+    >
+      <div class="meta"><span>052</span><span>第 18 关</span></div>
+      <div class="pinyin">niú</div>
+      <div class="hanzi">牛</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="羊"
+      data-audio="/audio/hanzi/053_yang2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="羊，yáng，点击播放三遍"
+    >
+      <div class="meta"><span>053</span><span>第 18 关</span></div>
+      <div class="pinyin">yáng</div>
+      <div class="hanzi">羊</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="小"
+      data-audio="/audio/hanzi/054_xiao3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="小，xiǎo，点击播放三遍"
+    >
+      <div class="meta"><span>054</span><span>第 18 关</span></div>
+      <div class="pinyin">xiǎo</div>
+      <div class="hanzi">小</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="少"
+      data-audio="/audio/hanzi/055_shao3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="少，shǎo，点击播放三遍"
+    >
+      <div class="meta"><span>055</span><span>第 19 关</span></div>
+      <div class="pinyin">shǎo</div>
+      <div class="hanzi">少</div>
+      <div class="other-pinyin">另：shào</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="巾"
+      data-audio="/audio/hanzi/056_jin1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="巾，jīn，点击播放三遍"
+    >
+      <div class="meta"><span>056</span><span>第 19 关</span></div>
+      <div class="pinyin">jīn</div>
+      <div class="hanzi">巾</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="牙"
+      data-audio="/audio/hanzi/057_ya2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="牙，yá，点击播放三遍"
+    >
+      <div class="meta"><span>057</span><span>第 19 关</span></div>
+      <div class="pinyin">yá</div>
+      <div class="hanzi">牙</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="尺"
+      data-audio="/audio/hanzi/058_chi3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="尺，chǐ，点击播放三遍"
+    >
+      <div class="meta"><span>058</span><span>第 20 关</span></div>
+      <div class="pinyin">chǐ</div>
+      <div class="hanzi">尺</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="毛"
+      data-audio="/audio/hanzi/059_mao2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="毛，máo，点击播放三遍"
+    >
+      <div class="meta"><span>059</span><span>第 20 关</span></div>
+      <div class="pinyin">máo</div>
+      <div class="hanzi">毛</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="卜"
+      data-audio="/audio/hanzi/060_bu3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="卜，bǔ，点击播放三遍"
+    >
+      <div class="meta"><span>060</span><span>第 20 关</span></div>
+      <div class="pinyin">bǔ</div>
+      <div class="hanzi">卜</div>
+      <div class="other-pinyin">另：bo</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="又"
+      data-audio="/audio/hanzi/061_you4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="又，yòu，点击播放三遍"
+    >
+      <div class="meta"><span>061</span><span>第 21 关</span></div>
+      <div class="pinyin">yòu</div>
+      <div class="hanzi">又</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="心"
+      data-audio="/audio/hanzi/062_xin1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="心，xīn，点击播放三遍"
+    >
+      <div class="meta"><span>062</span><span>第 21 关</span></div>
+      <div class="pinyin">xīn</div>
+      <div class="hanzi">心</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="风"
+      data-audio="/audio/hanzi/063_feng1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="风，fēng，点击播放三遍"
+    >
+      <div class="meta"><span>063</span><span>第 21 关</span></div>
+      <div class="pinyin">fēng</div>
+      <div class="hanzi">风</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="力"
+      data-audio="/audio/hanzi/064_li4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="力，lì，点击播放三遍"
+    >
+      <div class="meta"><span>064</span><span>第 22 关</span></div>
+      <div class="pinyin">lì</div>
+      <div class="hanzi">力</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="手"
+      data-audio="/audio/hanzi/065_shou3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="手，shǒu，点击播放三遍"
+    >
+      <div class="meta"><span>065</span><span>第 22 关</span></div>
+      <div class="pinyin">shǒu</div>
+      <div class="hanzi">手</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="水"
+      data-audio="/audio/hanzi/066_shui3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="水，shuǐ，点击播放三遍"
+    >
+      <div class="meta"><span>066</span><span>第 22 关</span></div>
+      <div class="pinyin">shuǐ</div>
+      <div class="hanzi">水</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="广"
+      data-audio="/audio/hanzi/067_guang3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="广，guǎng，点击播放三遍"
+    >
+      <div class="meta"><span>067</span><span>第 23 关</span></div>
+      <div class="pinyin">guǎng</div>
+      <div class="hanzi">广</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="升"
+      data-audio="/audio/hanzi/068_sheng1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="升，shēng，点击播放三遍"
+    >
+      <div class="meta"><span>068</span><span>第 23 关</span></div>
+      <div class="pinyin">shēng</div>
+      <div class="hanzi">升</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="足"
+      data-audio="/audio/hanzi/069_zu2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="足，zú，点击播放三遍"
+    >
+      <div class="meta"><span>069</span><span>第 23 关</span></div>
+      <div class="pinyin">zú</div>
+      <div class="hanzi">足</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="走"
+      data-audio="/audio/hanzi/070_zou3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="走，zǒu，点击播放三遍"
+    >
+      <div class="meta"><span>070</span><span>第 24 关</span></div>
+      <div class="pinyin">zǒu</div>
+      <div class="hanzi">走</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="方"
+      data-audio="/audio/hanzi/071_fang1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="方，fāng，点击播放三遍"
+    >
+      <div class="meta"><span>071</span><span>第 24 关</span></div>
+      <div class="pinyin">fāng</div>
+      <div class="hanzi">方</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="半"
+      data-audio="/audio/hanzi/072_ban4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="半，bàn，点击播放三遍"
+    >
+      <div class="meta"><span>072</span><span>第 24 关</span></div>
+      <div class="pinyin">bàn</div>
+      <div class="hanzi">半</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="巴"
+      data-audio="/audio/hanzi/073_ba1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="巴，bā，点击播放三遍"
+    >
+      <div class="meta"><span>073</span><span>第 25 关</span></div>
+      <div class="pinyin">bā</div>
+      <div class="hanzi">巴</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="业"
+      data-audio="/audio/hanzi/074_ye4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="业，yè，点击播放三遍"
+    >
+      <div class="meta"><span>074</span><span>第 25 关</span></div>
+      <div class="pinyin">yè</div>
+      <div class="hanzi">业</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="本"
+      data-audio="/audio/hanzi/075_ben3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="本，běn，点击播放三遍"
+    >
+      <div class="meta"><span>075</span><span>第 25 关</span></div>
+      <div class="pinyin">běn</div>
+      <div class="hanzi">本</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="平"
+      data-audio="/audio/hanzi/076_ping2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="平，píng，点击播放三遍"
+    >
+      <div class="meta"><span>076</span><span>第 26 关</span></div>
+      <div class="pinyin">píng</div>
+      <div class="hanzi">平</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="书"
+      data-audio="/audio/hanzi/077_shu1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="书，shū，点击播放三遍"
+    >
+      <div class="meta"><span>077</span><span>第 26 关</span></div>
+      <div class="pinyin">shū</div>
+      <div class="hanzi">书</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="自"
+      data-audio="/audio/hanzi/078_zi4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="自，zì，点击播放三遍"
+    >
+      <div class="meta"><span>078</span><span>第 26 关</span></div>
+      <div class="pinyin">zì</div>
+      <div class="hanzi">自</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="已"
+      data-audio="/audio/hanzi/079_yi3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="已，yǐ，点击播放三遍"
+    >
+      <div class="meta"><span>079</span><span>第 27 关</span></div>
+      <div class="pinyin">yǐ</div>
+      <div class="hanzi">已</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="东"
+      data-audio="/audio/hanzi/080_dong1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="东，dōng，点击播放三遍"
+    >
+      <div class="meta"><span>080</span><span>第 27 关</span></div>
+      <div class="pinyin">dōng</div>
+      <div class="hanzi">东</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="西"
+      data-audio="/audio/hanzi/081_xi1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="西，xī，点击播放三遍"
+    >
+      <div class="meta"><span>081</span><span>第 27 关</span></div>
+      <div class="pinyin">xī</div>
+      <div class="hanzi">西</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="回"
+      data-audio="/audio/hanzi/082_hui2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="回，huí，点击播放三遍"
+    >
+      <div class="meta"><span>082</span><span>第 28 关</span></div>
+      <div class="pinyin">huí</div>
+      <div class="hanzi">回</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="片"
+      data-audio="/audio/hanzi/083_pian4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="片，piàn，点击播放三遍"
+    >
+      <div class="meta"><span>083</span><span>第 28 关</span></div>
+      <div class="pinyin">piàn</div>
+      <div class="hanzi">片</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="皮"
+      data-audio="/audio/hanzi/084_pi2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="皮，pí，点击播放三遍"
+    >
+      <div class="meta"><span>084</span><span>第 28 关</span></div>
+      <div class="pinyin">pí</div>
+      <div class="hanzi">皮</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="生"
+      data-audio="/audio/hanzi/085_sheng1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="生，shēng，点击播放三遍"
+    >
+      <div class="meta"><span>085</span><span>第 29 关</span></div>
+      <div class="pinyin">shēng</div>
+      <div class="hanzi">生</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="里"
+      data-audio="/audio/hanzi/086_li3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="里，lǐ，点击播放三遍"
+    >
+      <div class="meta"><span>086</span><span>第 29 关</span></div>
+      <div class="pinyin">lǐ</div>
+      <div class="hanzi">里</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="果"
+      data-audio="/audio/hanzi/087_guo3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="果，guǒ，点击播放三遍"
+    >
+      <div class="meta"><span>087</span><span>第 29 关</span></div>
+      <div class="pinyin">guǒ</div>
+      <div class="hanzi">果</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="几"
+      data-audio="/audio/hanzi/088_ji3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="几，jǐ，点击播放三遍"
+    >
+      <div class="meta"><span>088</span><span>第 30 关</span></div>
+      <div class="pinyin">jǐ</div>
+      <div class="hanzi">几</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="用"
+      data-audio="/audio/hanzi/089_yong4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="用，yòng，点击播放三遍"
+    >
+      <div class="meta"><span>089</span><span>第 30 关</span></div>
+      <div class="pinyin">yòng</div>
+      <div class="hanzi">用</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="鱼"
+      data-audio="/audio/hanzi/090_yu2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="鱼，yú，点击播放三遍"
+    >
+      <div class="meta"><span>090</span><span>第 30 关</span></div>
+      <div class="pinyin">yú</div>
+      <div class="hanzi">鱼</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="今"
+      data-audio="/audio/hanzi/091_jin1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="今，jīn，点击播放三遍"
+    >
+      <div class="meta"><span>091</span><span>第 31 关</span></div>
+      <div class="pinyin">jīn</div>
+      <div class="hanzi">今</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="正"
+      data-audio="/audio/hanzi/092_zheng4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="正，zhèng，点击播放三遍"
+    >
+      <div class="meta"><span>092</span><span>第 31 关</span></div>
+      <div class="pinyin">zhèng</div>
+      <div class="hanzi">正</div>
+      <div class="other-pinyin">另：zhēng</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="雨"
+      data-audio="/audio/hanzi/093_yu3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="雨，yǔ，点击播放三遍"
+    >
+      <div class="meta"><span>093</span><span>第 31 关</span></div>
+      <div class="pinyin">yǔ</div>
+      <div class="hanzi">雨</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="两"
+      data-audio="/audio/hanzi/094_liang3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="两，liǎng，点击播放三遍"
+    >
+      <div class="meta"><span>094</span><span>第 32 关</span></div>
+      <div class="pinyin">liǎng</div>
+      <div class="hanzi">两</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="瓜"
+      data-audio="/audio/hanzi/095_gua1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="瓜，guā，点击播放三遍"
+    >
+      <div class="meta"><span>095</span><span>第 32 关</span></div>
+      <div class="pinyin">guā</div>
+      <div class="hanzi">瓜</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="衣"
+      data-audio="/audio/hanzi/096_yi1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="衣，yī，点击播放三遍"
+    >
+      <div class="meta"><span>096</span><span>第 32 关</span></div>
+      <div class="pinyin">yī</div>
+      <div class="hanzi">衣</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="来"
+      data-audio="/audio/hanzi/097_lai2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="来，lái，点击播放三遍"
+    >
+      <div class="meta"><span>097</span><span>第 33 关</span></div>
+      <div class="pinyin">lái</div>
+      <div class="hanzi">来</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="年"
+      data-audio="/audio/hanzi/098_nian2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="年，nián，点击播放三遍"
+    >
+      <div class="meta"><span>098</span><span>第 33 关</span></div>
+      <div class="pinyin">nián</div>
+      <div class="hanzi">年</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="左"
+      data-audio="/audio/hanzi/099_zuo3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="左，zuǒ，点击播放三遍"
+    >
+      <div class="meta"><span>099</span><span>第 33 关</span></div>
+      <div class="pinyin">zuǒ</div>
+      <div class="hanzi">左</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="右"
+      data-audio="/audio/hanzi/100_you4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="右，yòu，点击播放三遍"
+    >
+      <div class="meta"><span>100</span><span>第 34 关</span></div>
+      <div class="pinyin">yòu</div>
+      <div class="hanzi">右</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+    </main>
+    <footer class="sheet-footer">
+      <span>拼音小火车 · 300 字 / 100 关</span>
+      <span>2 / 6</span>
+    </footer>
+  </section>
+
+  <section class="sheet">
+    <header class="sheet-header">
+      <div>
+        <p>小学常见 300 字拼音表</p>
+        <h1>第 3 页</h1>
+      </div>
+      <div class="sheet-range">101 - 150</div>
+    </header>
+    <main class="grid">
+      
+    <article
+      class="card"
+      data-char="万"
+      data-audio="/audio/hanzi/101_wan4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="万，wàn，点击播放三遍"
+    >
+      <div class="meta"><span>101</span><span>第 34 关</span></div>
+      <div class="pinyin">wàn</div>
+      <div class="hanzi">万</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="丁"
+      data-audio="/audio/hanzi/102_ding1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="丁，dīng，点击播放三遍"
+    >
+      <div class="meta"><span>102</span><span>第 34 关</span></div>
+      <div class="pinyin">dīng</div>
+      <div class="hanzi">丁</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="冬"
+      data-audio="/audio/hanzi/103_dong1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="冬，dōng，点击播放三遍"
+    >
+      <div class="meta"><span>103</span><span>第 35 关</span></div>
+      <div class="pinyin">dōng</div>
+      <div class="hanzi">冬</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="百"
+      data-audio="/audio/hanzi/104_bai3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="百，bǎi，点击播放三遍"
+    >
+      <div class="meta"><span>104</span><span>第 35 关</span></div>
+      <div class="pinyin">bǎi</div>
+      <div class="hanzi">百</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="齐"
+      data-audio="/audio/hanzi/105_qi2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="齐，qí，点击播放三遍"
+    >
+      <div class="meta"><span>105</span><span>第 35 关</span></div>
+      <div class="pinyin">qí</div>
+      <div class="hanzi">齐</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="说"
+      data-audio="/audio/hanzi/106_shuo1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="说，shuō，点击播放三遍"
+    >
+      <div class="meta"><span>106</span><span>第 36 关</span></div>
+      <div class="pinyin">shuō</div>
+      <div class="hanzi">说</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="话"
+      data-audio="/audio/hanzi/107_hua4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="话，huà，点击播放三遍"
+    >
+      <div class="meta"><span>107</span><span>第 36 关</span></div>
+      <div class="pinyin">huà</div>
+      <div class="hanzi">话</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="朋"
+      data-audio="/audio/hanzi/108_peng2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="朋，péng，点击播放三遍"
+    >
+      <div class="meta"><span>108</span><span>第 36 关</span></div>
+      <div class="pinyin">péng</div>
+      <div class="hanzi">朋</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="友"
+      data-audio="/audio/hanzi/109_you3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="友，yǒu，点击播放三遍"
+    >
+      <div class="meta"><span>109</span><span>第 37 关</span></div>
+      <div class="pinyin">yǒu</div>
+      <div class="hanzi">友</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="春"
+      data-audio="/audio/hanzi/110_chun1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="春，chūn，点击播放三遍"
+    >
+      <div class="meta"><span>110</span><span>第 37 关</span></div>
+      <div class="pinyin">chūn</div>
+      <div class="hanzi">春</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="高"
+      data-audio="/audio/hanzi/111_gao1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="高，gāo，点击播放三遍"
+    >
+      <div class="meta"><span>111</span><span>第 37 关</span></div>
+      <div class="pinyin">gāo</div>
+      <div class="hanzi">高</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="你"
+      data-audio="/audio/hanzi/112_ni3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="你，nǐ，点击播放三遍"
+    >
+      <div class="meta"><span>112</span><span>第 38 关</span></div>
+      <div class="pinyin">nǐ</div>
+      <div class="hanzi">你</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="们"
+      data-audio="/audio/hanzi/113_men5.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="们，men，点击播放三遍"
+    >
+      <div class="meta"><span>113</span><span>第 38 关</span></div>
+      <div class="pinyin">men</div>
+      <div class="hanzi">们</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="红"
+      data-audio="/audio/hanzi/114_hong2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="红，hóng，点击播放三遍"
+    >
+      <div class="meta"><span>114</span><span>第 38 关</span></div>
+      <div class="pinyin">hóng</div>
+      <div class="hanzi">红</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="绿"
+      data-audio="/audio/hanzi/115_lv4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="绿，lǜ，点击播放三遍"
+    >
+      <div class="meta"><span>115</span><span>第 39 关</span></div>
+      <div class="pinyin">lǜ</div>
+      <div class="hanzi">绿</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="花"
+      data-audio="/audio/hanzi/116_hua1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="花，huā，点击播放三遍"
+    >
+      <div class="meta"><span>116</span><span>第 39 关</span></div>
+      <div class="pinyin">huā</div>
+      <div class="hanzi">花</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="草"
+      data-audio="/audio/hanzi/117_cao3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="草，cǎo，点击播放三遍"
+    >
+      <div class="meta"><span>117</span><span>第 39 关</span></div>
+      <div class="pinyin">cǎo</div>
+      <div class="hanzi">草</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="爷"
+      data-audio="/audio/hanzi/118_ye2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="爷，yé，点击播放三遍"
+    >
+      <div class="meta"><span>118</span><span>第 40 关</span></div>
+      <div class="pinyin">yé</div>
+      <div class="hanzi">爷</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="节"
+      data-audio="/audio/hanzi/119_jie2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="节，jié，点击播放三遍"
+    >
+      <div class="meta"><span>119</span><span>第 40 关</span></div>
+      <div class="pinyin">jié</div>
+      <div class="hanzi">节</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="岁"
+      data-audio="/audio/hanzi/120_sui4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="岁，suì，点击播放三遍"
+    >
+      <div class="meta"><span>120</span><span>第 40 关</span></div>
+      <div class="pinyin">suì</div>
+      <div class="hanzi">岁</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="亲"
+      data-audio="/audio/hanzi/121_qin1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="亲，qīn，点击播放三遍"
+    >
+      <div class="meta"><span>121</span><span>第 41 关</span></div>
+      <div class="pinyin">qīn</div>
+      <div class="hanzi">亲</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="的"
+      data-audio="/audio/hanzi/122_de5.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="的，de，点击播放三遍"
+    >
+      <div class="meta"><span>122</span><span>第 41 关</span></div>
+      <div class="pinyin">de</div>
+      <div class="hanzi">的</div>
+      <div class="other-pinyin">另：dí / dì</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="行"
+      data-audio="/audio/hanzi/123_xing2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="行，xíng，点击播放三遍"
+    >
+      <div class="meta"><span>123</span><span>第 41 关</span></div>
+      <div class="pinyin">xíng</div>
+      <div class="hanzi">行</div>
+      <div class="other-pinyin">另：háng / héng</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="古"
+      data-audio="/audio/hanzi/124_gu3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="古，gǔ，点击播放三遍"
+    >
+      <div class="meta"><span>124</span><span>第 42 关</span></div>
+      <div class="pinyin">gǔ</div>
+      <div class="hanzi">古</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="声"
+      data-audio="/audio/hanzi/125_sheng1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="声，shēng，点击播放三遍"
+    >
+      <div class="meta"><span>125</span><span>第 42 关</span></div>
+      <div class="pinyin">shēng</div>
+      <div class="hanzi">声</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="多"
+      data-audio="/audio/hanzi/126_duo1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="多，duō，点击播放三遍"
+    >
+      <div class="meta"><span>126</span><span>第 42 关</span></div>
+      <div class="pinyin">duō</div>
+      <div class="hanzi">多</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="处"
+      data-audio="/audio/hanzi/127_chu4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="处，chù，点击播放三遍"
+    >
+      <div class="meta"><span>127</span><span>第 43 关</span></div>
+      <div class="pinyin">chù</div>
+      <div class="hanzi">处</div>
+      <div class="other-pinyin">另：chǔ</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="知"
+      data-audio="/audio/hanzi/128_zhi1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="知，zhī，点击播放三遍"
+    >
+      <div class="meta"><span>128</span><span>第 43 关</span></div>
+      <div class="pinyin">zhī</div>
+      <div class="hanzi">知</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="忙"
+      data-audio="/audio/hanzi/129_mang2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="忙，máng，点击播放三遍"
+    >
+      <div class="meta"><span>129</span><span>第 43 关</span></div>
+      <div class="pinyin">máng</div>
+      <div class="hanzi">忙</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="洗"
+      data-audio="/audio/hanzi/130_xi3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="洗，xǐ，点击播放三遍"
+    >
+      <div class="meta"><span>130</span><span>第 44 关</span></div>
+      <div class="pinyin">xǐ</div>
+      <div class="hanzi">洗</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="认"
+      data-audio="/audio/hanzi/131_ren4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="认，rèn，点击播放三遍"
+    >
+      <div class="meta"><span>131</span><span>第 44 关</span></div>
+      <div class="pinyin">rèn</div>
+      <div class="hanzi">认</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="扫"
+      data-audio="/audio/hanzi/132_sao3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="扫，sǎo，点击播放三遍"
+    >
+      <div class="meta"><span>132</span><span>第 44 关</span></div>
+      <div class="pinyin">sǎo</div>
+      <div class="hanzi">扫</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="真"
+      data-audio="/audio/hanzi/133_zhen1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="真，zhēn，点击播放三遍"
+    >
+      <div class="meta"><span>133</span><span>第 45 关</span></div>
+      <div class="pinyin">zhēn</div>
+      <div class="hanzi">真</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="父"
+      data-audio="/audio/hanzi/134_fu4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="父，fù，点击播放三遍"
+    >
+      <div class="meta"><span>134</span><span>第 45 关</span></div>
+      <div class="pinyin">fù</div>
+      <div class="hanzi">父</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="母"
+      data-audio="/audio/hanzi/135_mu3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="母，mǔ，点击播放三遍"
+    >
+      <div class="meta"><span>135</span><span>第 45 关</span></div>
+      <div class="pinyin">mǔ</div>
+      <div class="hanzi">母</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="爸"
+      data-audio="/audio/hanzi/136_ba4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="爸，bà，点击播放三遍"
+    >
+      <div class="meta"><span>136</span><span>第 46 关</span></div>
+      <div class="pinyin">bà</div>
+      <div class="hanzi">爸</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="全"
+      data-audio="/audio/hanzi/137_quan2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="全，quán，点击播放三遍"
+    >
+      <div class="meta"><span>137</span><span>第 46 关</span></div>
+      <div class="pinyin">quán</div>
+      <div class="hanzi">全</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="关"
+      data-audio="/audio/hanzi/138_guan1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="关，guān，点击播放三遍"
+    >
+      <div class="meta"><span>138</span><span>第 46 关</span></div>
+      <div class="pinyin">guān</div>
+      <div class="hanzi">关</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="写"
+      data-audio="/audio/hanzi/139_xie3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="写，xiě，点击播放三遍"
+    >
+      <div class="meta"><span>139</span><span>第 47 关</span></div>
+      <div class="pinyin">xiě</div>
+      <div class="hanzi">写</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="完"
+      data-audio="/audio/hanzi/140_wan2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="完，wán，点击播放三遍"
+    >
+      <div class="meta"><span>140</span><span>第 47 关</span></div>
+      <div class="pinyin">wán</div>
+      <div class="hanzi">完</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="家"
+      data-audio="/audio/hanzi/141_jia1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="家，jiā，点击播放三遍"
+    >
+      <div class="meta"><span>141</span><span>第 47 关</span></div>
+      <div class="pinyin">jiā</div>
+      <div class="hanzi">家</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="看"
+      data-audio="/audio/hanzi/142_kan4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="看，kàn，点击播放三遍"
+    >
+      <div class="meta"><span>142</span><span>第 48 关</span></div>
+      <div class="pinyin">kàn</div>
+      <div class="hanzi">看</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="着"
+      data-audio="/audio/hanzi/143_zhe5.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="着，zhe，点击播放三遍"
+    >
+      <div class="meta"><span>143</span><span>第 48 关</span></div>
+      <div class="pinyin">zhe</div>
+      <div class="hanzi">着</div>
+      <div class="other-pinyin">另：zháo / zhuó / zhāo</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="画"
+      data-audio="/audio/hanzi/144_hua4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="画，huà，点击播放三遍"
+    >
+      <div class="meta"><span>144</span><span>第 48 关</span></div>
+      <div class="pinyin">huà</div>
+      <div class="hanzi">画</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="笑"
+      data-audio="/audio/hanzi/145_xiao4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="笑，xiào，点击播放三遍"
+    >
+      <div class="meta"><span>145</span><span>第 49 关</span></div>
+      <div class="pinyin">xiào</div>
+      <div class="hanzi">笑</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="兴"
+      data-audio="/audio/hanzi/146_xing4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="兴，xìng，点击播放三遍"
+    >
+      <div class="meta"><span>146</span><span>第 49 关</span></div>
+      <div class="pinyin">xìng</div>
+      <div class="hanzi">兴</div>
+      <div class="other-pinyin">另：xīng</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="会"
+      data-audio="/audio/hanzi/147_hui4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="会，huì，点击播放三遍"
+    >
+      <div class="meta"><span>147</span><span>第 49 关</span></div>
+      <div class="pinyin">huì</div>
+      <div class="hanzi">会</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="妈"
+      data-audio="/audio/hanzi/148_ma1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="妈，mā，点击播放三遍"
+    >
+      <div class="meta"><span>148</span><span>第 50 关</span></div>
+      <div class="pinyin">mā</div>
+      <div class="hanzi">妈</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="奶"
+      data-audio="/audio/hanzi/149_nai3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="奶，nǎi，点击播放三遍"
+    >
+      <div class="meta"><span>149</span><span>第 50 关</span></div>
+      <div class="pinyin">nǎi</div>
+      <div class="hanzi">奶</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="午"
+      data-audio="/audio/hanzi/150_wu3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="午，wǔ，点击播放三遍"
+    >
+      <div class="meta"><span>150</span><span>第 50 关</span></div>
+      <div class="pinyin">wǔ</div>
+      <div class="hanzi">午</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+    </main>
+    <footer class="sheet-footer">
+      <span>拼音小火车 · 300 字 / 100 关</span>
+      <span>3 / 6</span>
+    </footer>
+  </section>
+
+  <section class="sheet">
+    <header class="sheet-header">
+      <div>
+        <p>小学常见 300 字拼音表</p>
+        <h1>第 4 页</h1>
+      </div>
+      <div class="sheet-range">151 - 200</div>
+    </header>
+    <main class="grid">
+      
+    <article
+      class="card"
+      data-char="合"
+      data-audio="/audio/hanzi/151_he2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="合，hé，点击播放三遍"
+    >
+      <div class="meta"><span>151</span><span>第 51 关</span></div>
+      <div class="pinyin">hé</div>
+      <div class="hanzi">合</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="放"
+      data-audio="/audio/hanzi/152_fang4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="放，fàng，点击播放三遍"
+    >
+      <div class="meta"><span>152</span><span>第 51 关</span></div>
+      <div class="pinyin">fàng</div>
+      <div class="hanzi">放</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="收"
+      data-audio="/audio/hanzi/153_shou1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="收，shōu，点击播放三遍"
+    >
+      <div class="meta"><span>153</span><span>第 51 关</span></div>
+      <div class="pinyin">shōu</div>
+      <div class="hanzi">收</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="女"
+      data-audio="/audio/hanzi/154_nv3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="女，nǚ，点击播放三遍"
+    >
+      <div class="meta"><span>154</span><span>第 52 关</span></div>
+      <div class="pinyin">nǚ</div>
+      <div class="hanzi">女</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="太"
+      data-audio="/audio/hanzi/155_tai4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="太，tài，点击播放三遍"
+    >
+      <div class="meta"><span>155</span><span>第 52 关</span></div>
+      <div class="pinyin">tài</div>
+      <div class="hanzi">太</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="气"
+      data-audio="/audio/hanzi/156_qi4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="气，qì，点击播放三遍"
+    >
+      <div class="meta"><span>156</span><span>第 52 关</span></div>
+      <div class="pinyin">qì</div>
+      <div class="hanzi">气</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="早"
+      data-audio="/audio/hanzi/157_zao3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="早，zǎo，点击播放三遍"
+    >
+      <div class="meta"><span>157</span><span>第 53 关</span></div>
+      <div class="pinyin">zǎo</div>
+      <div class="hanzi">早</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="去"
+      data-audio="/audio/hanzi/158_qu4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="去，qù，点击播放三遍"
+    >
+      <div class="meta"><span>158</span><span>第 53 关</span></div>
+      <div class="pinyin">qù</div>
+      <div class="hanzi">去</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="亮"
+      data-audio="/audio/hanzi/159_liang4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="亮，liàng，点击播放三遍"
+    >
+      <div class="meta"><span>159</span><span>第 53 关</span></div>
+      <div class="pinyin">liàng</div>
+      <div class="hanzi">亮</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="和"
+      data-audio="/audio/hanzi/160_he2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="和，hé，点击播放三遍"
+    >
+      <div class="meta"><span>160</span><span>第 54 关</span></div>
+      <div class="pinyin">hé</div>
+      <div class="hanzi">和</div>
+      <div class="other-pinyin">另：hè / huó / huò / hú</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="语"
+      data-audio="/audio/hanzi/161_yu3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="语，yǔ，点击播放三遍"
+    >
+      <div class="meta"><span>161</span><span>第 54 关</span></div>
+      <div class="pinyin">yǔ</div>
+      <div class="hanzi">语</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="千"
+      data-audio="/audio/hanzi/162_qian1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="千，qiān，点击播放三遍"
+    >
+      <div class="meta"><span>162</span><span>第 54 关</span></div>
+      <div class="pinyin">qiān</div>
+      <div class="hanzi">千</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="李"
+      data-audio="/audio/hanzi/163_li3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="李，lǐ，点击播放三遍"
+    >
+      <div class="meta"><span>163</span><span>第 55 关</span></div>
+      <div class="pinyin">lǐ</div>
+      <div class="hanzi">李</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="秀"
+      data-audio="/audio/hanzi/164_xiu4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="秀，xiù，点击播放三遍"
+    >
+      <div class="meta"><span>164</span><span>第 55 关</span></div>
+      <div class="pinyin">xiù</div>
+      <div class="hanzi">秀</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="香"
+      data-audio="/audio/hanzi/165_xiang1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="香，xiāng，点击播放三遍"
+    >
+      <div class="meta"><span>165</span><span>第 55 关</span></div>
+      <div class="pinyin">xiāng</div>
+      <div class="hanzi">香</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="听"
+      data-audio="/audio/hanzi/166_ting1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="听，tīng，点击播放三遍"
+    >
+      <div class="meta"><span>166</span><span>第 56 关</span></div>
+      <div class="pinyin">tīng</div>
+      <div class="hanzi">听</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="唱"
+      data-audio="/audio/hanzi/167_chang4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="唱，chàng，点击播放三遍"
+    >
+      <div class="meta"><span>167</span><span>第 56 关</span></div>
+      <div class="pinyin">chàng</div>
+      <div class="hanzi">唱</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="连"
+      data-audio="/audio/hanzi/168_lian2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="连，lián，点击播放三遍"
+    >
+      <div class="meta"><span>168</span><span>第 56 关</span></div>
+      <div class="pinyin">lián</div>
+      <div class="hanzi">连</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="远"
+      data-audio="/audio/hanzi/169_yuan3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="远，yuǎn，点击播放三遍"
+    >
+      <div class="meta"><span>169</span><span>第 57 关</span></div>
+      <div class="pinyin">yuǎn</div>
+      <div class="hanzi">远</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="定"
+      data-audio="/audio/hanzi/170_ding4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="定，dìng，点击播放三遍"
+    >
+      <div class="meta"><span>170</span><span>第 57 关</span></div>
+      <div class="pinyin">dìng</div>
+      <div class="hanzi">定</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="向"
+      data-audio="/audio/hanzi/171_xiang4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="向，xiàng，点击播放三遍"
+    >
+      <div class="meta"><span>171</span><span>第 57 关</span></div>
+      <div class="pinyin">xiàng</div>
+      <div class="hanzi">向</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="以"
+      data-audio="/audio/hanzi/172_yi3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="以，yǐ，点击播放三遍"
+    >
+      <div class="meta"><span>172</span><span>第 58 关</span></div>
+      <div class="pinyin">yǐ</div>
+      <div class="hanzi">以</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="后"
+      data-audio="/audio/hanzi/173_hou4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="后，hòu，点击播放三遍"
+    >
+      <div class="meta"><span>173</span><span>第 58 关</span></div>
+      <div class="pinyin">hòu</div>
+      <div class="hanzi">后</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="更"
+      data-audio="/audio/hanzi/174_geng4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="更，gèng，点击播放三遍"
+    >
+      <div class="meta"><span>174</span><span>第 58 关</span></div>
+      <div class="pinyin">gèng</div>
+      <div class="hanzi">更</div>
+      <div class="other-pinyin">另：gēng</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="主"
+      data-audio="/audio/hanzi/175_zhu3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="主，zhǔ，点击播放三遍"
+    >
+      <div class="meta"><span>175</span><span>第 59 关</span></div>
+      <div class="pinyin">zhǔ</div>
+      <div class="hanzi">主</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="意"
+      data-audio="/audio/hanzi/176_yi4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="意，yì，点击播放三遍"
+    >
+      <div class="meta"><span>176</span><span>第 59 关</span></div>
+      <div class="pinyin">yì</div>
+      <div class="hanzi">意</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="总"
+      data-audio="/audio/hanzi/177_zong3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="总，zǒng，点击播放三遍"
+    >
+      <div class="meta"><span>177</span><span>第 59 关</span></div>
+      <div class="pinyin">zǒng</div>
+      <div class="hanzi">总</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="先"
+      data-audio="/audio/hanzi/178_xian1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="先，xiān，点击播放三遍"
+    >
+      <div class="meta"><span>178</span><span>第 60 关</span></div>
+      <div class="pinyin">xiān</div>
+      <div class="hanzi">先</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="干"
+      data-audio="/audio/hanzi/179_gan1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="干，gān，点击播放三遍"
+    >
+      <div class="meta"><span>179</span><span>第 60 关</span></div>
+      <div class="pinyin">gān</div>
+      <div class="hanzi">干</div>
+      <div class="other-pinyin">另：gàn</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="赶"
+      data-audio="/audio/hanzi/180_gan3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="赶，gǎn，点击播放三遍"
+    >
+      <div class="meta"><span>180</span><span>第 60 关</span></div>
+      <div class="pinyin">gǎn</div>
+      <div class="hanzi">赶</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="起"
+      data-audio="/audio/hanzi/181_qi3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="起，qǐ，点击播放三遍"
+    >
+      <div class="meta"><span>181</span><span>第 61 关</span></div>
+      <div class="pinyin">qǐ</div>
+      <div class="hanzi">起</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="明"
+      data-audio="/audio/hanzi/182_ming2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="明，míng，点击播放三遍"
+    >
+      <div class="meta"><span>182</span><span>第 61 关</span></div>
+      <div class="pinyin">míng</div>
+      <div class="hanzi">明</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="净"
+      data-audio="/audio/hanzi/183_jing4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="净，jìng，点击播放三遍"
+    >
+      <div class="meta"><span>183</span><span>第 61 关</span></div>
+      <div class="pinyin">jìng</div>
+      <div class="hanzi">净</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="同"
+      data-audio="/audio/hanzi/184_tong2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="同，tóng，点击播放三遍"
+    >
+      <div class="meta"><span>184</span><span>第 62 关</span></div>
+      <div class="pinyin">tóng</div>
+      <div class="hanzi">同</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="工"
+      data-audio="/audio/hanzi/185_gong1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="工，gōng，点击播放三遍"
+    >
+      <div class="meta"><span>185</span><span>第 62 关</span></div>
+      <div class="pinyin">gōng</div>
+      <div class="hanzi">工</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="专"
+      data-audio="/audio/hanzi/186_zhuan1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="专，zhuān，点击播放三遍"
+    >
+      <div class="meta"><span>186</span><span>第 62 关</span></div>
+      <div class="pinyin">zhuān</div>
+      <div class="hanzi">专</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="才"
+      data-audio="/audio/hanzi/187_cai2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="才，cái，点击播放三遍"
+    >
+      <div class="meta"><span>187</span><span>第 63 关</span></div>
+      <div class="pinyin">cái</div>
+      <div class="hanzi">才</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="级"
+      data-audio="/audio/hanzi/188_ji2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="级，jí，点击播放三遍"
+    >
+      <div class="meta"><span>188</span><span>第 63 关</span></div>
+      <div class="pinyin">jí</div>
+      <div class="hanzi">级</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="队"
+      data-audio="/audio/hanzi/189_dui4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="队，duì，点击播放三遍"
+    >
+      <div class="meta"><span>189</span><span>第 63 关</span></div>
+      <div class="pinyin">duì</div>
+      <div class="hanzi">队</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="蚂"
+      data-audio="/audio/hanzi/190_ma3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="蚂，mǎ，点击播放三遍"
+    >
+      <div class="meta"><span>190</span><span>第 64 关</span></div>
+      <div class="pinyin">mǎ</div>
+      <div class="hanzi">蚂</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="蚁"
+      data-audio="/audio/hanzi/191_yi3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="蚁，yǐ，点击播放三遍"
+    >
+      <div class="meta"><span>191</span><span>第 64 关</span></div>
+      <div class="pinyin">yǐ</div>
+      <div class="hanzi">蚁</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="前"
+      data-audio="/audio/hanzi/192_qian2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="前，qián，点击播放三遍"
+    >
+      <div class="meta"><span>192</span><span>第 64 关</span></div>
+      <div class="pinyin">qián</div>
+      <div class="hanzi">前</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="空"
+      data-audio="/audio/hanzi/193_kong1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="空，kōng，点击播放三遍"
+    >
+      <div class="meta"><span>193</span><span>第 65 关</span></div>
+      <div class="pinyin">kōng</div>
+      <div class="hanzi">空</div>
+      <div class="other-pinyin">另：kòng</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="房"
+      data-audio="/audio/hanzi/194_fang2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="房，fáng，点击播放三遍"
+    >
+      <div class="meta"><span>194</span><span>第 65 关</span></div>
+      <div class="pinyin">fáng</div>
+      <div class="hanzi">房</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="网"
+      data-audio="/audio/hanzi/195_wang3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="网，wǎng，点击播放三遍"
+    >
+      <div class="meta"><span>195</span><span>第 65 关</span></div>
+      <div class="pinyin">wǎng</div>
+      <div class="hanzi">网</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="诗"
+      data-audio="/audio/hanzi/196_shi1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="诗，shī，点击播放三遍"
+    >
+      <div class="meta"><span>196</span><span>第 66 关</span></div>
+      <div class="pinyin">shī</div>
+      <div class="hanzi">诗</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="林"
+      data-audio="/audio/hanzi/197_lin2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="林，lín，点击播放三遍"
+    >
+      <div class="meta"><span>197</span><span>第 66 关</span></div>
+      <div class="pinyin">lín</div>
+      <div class="hanzi">林</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="童"
+      data-audio="/audio/hanzi/198_tong2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="童，tóng，点击播放三遍"
+    >
+      <div class="meta"><span>198</span><span>第 66 关</span></div>
+      <div class="pinyin">tóng</div>
+      <div class="hanzi">童</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="黄"
+      data-audio="/audio/hanzi/199_huang2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="黄，huáng，点击播放三遍"
+    >
+      <div class="meta"><span>199</span><span>第 67 关</span></div>
+      <div class="pinyin">huáng</div>
+      <div class="hanzi">黄</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="闭"
+      data-audio="/audio/hanzi/200_bi4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="闭，bì，点击播放三遍"
+    >
+      <div class="meta"><span>200</span><span>第 67 关</span></div>
+      <div class="pinyin">bì</div>
+      <div class="hanzi">闭</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+    </main>
+    <footer class="sheet-footer">
+      <span>拼音小火车 · 300 字 / 100 关</span>
+      <span>4 / 6</span>
+    </footer>
+  </section>
+
+  <section class="sheet">
+    <header class="sheet-header">
+      <div>
+        <p>小学常见 300 字拼音表</p>
+        <h1>第 5 页</h1>
+      </div>
+      <div class="sheet-range">201 - 250</div>
+    </header>
+    <main class="grid">
+      
+    <article
+      class="card"
+      data-char="立"
+      data-audio="/audio/hanzi/201_li4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="立，lì，点击播放三遍"
+    >
+      <div class="meta"><span>201</span><span>第 67 关</span></div>
+      <div class="pinyin">lì</div>
+      <div class="hanzi">立</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="是"
+      data-audio="/audio/hanzi/202_shi4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="是，shì，点击播放三遍"
+    >
+      <div class="meta"><span>202</span><span>第 68 关</span></div>
+      <div class="pinyin">shì</div>
+      <div class="hanzi">是</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="朵"
+      data-audio="/audio/hanzi/203_duo3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="朵，duǒ，点击播放三遍"
+    >
+      <div class="meta"><span>203</span><span>第 68 关</span></div>
+      <div class="pinyin">duǒ</div>
+      <div class="hanzi">朵</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="美"
+      data-audio="/audio/hanzi/204_mei3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="美，měi，点击播放三遍"
+    >
+      <div class="meta"><span>204</span><span>第 68 关</span></div>
+      <div class="pinyin">měi</div>
+      <div class="hanzi">美</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="我"
+      data-audio="/audio/hanzi/205_wo3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="我，wǒ，点击播放三遍"
+    >
+      <div class="meta"><span>205</span><span>第 69 关</span></div>
+      <div class="pinyin">wǒ</div>
+      <div class="hanzi">我</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="叶"
+      data-audio="/audio/hanzi/206_ye4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="叶，yè，点击播放三遍"
+    >
+      <div class="meta"><span>206</span><span>第 69 关</span></div>
+      <div class="pinyin">yè</div>
+      <div class="hanzi">叶</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="机"
+      data-audio="/audio/hanzi/207_ji1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="机，jī，点击播放三遍"
+    >
+      <div class="meta"><span>207</span><span>第 69 关</span></div>
+      <div class="pinyin">jī</div>
+      <div class="hanzi">机</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="她"
+      data-audio="/audio/hanzi/208_ta1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="她，tā，点击播放三遍"
+    >
+      <div class="meta"><span>208</span><span>第 70 关</span></div>
+      <div class="pinyin">tā</div>
+      <div class="hanzi">她</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="他"
+      data-audio="/audio/hanzi/209_ta1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="他，tā，点击播放三遍"
+    >
+      <div class="meta"><span>209</span><span>第 70 关</span></div>
+      <div class="pinyin">tā</div>
+      <div class="hanzi">他</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="送"
+      data-audio="/audio/hanzi/210_song4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="送，sòng，点击播放三遍"
+    >
+      <div class="meta"><span>210</span><span>第 70 关</span></div>
+      <div class="pinyin">sòng</div>
+      <div class="hanzi">送</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="过"
+      data-audio="/audio/hanzi/211_guo4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="过，guò，点击播放三遍"
+    >
+      <div class="meta"><span>211</span><span>第 71 关</span></div>
+      <div class="pinyin">guò</div>
+      <div class="hanzi">过</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="时"
+      data-audio="/audio/hanzi/212_shi2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="时，shí，点击播放三遍"
+    >
+      <div class="meta"><span>212</span><span>第 71 关</span></div>
+      <div class="pinyin">shí</div>
+      <div class="hanzi">时</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="让"
+      data-audio="/audio/hanzi/213_rang4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="让，ràng，点击播放三遍"
+    >
+      <div class="meta"><span>213</span><span>第 71 关</span></div>
+      <div class="pinyin">ràng</div>
+      <div class="hanzi">让</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="吗"
+      data-audio="/audio/hanzi/214_ma5.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="吗，ma，点击播放三遍"
+    >
+      <div class="meta"><span>214</span><span>第 72 关</span></div>
+      <div class="pinyin">ma</div>
+      <div class="hanzi">吗</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="吧"
+      data-audio="/audio/hanzi/215_ba5.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="吧，ba，点击播放三遍"
+    >
+      <div class="meta"><span>215</span><span>第 72 关</span></div>
+      <div class="pinyin">ba</div>
+      <div class="hanzi">吧</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="虫"
+      data-audio="/audio/hanzi/216_chong2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="虫，chóng，点击播放三遍"
+    >
+      <div class="meta"><span>216</span><span>第 72 关</span></div>
+      <div class="pinyin">chóng</div>
+      <div class="hanzi">虫</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="往"
+      data-audio="/audio/hanzi/217_wang3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="往，wǎng，点击播放三遍"
+    >
+      <div class="meta"><span>217</span><span>第 73 关</span></div>
+      <div class="pinyin">wǎng</div>
+      <div class="hanzi">往</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="得"
+      data-audio="/audio/hanzi/218_de2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="得，dé，点击播放三遍"
+    >
+      <div class="meta"><span>218</span><span>第 73 关</span></div>
+      <div class="pinyin">dé</div>
+      <div class="hanzi">得</div>
+      <div class="other-pinyin">另：de / děi</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="很"
+      data-audio="/audio/hanzi/219_hen3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="很，hěn，点击播放三遍"
+    >
+      <div class="meta"><span>219</span><span>第 73 关</span></div>
+      <div class="pinyin">hěn</div>
+      <div class="hanzi">很</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="河"
+      data-audio="/audio/hanzi/220_he2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="河，hé，点击播放三遍"
+    >
+      <div class="meta"><span>220</span><span>第 74 关</span></div>
+      <div class="pinyin">hé</div>
+      <div class="hanzi">河</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="姐"
+      data-audio="/audio/hanzi/221_jie3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="姐，jiě，点击播放三遍"
+    >
+      <div class="meta"><span>221</span><span>第 74 关</span></div>
+      <div class="pinyin">jiě</div>
+      <div class="hanzi">姐</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="借"
+      data-audio="/audio/hanzi/222_jie4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="借，jiè，点击播放三遍"
+    >
+      <div class="meta"><span>222</span><span>第 74 关</span></div>
+      <div class="pinyin">jiè</div>
+      <div class="hanzi">借</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="呢"
+      data-audio="/audio/hanzi/223_ne5.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="呢，ne，点击播放三遍"
+    >
+      <div class="meta"><span>223</span><span>第 75 关</span></div>
+      <div class="pinyin">ne</div>
+      <div class="hanzi">呢</div>
+      <div class="other-pinyin">另：ní</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="呀"
+      data-audio="/audio/hanzi/224_ya5.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="呀，ya，点击播放三遍"
+    >
+      <div class="meta"><span>224</span><span>第 75 关</span></div>
+      <div class="pinyin">ya</div>
+      <div class="hanzi">呀</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="哪"
+      data-audio="/audio/hanzi/225_na3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="哪，nǎ，点击播放三遍"
+    >
+      <div class="meta"><span>225</span><span>第 75 关</span></div>
+      <div class="pinyin">nǎ</div>
+      <div class="hanzi">哪</div>
+      <div class="other-pinyin">另：na / něi</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="谁"
+      data-audio="/audio/hanzi/226_shui2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="谁，shuí，点击播放三遍"
+    >
+      <div class="meta"><span>226</span><span>第 76 关</span></div>
+      <div class="pinyin">shuí</div>
+      <div class="hanzi">谁</div>
+      <div class="other-pinyin">另：shéi</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="怕"
+      data-audio="/audio/hanzi/227_pa4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="怕，pà，点击播放三遍"
+    >
+      <div class="meta"><span>227</span><span>第 76 关</span></div>
+      <div class="pinyin">pà</div>
+      <div class="hanzi">怕</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="跟"
+      data-audio="/audio/hanzi/228_gen1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="跟，gēn，点击播放三遍"
+    >
+      <div class="meta"><span>228</span><span>第 76 关</span></div>
+      <div class="pinyin">gēn</div>
+      <div class="hanzi">跟</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="凉"
+      data-audio="/audio/hanzi/229_liang2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="凉，liáng，点击播放三遍"
+    >
+      <div class="meta"><span>229</span><span>第 77 关</span></div>
+      <div class="pinyin">liáng</div>
+      <div class="hanzi">凉</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="量"
+      data-audio="/audio/hanzi/230_liang4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="量，liàng，点击播放三遍"
+    >
+      <div class="meta"><span>230</span><span>第 77 关</span></div>
+      <div class="pinyin">liàng</div>
+      <div class="hanzi">量</div>
+      <div class="other-pinyin">另：liáng</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="最"
+      data-audio="/audio/hanzi/231_zui4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="最，zuì，点击播放三遍"
+    >
+      <div class="meta"><span>231</span><span>第 77 关</span></div>
+      <div class="pinyin">zuì</div>
+      <div class="hanzi">最</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="园"
+      data-audio="/audio/hanzi/232_yuan2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="园，yuán，点击播放三遍"
+    >
+      <div class="meta"><span>232</span><span>第 78 关</span></div>
+      <div class="pinyin">yuán</div>
+      <div class="hanzi">园</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="因"
+      data-audio="/audio/hanzi/233_yin1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="因，yīn，点击播放三遍"
+    >
+      <div class="meta"><span>233</span><span>第 78 关</span></div>
+      <div class="pinyin">yīn</div>
+      <div class="hanzi">因</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="为"
+      data-audio="/audio/hanzi/234_wei4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="为，wèi，点击播放三遍"
+    >
+      <div class="meta"><span>234</span><span>第 78 关</span></div>
+      <div class="pinyin">wèi</div>
+      <div class="hanzi">为</div>
+      <div class="other-pinyin">另：wéi</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="脸"
+      data-audio="/audio/hanzi/235_lian3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="脸，liǎn，点击播放三遍"
+    >
+      <div class="meta"><span>235</span><span>第 79 关</span></div>
+      <div class="pinyin">liǎn</div>
+      <div class="hanzi">脸</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="阳"
+      data-audio="/audio/hanzi/236_yang2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="阳，yáng，点击播放三遍"
+    >
+      <div class="meta"><span>236</span><span>第 79 关</span></div>
+      <div class="pinyin">yáng</div>
+      <div class="hanzi">阳</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="光"
+      data-audio="/audio/hanzi/237_guang1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="光，guāng，点击播放三遍"
+    >
+      <div class="meta"><span>237</span><span>第 79 关</span></div>
+      <div class="pinyin">guāng</div>
+      <div class="hanzi">光</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="可"
+      data-audio="/audio/hanzi/238_ke3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="可，kě，点击播放三遍"
+    >
+      <div class="meta"><span>238</span><span>第 80 关</span></div>
+      <div class="pinyin">kě</div>
+      <div class="hanzi">可</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="石"
+      data-audio="/audio/hanzi/239_shi2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="石，shí，点击播放三遍"
+    >
+      <div class="meta"><span>239</span><span>第 80 关</span></div>
+      <div class="pinyin">shí</div>
+      <div class="hanzi">石</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="办"
+      data-audio="/audio/hanzi/240_ban4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="办，bàn，点击播放三遍"
+    >
+      <div class="meta"><span>240</span><span>第 80 关</span></div>
+      <div class="pinyin">bàn</div>
+      <div class="hanzi">办</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="法"
+      data-audio="/audio/hanzi/241_fa3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="法，fǎ，点击播放三遍"
+    >
+      <div class="meta"><span>241</span><span>第 81 关</span></div>
+      <div class="pinyin">fǎ</div>
+      <div class="hanzi">法</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="找"
+      data-audio="/audio/hanzi/242_zhao3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="找，zhǎo，点击播放三遍"
+    >
+      <div class="meta"><span>242</span><span>第 81 关</span></div>
+      <div class="pinyin">zhǎo</div>
+      <div class="hanzi">找</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="许"
+      data-audio="/audio/hanzi/243_xu3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="许，xǔ，点击播放三遍"
+    >
+      <div class="meta"><span>243</span><span>第 81 关</span></div>
+      <div class="pinyin">xǔ</div>
+      <div class="hanzi">许</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="别"
+      data-audio="/audio/hanzi/244_bie2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="别，bié，点击播放三遍"
+    >
+      <div class="meta"><span>244</span><span>第 82 关</span></div>
+      <div class="pinyin">bié</div>
+      <div class="hanzi">别</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="到"
+      data-audio="/audio/hanzi/245_dao4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="到，dào，点击播放三遍"
+    >
+      <div class="meta"><span>245</span><span>第 82 关</span></div>
+      <div class="pinyin">dào</div>
+      <div class="hanzi">到</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="那"
+      data-audio="/audio/hanzi/246_na4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="那，nà，点击播放三遍"
+    >
+      <div class="meta"><span>246</span><span>第 82 关</span></div>
+      <div class="pinyin">nà</div>
+      <div class="hanzi">那</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="都"
+      data-audio="/audio/hanzi/247_dou1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="都，dōu，点击播放三遍"
+    >
+      <div class="meta"><span>247</span><span>第 83 关</span></div>
+      <div class="pinyin">dōu</div>
+      <div class="hanzi">都</div>
+      <div class="other-pinyin">另：dū</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="吓"
+      data-audio="/audio/hanzi/248_xia4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="吓，xià，点击播放三遍"
+    >
+      <div class="meta"><span>248</span><span>第 83 关</span></div>
+      <div class="pinyin">xià</div>
+      <div class="hanzi">吓</div>
+      <div class="other-pinyin">另：hè</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="叫"
+      data-audio="/audio/hanzi/249_jiao4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="叫，jiào，点击播放三遍"
+    >
+      <div class="meta"><span>249</span><span>第 83 关</span></div>
+      <div class="pinyin">jiào</div>
+      <div class="hanzi">叫</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="再"
+      data-audio="/audio/hanzi/250_zai4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="再，zài，点击播放三遍"
+    >
+      <div class="meta"><span>250</span><span>第 84 关</span></div>
+      <div class="pinyin">zài</div>
+      <div class="hanzi">再</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+    </main>
+    <footer class="sheet-footer">
+      <span>拼音小火车 · 300 字 / 100 关</span>
+      <span>5 / 6</span>
+    </footer>
+  </section>
+
+  <section class="sheet">
+    <header class="sheet-header">
+      <div>
+        <p>小学常见 300 字拼音表</p>
+        <h1>第 6 页</h1>
+      </div>
+      <div class="sheet-range">251 - 300</div>
+    </header>
+    <main class="grid">
+      
+    <article
+      class="card"
+      data-char="象"
+      data-audio="/audio/hanzi/251_xiang4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="象，xiàng，点击播放三遍"
+    >
+      <div class="meta"><span>251</span><span>第 84 关</span></div>
+      <div class="pinyin">xiàng</div>
+      <div class="hanzi">象</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="像"
+      data-audio="/audio/hanzi/252_xiang4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="像，xiàng，点击播放三遍"
+    >
+      <div class="meta"><span>252</span><span>第 84 关</span></div>
+      <div class="pinyin">xiàng</div>
+      <div class="hanzi">像</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="做"
+      data-audio="/audio/hanzi/253_zuo4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="做，zuò，点击播放三遍"
+    >
+      <div class="meta"><span>253</span><span>第 85 关</span></div>
+      <div class="pinyin">zuò</div>
+      <div class="hanzi">做</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="点"
+      data-audio="/audio/hanzi/254_dian3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="点，diǎn，点击播放三遍"
+    >
+      <div class="meta"><span>254</span><span>第 85 关</span></div>
+      <div class="pinyin">diǎn</div>
+      <div class="hanzi">点</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="照"
+      data-audio="/audio/hanzi/255_zhao4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="照，zhào，点击播放三遍"
+    >
+      <div class="meta"><span>255</span><span>第 85 关</span></div>
+      <div class="pinyin">zhào</div>
+      <div class="hanzi">照</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="沙"
+      data-audio="/audio/hanzi/256_sha1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="沙，shā，点击播放三遍"
+    >
+      <div class="meta"><span>256</span><span>第 86 关</span></div>
+      <div class="pinyin">shā</div>
+      <div class="hanzi">沙</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="海"
+      data-audio="/audio/hanzi/257_hai3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="海，hǎi，点击播放三遍"
+    >
+      <div class="meta"><span>257</span><span>第 86 关</span></div>
+      <div class="pinyin">hǎi</div>
+      <div class="hanzi">海</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="桥"
+      data-audio="/audio/hanzi/258_qiao2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="桥，qiáo，点击播放三遍"
+    >
+      <div class="meta"><span>258</span><span>第 86 关</span></div>
+      <div class="pinyin">qiáo</div>
+      <div class="hanzi">桥</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="竹"
+      data-audio="/audio/hanzi/259_zhu2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="竹，zhú，点击播放三遍"
+    >
+      <div class="meta"><span>259</span><span>第 87 关</span></div>
+      <div class="pinyin">zhú</div>
+      <div class="hanzi">竹</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="军"
+      data-audio="/audio/hanzi/260_jun1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="军，jūn，点击播放三遍"
+    >
+      <div class="meta"><span>260</span><span>第 87 关</span></div>
+      <div class="pinyin">jūn</div>
+      <div class="hanzi">军</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="苗"
+      data-audio="/audio/hanzi/261_miao2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="苗，miáo，点击播放三遍"
+    >
+      <div class="meta"><span>261</span><span>第 87 关</span></div>
+      <div class="pinyin">miáo</div>
+      <div class="hanzi">苗</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="井"
+      data-audio="/audio/hanzi/262_jing3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="井，jǐng，点击播放三遍"
+    >
+      <div class="meta"><span>262</span><span>第 88 关</span></div>
+      <div class="pinyin">jǐng</div>
+      <div class="hanzi">井</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="乡"
+      data-audio="/audio/hanzi/263_xiang1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="乡，xiāng，点击播放三遍"
+    >
+      <div class="meta"><span>263</span><span>第 88 关</span></div>
+      <div class="pinyin">xiāng</div>
+      <div class="hanzi">乡</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="面"
+      data-audio="/audio/hanzi/264_mian4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="面，miàn，点击播放三遍"
+    >
+      <div class="meta"><span>264</span><span>第 88 关</span></div>
+      <div class="pinyin">miàn</div>
+      <div class="hanzi">面</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="忘"
+      data-audio="/audio/hanzi/265_wang4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="忘，wàng，点击播放三遍"
+    >
+      <div class="meta"><span>265</span><span>第 89 关</span></div>
+      <div class="pinyin">wàng</div>
+      <div class="hanzi">忘</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="想"
+      data-audio="/audio/hanzi/266_xiang3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="想，xiǎng，点击播放三遍"
+    >
+      <div class="meta"><span>266</span><span>第 89 关</span></div>
+      <div class="pinyin">xiǎng</div>
+      <div class="hanzi">想</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="念"
+      data-audio="/audio/hanzi/267_nian4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="念，niàn，点击播放三遍"
+    >
+      <div class="meta"><span>267</span><span>第 89 关</span></div>
+      <div class="pinyin">niàn</div>
+      <div class="hanzi">念</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="王"
+      data-audio="/audio/hanzi/268_wang2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="王，wáng，点击播放三遍"
+    >
+      <div class="meta"><span>268</span><span>第 90 关</span></div>
+      <div class="pinyin">wáng</div>
+      <div class="hanzi">王</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="从"
+      data-audio="/audio/hanzi/269_cong2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="从，cóng，点击播放三遍"
+    >
+      <div class="meta"><span>269</span><span>第 90 关</span></div>
+      <div class="pinyin">cóng</div>
+      <div class="hanzi">从</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="边"
+      data-audio="/audio/hanzi/270_bian1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="边，biān，点击播放三遍"
+    >
+      <div class="meta"><span>270</span><span>第 90 关</span></div>
+      <div class="pinyin">biān</div>
+      <div class="hanzi">边</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="这"
+      data-audio="/audio/hanzi/271_zhe4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="这，zhè，点击播放三遍"
+    >
+      <div class="meta"><span>271</span><span>第 91 关</span></div>
+      <div class="pinyin">zhè</div>
+      <div class="hanzi">这</div>
+      <div class="other-pinyin">另：zhèi</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="进"
+      data-audio="/audio/hanzi/272_jin4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="进，jìn，点击播放三遍"
+    >
+      <div class="meta"><span>272</span><span>第 91 关</span></div>
+      <div class="pinyin">jìn</div>
+      <div class="hanzi">进</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="道"
+      data-audio="/audio/hanzi/273_dao4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="道，dào，点击播放三遍"
+    >
+      <div class="meta"><span>273</span><span>第 91 关</span></div>
+      <div class="pinyin">dào</div>
+      <div class="hanzi">道</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="贝"
+      data-audio="/audio/hanzi/274_bei4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="贝，bèi，点击播放三遍"
+    >
+      <div class="meta"><span>274</span><span>第 92 关</span></div>
+      <div class="pinyin">bèi</div>
+      <div class="hanzi">贝</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="原"
+      data-audio="/audio/hanzi/275_yuan2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="原，yuán，点击播放三遍"
+    >
+      <div class="meta"><span>275</span><span>第 92 关</span></div>
+      <div class="pinyin">yuán</div>
+      <div class="hanzi">原</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="男"
+      data-audio="/audio/hanzi/276_nan2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="男，nán，点击播放三遍"
+    >
+      <div class="meta"><span>276</span><span>第 92 关</span></div>
+      <div class="pinyin">nán</div>
+      <div class="hanzi">男</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="爱"
+      data-audio="/audio/hanzi/277_ai4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="爱，ài，点击播放三遍"
+    >
+      <div class="meta"><span>277</span><span>第 93 关</span></div>
+      <div class="pinyin">ài</div>
+      <div class="hanzi">爱</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="虾"
+      data-audio="/audio/hanzi/278_xia1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="虾，xiā，点击播放三遍"
+    >
+      <div class="meta"><span>278</span><span>第 93 关</span></div>
+      <div class="pinyin">xiā</div>
+      <div class="hanzi">虾</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="跑"
+      data-audio="/audio/hanzi/279_pao3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="跑，pǎo，点击播放三遍"
+    >
+      <div class="meta"><span>279</span><span>第 93 关</span></div>
+      <div class="pinyin">pǎo</div>
+      <div class="hanzi">跑</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="吹"
+      data-audio="/audio/hanzi/280_chui1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="吹，chuī，点击播放三遍"
+    >
+      <div class="meta"><span>280</span><span>第 94 关</span></div>
+      <div class="pinyin">chuī</div>
+      <div class="hanzi">吹</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="地"
+      data-audio="/audio/hanzi/281_di4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="地，dì，点击播放三遍"
+    >
+      <div class="meta"><span>281</span><span>第 94 关</span></div>
+      <div class="pinyin">dì</div>
+      <div class="hanzi">地</div>
+      <div class="other-pinyin">另：de</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="快"
+      data-audio="/audio/hanzi/282_kuai4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="快，kuài，点击播放三遍"
+    >
+      <div class="meta"><span>282</span><span>第 94 关</span></div>
+      <div class="pinyin">kuài</div>
+      <div class="hanzi">快</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="乐"
+      data-audio="/audio/hanzi/283_le4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="乐，lè，点击播放三遍"
+    >
+      <div class="meta"><span>283</span><span>第 95 关</span></div>
+      <div class="pinyin">lè</div>
+      <div class="hanzi">乐</div>
+      <div class="other-pinyin">另：yuè</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="老"
+      data-audio="/audio/hanzi/284_lao3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="老，lǎo，点击播放三遍"
+    >
+      <div class="meta"><span>284</span><span>第 95 关</span></div>
+      <div class="pinyin">lǎo</div>
+      <div class="hanzi">老</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="师"
+      data-audio="/audio/hanzi/285_shi1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="师，shī，点击播放三遍"
+    >
+      <div class="meta"><span>285</span><span>第 95 关</span></div>
+      <div class="pinyin">shī</div>
+      <div class="hanzi">师</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="短"
+      data-audio="/audio/hanzi/286_duan3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="短，duǎn，点击播放三遍"
+    >
+      <div class="meta"><span>286</span><span>第 96 关</span></div>
+      <div class="pinyin">duǎn</div>
+      <div class="hanzi">短</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="对"
+      data-audio="/audio/hanzi/287_dui4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="对，duì，点击播放三遍"
+    >
+      <div class="meta"><span>287</span><span>第 96 关</span></div>
+      <div class="pinyin">duì</div>
+      <div class="hanzi">对</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="冷"
+      data-audio="/audio/hanzi/288_leng3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="冷，lěng，点击播放三遍"
+    >
+      <div class="meta"><span>288</span><span>第 96 关</span></div>
+      <div class="pinyin">lěng</div>
+      <div class="hanzi">冷</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="淡"
+      data-audio="/audio/hanzi/289_dan4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="淡，dàn，点击播放三遍"
+    >
+      <div class="meta"><span>289</span><span>第 97 关</span></div>
+      <div class="pinyin">dàn</div>
+      <div class="hanzi">淡</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="热"
+      data-audio="/audio/hanzi/290_re4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="热，rè，点击播放三遍"
+    >
+      <div class="meta"><span>290</span><span>第 97 关</span></div>
+      <div class="pinyin">rè</div>
+      <div class="hanzi">热</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="情"
+      data-audio="/audio/hanzi/291_qing2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="情，qíng，点击播放三遍"
+    >
+      <div class="meta"><span>291</span><span>第 97 关</span></div>
+      <div class="pinyin">qíng</div>
+      <div class="hanzi">情</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="拉"
+      data-audio="/audio/hanzi/292_la1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="拉，lā，点击播放三遍"
+    >
+      <div class="meta"><span>292</span><span>第 98 关</span></div>
+      <div class="pinyin">lā</div>
+      <div class="hanzi">拉</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="把"
+      data-audio="/audio/hanzi/293_ba3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="把，bǎ，点击播放三遍"
+    >
+      <div class="meta"><span>293</span><span>第 98 关</span></div>
+      <div class="pinyin">bǎ</div>
+      <div class="hanzi">把</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="给"
+      data-audio="/audio/hanzi/294_gei3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="给，gěi，点击播放三遍"
+    >
+      <div class="meta"><span>294</span><span>第 98 关</span></div>
+      <div class="pinyin">gěi</div>
+      <div class="hanzi">给</div>
+      <div class="other-pinyin">另：jǐ</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="活"
+      data-audio="/audio/hanzi/295_huo2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="活，huó，点击播放三遍"
+    >
+      <div class="meta"><span>295</span><span>第 99 关</span></div>
+      <div class="pinyin">huó</div>
+      <div class="hanzi">活</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card polyphonic"
+      data-char="种"
+      data-audio="/audio/hanzi/296_zhong4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="种，zhòng，点击播放三遍"
+    >
+      <div class="meta"><span>296</span><span>第 99 关</span></div>
+      <div class="pinyin">zhòng</div>
+      <div class="hanzi">种</div>
+      <div class="other-pinyin">另：zhǒng</div>
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="吃"
+      data-audio="/audio/hanzi/297_chi1.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="吃，chī，点击播放三遍"
+    >
+      <div class="meta"><span>297</span><span>第 99 关</span></div>
+      <div class="pinyin">chī</div>
+      <div class="hanzi">吃</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="练"
+      data-audio="/audio/hanzi/298_lian4.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="练，liàn，点击播放三遍"
+    >
+      <div class="meta"><span>298</span><span>第 100 关</span></div>
+      <div class="pinyin">liàn</div>
+      <div class="hanzi">练</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="习"
+      data-audio="/audio/hanzi/299_xi2.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="习，xí，点击播放三遍"
+    >
+      <div class="meta"><span>299</span><span>第 100 关</span></div>
+      <div class="pinyin">xí</div>
+      <div class="hanzi">习</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+
+    <article
+      class="card"
+      data-char="苦"
+      data-audio="/audio/hanzi/300_ku3.mp3"
+      role="button"
+      tabindex="0"
+      aria-label="苦，kǔ，点击播放三遍"
+    >
+      <div class="meta"><span>300</span><span>第 100 关</span></div>
+      <div class="pinyin">kǔ</div>
+      <div class="hanzi">苦</div>
+      
+      <div class="sound-hint">点读 ×3</div>
+    </article>
+    </main>
+    <footer class="sheet-footer">
+      <span>拼音小火车 · 300 字 / 100 关</span>
+      <span>6 / 6</span>
+    </footer>
+  </section>
+  <script>
+    let playToken = 0;
+    let activeAudio = null;
+    const missingAudio = new Set();
+
+    function stopCurrentAudio() {
+      playToken += 1;
+      if (!activeAudio) {
+        return;
+      }
+      activeAudio.pause();
+      activeAudio.currentTime = 0;
+      activeAudio.src = '';
+      activeAudio = null;
+    }
+
+    function wait(ms) {
+      return new Promise(function(resolve) {
+        window.setTimeout(resolve, ms);
+      });
+    }
+
+    function playAudioOnce(src) {
+      return new Promise(function(resolve, reject) {
+        if (activeAudio) {
+          activeAudio.pause();
+          activeAudio.currentTime = 0;
+          activeAudio.src = '';
+          activeAudio = null;
+        }
+
+        const audio = new Audio(src);
+        activeAudio = audio;
+        audio.preload = 'auto';
+        audio.onended = function() {
+          if (activeAudio === audio) {
+            activeAudio = null;
+          }
+          resolve();
+        };
+        audio.onerror = function() {
+          if (activeAudio === audio) {
+            activeAudio = null;
+          }
+          reject(new Error('audio failed'));
+        };
+        audio.play().catch(reject);
+      });
+    }
+
+    function speakWithBrowser(char, repeat, token) {
+      return new Promise(function(resolve) {
+        if (!('speechSynthesis' in window)) {
+          resolve();
+          return;
+        }
+
+        window.speechSynthesis.cancel();
+        let count = 0;
+        function speakOnce() {
+          if (playToken !== token || count >= repeat) {
+            resolve();
+            return;
+          }
+
+          const utterance = new SpeechSynthesisUtterance(char);
+          utterance.lang = 'zh-CN';
+          utterance.rate = 0.75;
+          utterance.pitch = 1.05;
+          utterance.onend = function() {
+            count += 1;
+            window.setTimeout(speakOnce, 260);
+          };
+          utterance.onerror = function() {
+            count += 1;
+            window.setTimeout(speakOnce, 260);
+          };
+          window.speechSynthesis.speak(utterance);
+        }
+        speakOnce();
+      });
+    }
+
+    async function playCard(card) {
+      const token = playToken + 1;
+      playToken = token;
+      const char = card.dataset.char;
+      const audio = card.dataset.audio;
+
+      document.querySelectorAll('.card.playing').forEach(function(item) {
+        item.classList.remove('playing');
+      });
+      card.classList.add('playing');
+
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+
+      if (audio && !missingAudio.has(audio)) {
+        try {
+          for (let index = 0; index < 3; index += 1) {
+            if (playToken !== token) {
+              return;
+            }
+            await playAudioOnce(audio);
+            if (index < 2) {
+              await wait(260);
+            }
+          }
+          card.classList.remove('playing');
+          return;
+        } catch (error) {
+          missingAudio.add(audio);
+        }
+      }
+
+      if (playToken === token) {
+        await speakWithBrowser(char, 3, token);
+      }
+      card.classList.remove('playing');
+    }
+
+    document.addEventListener('click', function(event) {
+      const card = event.target.closest('.card');
+      if (card) {
+        playCard(card);
+      }
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key !== 'Enter' && event.key !== ' ') {
+        return;
+      }
+      const card = event.target.closest('.card');
+      if (card) {
+        event.preventDefault();
+        playCard(card);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,4538 @@
+[
+  {
+    "id": 1,
+    "char": "一",
+    "pinyin": "yī",
+    "allPinyins": [
+      "yī"
+    ],
+    "toneNumber": "yi1",
+    "fileName": "001_yi1.mp3",
+    "audio": "/audio/hanzi/001_yi1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "一",
+    "note": ""
+  },
+  {
+    "id": 2,
+    "char": "二",
+    "pinyin": "èr",
+    "allPinyins": [
+      "èr"
+    ],
+    "toneNumber": "er4",
+    "fileName": "002_er4.mp3",
+    "audio": "/audio/hanzi/002_er4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "二",
+    "note": ""
+  },
+  {
+    "id": 3,
+    "char": "三",
+    "pinyin": "sān",
+    "allPinyins": [
+      "sān"
+    ],
+    "toneNumber": "san1",
+    "fileName": "003_san1.mp3",
+    "audio": "/audio/hanzi/003_san1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "三",
+    "note": ""
+  },
+  {
+    "id": 4,
+    "char": "十",
+    "pinyin": "shí",
+    "allPinyins": [
+      "shí"
+    ],
+    "toneNumber": "shi2",
+    "fileName": "004_shi2.mp3",
+    "audio": "/audio/hanzi/004_shi2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "十",
+    "note": ""
+  },
+  {
+    "id": 5,
+    "char": "木",
+    "pinyin": "mù",
+    "allPinyins": [
+      "mù"
+    ],
+    "toneNumber": "mu4",
+    "fileName": "005_mu4.mp3",
+    "audio": "/audio/hanzi/005_mu4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "木",
+    "note": ""
+  },
+  {
+    "id": 6,
+    "char": "禾",
+    "pinyin": "hé",
+    "allPinyins": [
+      "hé"
+    ],
+    "toneNumber": "he2",
+    "fileName": "006_he2.mp3",
+    "audio": "/audio/hanzi/006_he2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "禾",
+    "note": ""
+  },
+  {
+    "id": 7,
+    "char": "上",
+    "pinyin": "shàng",
+    "allPinyins": [
+      "shàng"
+    ],
+    "toneNumber": "shang4",
+    "fileName": "007_shang4.mp3",
+    "audio": "/audio/hanzi/007_shang4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "上",
+    "note": ""
+  },
+  {
+    "id": 8,
+    "char": "下",
+    "pinyin": "xià",
+    "allPinyins": [
+      "xià"
+    ],
+    "toneNumber": "xia4",
+    "fileName": "008_xia4.mp3",
+    "audio": "/audio/hanzi/008_xia4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "下",
+    "note": ""
+  },
+  {
+    "id": 9,
+    "char": "土",
+    "pinyin": "tǔ",
+    "allPinyins": [
+      "tǔ"
+    ],
+    "toneNumber": "tu3",
+    "fileName": "009_tu3.mp3",
+    "audio": "/audio/hanzi/009_tu3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "土",
+    "note": ""
+  },
+  {
+    "id": 10,
+    "char": "个",
+    "pinyin": "gè",
+    "allPinyins": [
+      "gè"
+    ],
+    "toneNumber": "ge4",
+    "fileName": "010_ge4.mp3",
+    "audio": "/audio/hanzi/010_ge4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "个",
+    "note": ""
+  },
+  {
+    "id": 11,
+    "char": "八",
+    "pinyin": "bā",
+    "allPinyins": [
+      "bā"
+    ],
+    "toneNumber": "ba1",
+    "fileName": "011_ba1.mp3",
+    "audio": "/audio/hanzi/011_ba1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "八",
+    "note": ""
+  },
+  {
+    "id": 12,
+    "char": "入",
+    "pinyin": "rù",
+    "allPinyins": [
+      "rù"
+    ],
+    "toneNumber": "ru4",
+    "fileName": "012_ru4.mp3",
+    "audio": "/audio/hanzi/012_ru4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "入",
+    "note": ""
+  },
+  {
+    "id": 13,
+    "char": "大",
+    "pinyin": "dà",
+    "allPinyins": [
+      "dà"
+    ],
+    "toneNumber": "da4",
+    "fileName": "013_da4.mp3",
+    "audio": "/audio/hanzi/013_da4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "大",
+    "note": ""
+  },
+  {
+    "id": 14,
+    "char": "天",
+    "pinyin": "tiān",
+    "allPinyins": [
+      "tiān"
+    ],
+    "toneNumber": "tian1",
+    "fileName": "014_tian1.mp3",
+    "audio": "/audio/hanzi/014_tian1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "天",
+    "note": ""
+  },
+  {
+    "id": 15,
+    "char": "人",
+    "pinyin": "rén",
+    "allPinyins": [
+      "rén"
+    ],
+    "toneNumber": "ren2",
+    "fileName": "015_ren2.mp3",
+    "audio": "/audio/hanzi/015_ren2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "人",
+    "note": ""
+  },
+  {
+    "id": 16,
+    "char": "火",
+    "pinyin": "huǒ",
+    "allPinyins": [
+      "huǒ"
+    ],
+    "toneNumber": "huo3",
+    "fileName": "016_huo3.mp3",
+    "audio": "/audio/hanzi/016_huo3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "火",
+    "note": ""
+  },
+  {
+    "id": 17,
+    "char": "文",
+    "pinyin": "wén",
+    "allPinyins": [
+      "wén"
+    ],
+    "toneNumber": "wen2",
+    "fileName": "017_wen2.mp3",
+    "audio": "/audio/hanzi/017_wen2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "文",
+    "note": ""
+  },
+  {
+    "id": 18,
+    "char": "六",
+    "pinyin": "liù",
+    "allPinyins": [
+      "liù"
+    ],
+    "toneNumber": "liu4",
+    "fileName": "018_liu4.mp3",
+    "audio": "/audio/hanzi/018_liu4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "六",
+    "note": ""
+  },
+  {
+    "id": 19,
+    "char": "七",
+    "pinyin": "qī",
+    "allPinyins": [
+      "qī"
+    ],
+    "toneNumber": "qi1",
+    "fileName": "019_qi1.mp3",
+    "audio": "/audio/hanzi/019_qi1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "七",
+    "note": ""
+  },
+  {
+    "id": 20,
+    "char": "儿",
+    "pinyin": "ér",
+    "allPinyins": [
+      "ér"
+    ],
+    "toneNumber": "er2",
+    "fileName": "020_er2.mp3",
+    "audio": "/audio/hanzi/020_er2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "儿",
+    "note": ""
+  },
+  {
+    "id": 21,
+    "char": "九",
+    "pinyin": "jiǔ",
+    "allPinyins": [
+      "jiǔ"
+    ],
+    "toneNumber": "jiu3",
+    "fileName": "021_jiu3.mp3",
+    "audio": "/audio/hanzi/021_jiu3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "九",
+    "note": ""
+  },
+  {
+    "id": 22,
+    "char": "无",
+    "pinyin": "wú",
+    "allPinyins": [
+      "wú"
+    ],
+    "toneNumber": "wu2",
+    "fileName": "022_wu2.mp3",
+    "audio": "/audio/hanzi/022_wu2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "无",
+    "note": ""
+  },
+  {
+    "id": 23,
+    "char": "口",
+    "pinyin": "kǒu",
+    "allPinyins": [
+      "kǒu"
+    ],
+    "toneNumber": "kou3",
+    "fileName": "023_kou3.mp3",
+    "audio": "/audio/hanzi/023_kou3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "口",
+    "note": ""
+  },
+  {
+    "id": 24,
+    "char": "日",
+    "pinyin": "rì",
+    "allPinyins": [
+      "rì"
+    ],
+    "toneNumber": "ri4",
+    "fileName": "024_ri4.mp3",
+    "audio": "/audio/hanzi/024_ri4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "日",
+    "note": ""
+  },
+  {
+    "id": 25,
+    "char": "中",
+    "pinyin": "zhōng",
+    "allPinyins": [
+      "zhōng"
+    ],
+    "toneNumber": "zhong1",
+    "fileName": "025_zhong1.mp3",
+    "audio": "/audio/hanzi/025_zhong1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "中",
+    "note": ""
+  },
+  {
+    "id": 26,
+    "char": "了",
+    "pinyin": "le",
+    "allPinyins": [
+      "le",
+      "liǎo"
+    ],
+    "toneNumber": "le5",
+    "fileName": "026_le5.mp3",
+    "audio": "/audio/hanzi/026_le5.mp3",
+    "isPolyphonic": true,
+    "source": "一年级上册常见字",
+    "recommendedText": "了",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 27,
+    "char": "子",
+    "pinyin": "zǐ",
+    "allPinyins": [
+      "zǐ"
+    ],
+    "toneNumber": "zi3",
+    "fileName": "027_zi3.mp3",
+    "audio": "/audio/hanzi/027_zi3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "子",
+    "note": ""
+  },
+  {
+    "id": 28,
+    "char": "门",
+    "pinyin": "mén",
+    "allPinyins": [
+      "mén"
+    ],
+    "toneNumber": "men2",
+    "fileName": "028_men2.mp3",
+    "audio": "/audio/hanzi/028_men2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "门",
+    "note": ""
+  },
+  {
+    "id": 29,
+    "char": "月",
+    "pinyin": "yuè",
+    "allPinyins": [
+      "yuè"
+    ],
+    "toneNumber": "yue4",
+    "fileName": "029_yue4.mp3",
+    "audio": "/audio/hanzi/029_yue4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "月",
+    "note": ""
+  },
+  {
+    "id": 30,
+    "char": "不",
+    "pinyin": "bù",
+    "allPinyins": [
+      "bù"
+    ],
+    "toneNumber": "bu4",
+    "fileName": "030_bu4.mp3",
+    "audio": "/audio/hanzi/030_bu4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "不",
+    "note": ""
+  },
+  {
+    "id": 31,
+    "char": "开",
+    "pinyin": "kāi",
+    "allPinyins": [
+      "kāi"
+    ],
+    "toneNumber": "kai1",
+    "fileName": "031_kai1.mp3",
+    "audio": "/audio/hanzi/031_kai1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "开",
+    "note": ""
+  },
+  {
+    "id": 32,
+    "char": "四",
+    "pinyin": "sì",
+    "allPinyins": [
+      "sì"
+    ],
+    "toneNumber": "si4",
+    "fileName": "032_si4.mp3",
+    "audio": "/audio/hanzi/032_si4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "四",
+    "note": ""
+  },
+  {
+    "id": 33,
+    "char": "五",
+    "pinyin": "wǔ",
+    "allPinyins": [
+      "wǔ"
+    ],
+    "toneNumber": "wu3",
+    "fileName": "033_wu3.mp3",
+    "audio": "/audio/hanzi/033_wu3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "五",
+    "note": ""
+  },
+  {
+    "id": 34,
+    "char": "目",
+    "pinyin": "mù",
+    "allPinyins": [
+      "mù"
+    ],
+    "toneNumber": "mu4",
+    "fileName": "034_mu4.mp3",
+    "audio": "/audio/hanzi/034_mu4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "目",
+    "note": ""
+  },
+  {
+    "id": 35,
+    "char": "耳",
+    "pinyin": "ěr",
+    "allPinyins": [
+      "ěr"
+    ],
+    "toneNumber": "er3",
+    "fileName": "035_er3.mp3",
+    "audio": "/audio/hanzi/035_er3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "耳",
+    "note": ""
+  },
+  {
+    "id": 36,
+    "char": "头",
+    "pinyin": "tóu",
+    "allPinyins": [
+      "tóu"
+    ],
+    "toneNumber": "tou2",
+    "fileName": "036_tou2.mp3",
+    "audio": "/audio/hanzi/036_tou2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "头",
+    "note": ""
+  },
+  {
+    "id": 37,
+    "char": "米",
+    "pinyin": "mǐ",
+    "allPinyins": [
+      "mǐ"
+    ],
+    "toneNumber": "mi3",
+    "fileName": "037_mi3.mp3",
+    "audio": "/audio/hanzi/037_mi3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "米",
+    "note": ""
+  },
+  {
+    "id": 38,
+    "char": "见",
+    "pinyin": "jiàn",
+    "allPinyins": [
+      "jiàn"
+    ],
+    "toneNumber": "jian4",
+    "fileName": "038_jian4.mp3",
+    "audio": "/audio/hanzi/038_jian4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "见",
+    "note": ""
+  },
+  {
+    "id": 39,
+    "char": "白",
+    "pinyin": "bái",
+    "allPinyins": [
+      "bái"
+    ],
+    "toneNumber": "bai2",
+    "fileName": "039_bai2.mp3",
+    "audio": "/audio/hanzi/039_bai2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "白",
+    "note": ""
+  },
+  {
+    "id": 40,
+    "char": "田",
+    "pinyin": "tián",
+    "allPinyins": [
+      "tián"
+    ],
+    "toneNumber": "tian2",
+    "fileName": "040_tian2.mp3",
+    "audio": "/audio/hanzi/040_tian2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "田",
+    "note": ""
+  },
+  {
+    "id": 41,
+    "char": "电",
+    "pinyin": "diàn",
+    "allPinyins": [
+      "diàn"
+    ],
+    "toneNumber": "dian4",
+    "fileName": "041_dian4.mp3",
+    "audio": "/audio/hanzi/041_dian4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "电",
+    "note": ""
+  },
+  {
+    "id": 42,
+    "char": "也",
+    "pinyin": "yě",
+    "allPinyins": [
+      "yě"
+    ],
+    "toneNumber": "ye3",
+    "fileName": "042_ye3.mp3",
+    "audio": "/audio/hanzi/042_ye3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "也",
+    "note": ""
+  },
+  {
+    "id": 43,
+    "char": "长",
+    "pinyin": "cháng",
+    "allPinyins": [
+      "cháng",
+      "zhǎng"
+    ],
+    "toneNumber": "chang2",
+    "fileName": "043_chang2.mp3",
+    "audio": "/audio/hanzi/043_chang2.mp3",
+    "isPolyphonic": true,
+    "source": "一年级上册常见字",
+    "recommendedText": "长",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 44,
+    "char": "山",
+    "pinyin": "shān",
+    "allPinyins": [
+      "shān"
+    ],
+    "toneNumber": "shan1",
+    "fileName": "044_shan1.mp3",
+    "audio": "/audio/hanzi/044_shan1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "山",
+    "note": ""
+  },
+  {
+    "id": 45,
+    "char": "出",
+    "pinyin": "chū",
+    "allPinyins": [
+      "chū"
+    ],
+    "toneNumber": "chu1",
+    "fileName": "045_chu1.mp3",
+    "audio": "/audio/hanzi/045_chu1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "出",
+    "note": ""
+  },
+  {
+    "id": 46,
+    "char": "飞",
+    "pinyin": "fēi",
+    "allPinyins": [
+      "fēi"
+    ],
+    "toneNumber": "fei1",
+    "fileName": "046_fei1.mp3",
+    "audio": "/audio/hanzi/046_fei1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "飞",
+    "note": ""
+  },
+  {
+    "id": 47,
+    "char": "马",
+    "pinyin": "mǎ",
+    "allPinyins": [
+      "mǎ"
+    ],
+    "toneNumber": "ma3",
+    "fileName": "047_ma3.mp3",
+    "audio": "/audio/hanzi/047_ma3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "马",
+    "note": ""
+  },
+  {
+    "id": 48,
+    "char": "鸟",
+    "pinyin": "niǎo",
+    "allPinyins": [
+      "niǎo"
+    ],
+    "toneNumber": "niao3",
+    "fileName": "048_niao3.mp3",
+    "audio": "/audio/hanzi/048_niao3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "鸟",
+    "note": ""
+  },
+  {
+    "id": 49,
+    "char": "云",
+    "pinyin": "yún",
+    "allPinyins": [
+      "yún"
+    ],
+    "toneNumber": "yun2",
+    "fileName": "049_yun2.mp3",
+    "audio": "/audio/hanzi/049_yun2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "云",
+    "note": ""
+  },
+  {
+    "id": 50,
+    "char": "公",
+    "pinyin": "gōng",
+    "allPinyins": [
+      "gōng"
+    ],
+    "toneNumber": "gong1",
+    "fileName": "050_gong1.mp3",
+    "audio": "/audio/hanzi/050_gong1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "公",
+    "note": ""
+  },
+  {
+    "id": 51,
+    "char": "车",
+    "pinyin": "chē",
+    "allPinyins": [
+      "chē"
+    ],
+    "toneNumber": "che1",
+    "fileName": "051_che1.mp3",
+    "audio": "/audio/hanzi/051_che1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "车",
+    "note": ""
+  },
+  {
+    "id": 52,
+    "char": "牛",
+    "pinyin": "niú",
+    "allPinyins": [
+      "niú"
+    ],
+    "toneNumber": "niu2",
+    "fileName": "052_niu2.mp3",
+    "audio": "/audio/hanzi/052_niu2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "牛",
+    "note": ""
+  },
+  {
+    "id": 53,
+    "char": "羊",
+    "pinyin": "yáng",
+    "allPinyins": [
+      "yáng"
+    ],
+    "toneNumber": "yang2",
+    "fileName": "053_yang2.mp3",
+    "audio": "/audio/hanzi/053_yang2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "羊",
+    "note": ""
+  },
+  {
+    "id": 54,
+    "char": "小",
+    "pinyin": "xiǎo",
+    "allPinyins": [
+      "xiǎo"
+    ],
+    "toneNumber": "xiao3",
+    "fileName": "054_xiao3.mp3",
+    "audio": "/audio/hanzi/054_xiao3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "小",
+    "note": ""
+  },
+  {
+    "id": 55,
+    "char": "少",
+    "pinyin": "shǎo",
+    "allPinyins": [
+      "shǎo",
+      "shào"
+    ],
+    "toneNumber": "shao3",
+    "fileName": "055_shao3.mp3",
+    "audio": "/audio/hanzi/055_shao3.mp3",
+    "isPolyphonic": true,
+    "source": "一年级上册常见字",
+    "recommendedText": "少",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 56,
+    "char": "巾",
+    "pinyin": "jīn",
+    "allPinyins": [
+      "jīn"
+    ],
+    "toneNumber": "jin1",
+    "fileName": "056_jin1.mp3",
+    "audio": "/audio/hanzi/056_jin1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "巾",
+    "note": ""
+  },
+  {
+    "id": 57,
+    "char": "牙",
+    "pinyin": "yá",
+    "allPinyins": [
+      "yá"
+    ],
+    "toneNumber": "ya2",
+    "fileName": "057_ya2.mp3",
+    "audio": "/audio/hanzi/057_ya2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "牙",
+    "note": ""
+  },
+  {
+    "id": 58,
+    "char": "尺",
+    "pinyin": "chǐ",
+    "allPinyins": [
+      "chǐ"
+    ],
+    "toneNumber": "chi3",
+    "fileName": "058_chi3.mp3",
+    "audio": "/audio/hanzi/058_chi3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "尺",
+    "note": ""
+  },
+  {
+    "id": 59,
+    "char": "毛",
+    "pinyin": "máo",
+    "allPinyins": [
+      "máo"
+    ],
+    "toneNumber": "mao2",
+    "fileName": "059_mao2.mp3",
+    "audio": "/audio/hanzi/059_mao2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "毛",
+    "note": ""
+  },
+  {
+    "id": 60,
+    "char": "卜",
+    "pinyin": "bǔ",
+    "allPinyins": [
+      "bǔ",
+      "bo"
+    ],
+    "toneNumber": "bu3",
+    "fileName": "060_bu3.mp3",
+    "audio": "/audio/hanzi/060_bu3.mp3",
+    "isPolyphonic": true,
+    "source": "一年级上册常见字",
+    "recommendedText": "卜",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 61,
+    "char": "又",
+    "pinyin": "yòu",
+    "allPinyins": [
+      "yòu"
+    ],
+    "toneNumber": "you4",
+    "fileName": "061_you4.mp3",
+    "audio": "/audio/hanzi/061_you4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "又",
+    "note": ""
+  },
+  {
+    "id": 62,
+    "char": "心",
+    "pinyin": "xīn",
+    "allPinyins": [
+      "xīn"
+    ],
+    "toneNumber": "xin1",
+    "fileName": "062_xin1.mp3",
+    "audio": "/audio/hanzi/062_xin1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "心",
+    "note": ""
+  },
+  {
+    "id": 63,
+    "char": "风",
+    "pinyin": "fēng",
+    "allPinyins": [
+      "fēng"
+    ],
+    "toneNumber": "feng1",
+    "fileName": "063_feng1.mp3",
+    "audio": "/audio/hanzi/063_feng1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "风",
+    "note": ""
+  },
+  {
+    "id": 64,
+    "char": "力",
+    "pinyin": "lì",
+    "allPinyins": [
+      "lì"
+    ],
+    "toneNumber": "li4",
+    "fileName": "064_li4.mp3",
+    "audio": "/audio/hanzi/064_li4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "力",
+    "note": ""
+  },
+  {
+    "id": 65,
+    "char": "手",
+    "pinyin": "shǒu",
+    "allPinyins": [
+      "shǒu"
+    ],
+    "toneNumber": "shou3",
+    "fileName": "065_shou3.mp3",
+    "audio": "/audio/hanzi/065_shou3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "手",
+    "note": ""
+  },
+  {
+    "id": 66,
+    "char": "水",
+    "pinyin": "shuǐ",
+    "allPinyins": [
+      "shuǐ"
+    ],
+    "toneNumber": "shui3",
+    "fileName": "066_shui3.mp3",
+    "audio": "/audio/hanzi/066_shui3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "水",
+    "note": ""
+  },
+  {
+    "id": 67,
+    "char": "广",
+    "pinyin": "guǎng",
+    "allPinyins": [
+      "guǎng"
+    ],
+    "toneNumber": "guang3",
+    "fileName": "067_guang3.mp3",
+    "audio": "/audio/hanzi/067_guang3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "广",
+    "note": ""
+  },
+  {
+    "id": 68,
+    "char": "升",
+    "pinyin": "shēng",
+    "allPinyins": [
+      "shēng"
+    ],
+    "toneNumber": "sheng1",
+    "fileName": "068_sheng1.mp3",
+    "audio": "/audio/hanzi/068_sheng1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "升",
+    "note": ""
+  },
+  {
+    "id": 69,
+    "char": "足",
+    "pinyin": "zú",
+    "allPinyins": [
+      "zú"
+    ],
+    "toneNumber": "zu2",
+    "fileName": "069_zu2.mp3",
+    "audio": "/audio/hanzi/069_zu2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "足",
+    "note": ""
+  },
+  {
+    "id": 70,
+    "char": "走",
+    "pinyin": "zǒu",
+    "allPinyins": [
+      "zǒu"
+    ],
+    "toneNumber": "zou3",
+    "fileName": "070_zou3.mp3",
+    "audio": "/audio/hanzi/070_zou3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "走",
+    "note": ""
+  },
+  {
+    "id": 71,
+    "char": "方",
+    "pinyin": "fāng",
+    "allPinyins": [
+      "fāng"
+    ],
+    "toneNumber": "fang1",
+    "fileName": "071_fang1.mp3",
+    "audio": "/audio/hanzi/071_fang1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "方",
+    "note": ""
+  },
+  {
+    "id": 72,
+    "char": "半",
+    "pinyin": "bàn",
+    "allPinyins": [
+      "bàn"
+    ],
+    "toneNumber": "ban4",
+    "fileName": "072_ban4.mp3",
+    "audio": "/audio/hanzi/072_ban4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "半",
+    "note": ""
+  },
+  {
+    "id": 73,
+    "char": "巴",
+    "pinyin": "bā",
+    "allPinyins": [
+      "bā"
+    ],
+    "toneNumber": "ba1",
+    "fileName": "073_ba1.mp3",
+    "audio": "/audio/hanzi/073_ba1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "巴",
+    "note": ""
+  },
+  {
+    "id": 74,
+    "char": "业",
+    "pinyin": "yè",
+    "allPinyins": [
+      "yè"
+    ],
+    "toneNumber": "ye4",
+    "fileName": "074_ye4.mp3",
+    "audio": "/audio/hanzi/074_ye4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "业",
+    "note": ""
+  },
+  {
+    "id": 75,
+    "char": "本",
+    "pinyin": "běn",
+    "allPinyins": [
+      "běn"
+    ],
+    "toneNumber": "ben3",
+    "fileName": "075_ben3.mp3",
+    "audio": "/audio/hanzi/075_ben3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "本",
+    "note": ""
+  },
+  {
+    "id": 76,
+    "char": "平",
+    "pinyin": "píng",
+    "allPinyins": [
+      "píng"
+    ],
+    "toneNumber": "ping2",
+    "fileName": "076_ping2.mp3",
+    "audio": "/audio/hanzi/076_ping2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "平",
+    "note": ""
+  },
+  {
+    "id": 77,
+    "char": "书",
+    "pinyin": "shū",
+    "allPinyins": [
+      "shū"
+    ],
+    "toneNumber": "shu1",
+    "fileName": "077_shu1.mp3",
+    "audio": "/audio/hanzi/077_shu1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "书",
+    "note": ""
+  },
+  {
+    "id": 78,
+    "char": "自",
+    "pinyin": "zì",
+    "allPinyins": [
+      "zì"
+    ],
+    "toneNumber": "zi4",
+    "fileName": "078_zi4.mp3",
+    "audio": "/audio/hanzi/078_zi4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "自",
+    "note": ""
+  },
+  {
+    "id": 79,
+    "char": "已",
+    "pinyin": "yǐ",
+    "allPinyins": [
+      "yǐ"
+    ],
+    "toneNumber": "yi3",
+    "fileName": "079_yi3.mp3",
+    "audio": "/audio/hanzi/079_yi3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "已",
+    "note": ""
+  },
+  {
+    "id": 80,
+    "char": "东",
+    "pinyin": "dōng",
+    "allPinyins": [
+      "dōng"
+    ],
+    "toneNumber": "dong1",
+    "fileName": "080_dong1.mp3",
+    "audio": "/audio/hanzi/080_dong1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "东",
+    "note": ""
+  },
+  {
+    "id": 81,
+    "char": "西",
+    "pinyin": "xī",
+    "allPinyins": [
+      "xī"
+    ],
+    "toneNumber": "xi1",
+    "fileName": "081_xi1.mp3",
+    "audio": "/audio/hanzi/081_xi1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "西",
+    "note": ""
+  },
+  {
+    "id": 82,
+    "char": "回",
+    "pinyin": "huí",
+    "allPinyins": [
+      "huí"
+    ],
+    "toneNumber": "hui2",
+    "fileName": "082_hui2.mp3",
+    "audio": "/audio/hanzi/082_hui2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "回",
+    "note": ""
+  },
+  {
+    "id": 83,
+    "char": "片",
+    "pinyin": "piàn",
+    "allPinyins": [
+      "piàn"
+    ],
+    "toneNumber": "pian4",
+    "fileName": "083_pian4.mp3",
+    "audio": "/audio/hanzi/083_pian4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "片",
+    "note": ""
+  },
+  {
+    "id": 84,
+    "char": "皮",
+    "pinyin": "pí",
+    "allPinyins": [
+      "pí"
+    ],
+    "toneNumber": "pi2",
+    "fileName": "084_pi2.mp3",
+    "audio": "/audio/hanzi/084_pi2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "皮",
+    "note": ""
+  },
+  {
+    "id": 85,
+    "char": "生",
+    "pinyin": "shēng",
+    "allPinyins": [
+      "shēng"
+    ],
+    "toneNumber": "sheng1",
+    "fileName": "085_sheng1.mp3",
+    "audio": "/audio/hanzi/085_sheng1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "生",
+    "note": ""
+  },
+  {
+    "id": 86,
+    "char": "里",
+    "pinyin": "lǐ",
+    "allPinyins": [
+      "lǐ"
+    ],
+    "toneNumber": "li3",
+    "fileName": "086_li3.mp3",
+    "audio": "/audio/hanzi/086_li3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "里",
+    "note": ""
+  },
+  {
+    "id": 87,
+    "char": "果",
+    "pinyin": "guǒ",
+    "allPinyins": [
+      "guǒ"
+    ],
+    "toneNumber": "guo3",
+    "fileName": "087_guo3.mp3",
+    "audio": "/audio/hanzi/087_guo3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "果",
+    "note": ""
+  },
+  {
+    "id": 88,
+    "char": "几",
+    "pinyin": "jǐ",
+    "allPinyins": [
+      "jǐ"
+    ],
+    "toneNumber": "ji3",
+    "fileName": "088_ji3.mp3",
+    "audio": "/audio/hanzi/088_ji3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "几",
+    "note": ""
+  },
+  {
+    "id": 89,
+    "char": "用",
+    "pinyin": "yòng",
+    "allPinyins": [
+      "yòng"
+    ],
+    "toneNumber": "yong4",
+    "fileName": "089_yong4.mp3",
+    "audio": "/audio/hanzi/089_yong4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "用",
+    "note": ""
+  },
+  {
+    "id": 90,
+    "char": "鱼",
+    "pinyin": "yú",
+    "allPinyins": [
+      "yú"
+    ],
+    "toneNumber": "yu2",
+    "fileName": "090_yu2.mp3",
+    "audio": "/audio/hanzi/090_yu2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "鱼",
+    "note": ""
+  },
+  {
+    "id": 91,
+    "char": "今",
+    "pinyin": "jīn",
+    "allPinyins": [
+      "jīn"
+    ],
+    "toneNumber": "jin1",
+    "fileName": "091_jin1.mp3",
+    "audio": "/audio/hanzi/091_jin1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "今",
+    "note": ""
+  },
+  {
+    "id": 92,
+    "char": "正",
+    "pinyin": "zhèng",
+    "allPinyins": [
+      "zhèng",
+      "zhēng"
+    ],
+    "toneNumber": "zheng4",
+    "fileName": "092_zheng4.mp3",
+    "audio": "/audio/hanzi/092_zheng4.mp3",
+    "isPolyphonic": true,
+    "source": "一年级上册常见字",
+    "recommendedText": "正",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 93,
+    "char": "雨",
+    "pinyin": "yǔ",
+    "allPinyins": [
+      "yǔ"
+    ],
+    "toneNumber": "yu3",
+    "fileName": "093_yu3.mp3",
+    "audio": "/audio/hanzi/093_yu3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "雨",
+    "note": ""
+  },
+  {
+    "id": 94,
+    "char": "两",
+    "pinyin": "liǎng",
+    "allPinyins": [
+      "liǎng"
+    ],
+    "toneNumber": "liang3",
+    "fileName": "094_liang3.mp3",
+    "audio": "/audio/hanzi/094_liang3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "两",
+    "note": ""
+  },
+  {
+    "id": 95,
+    "char": "瓜",
+    "pinyin": "guā",
+    "allPinyins": [
+      "guā"
+    ],
+    "toneNumber": "gua1",
+    "fileName": "095_gua1.mp3",
+    "audio": "/audio/hanzi/095_gua1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "瓜",
+    "note": ""
+  },
+  {
+    "id": 96,
+    "char": "衣",
+    "pinyin": "yī",
+    "allPinyins": [
+      "yī"
+    ],
+    "toneNumber": "yi1",
+    "fileName": "096_yi1.mp3",
+    "audio": "/audio/hanzi/096_yi1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "衣",
+    "note": ""
+  },
+  {
+    "id": 97,
+    "char": "来",
+    "pinyin": "lái",
+    "allPinyins": [
+      "lái"
+    ],
+    "toneNumber": "lai2",
+    "fileName": "097_lai2.mp3",
+    "audio": "/audio/hanzi/097_lai2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "来",
+    "note": ""
+  },
+  {
+    "id": 98,
+    "char": "年",
+    "pinyin": "nián",
+    "allPinyins": [
+      "nián"
+    ],
+    "toneNumber": "nian2",
+    "fileName": "098_nian2.mp3",
+    "audio": "/audio/hanzi/098_nian2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "年",
+    "note": ""
+  },
+  {
+    "id": 99,
+    "char": "左",
+    "pinyin": "zuǒ",
+    "allPinyins": [
+      "zuǒ"
+    ],
+    "toneNumber": "zuo3",
+    "fileName": "099_zuo3.mp3",
+    "audio": "/audio/hanzi/099_zuo3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "左",
+    "note": ""
+  },
+  {
+    "id": 100,
+    "char": "右",
+    "pinyin": "yòu",
+    "allPinyins": [
+      "yòu"
+    ],
+    "toneNumber": "you4",
+    "fileName": "100_you4.mp3",
+    "audio": "/audio/hanzi/100_you4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级上册常见字",
+    "recommendedText": "右",
+    "note": ""
+  },
+  {
+    "id": 101,
+    "char": "万",
+    "pinyin": "wàn",
+    "allPinyins": [
+      "wàn"
+    ],
+    "toneNumber": "wan4",
+    "fileName": "101_wan4.mp3",
+    "audio": "/audio/hanzi/101_wan4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "万",
+    "note": ""
+  },
+  {
+    "id": 102,
+    "char": "丁",
+    "pinyin": "dīng",
+    "allPinyins": [
+      "dīng"
+    ],
+    "toneNumber": "ding1",
+    "fileName": "102_ding1.mp3",
+    "audio": "/audio/hanzi/102_ding1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "丁",
+    "note": ""
+  },
+  {
+    "id": 103,
+    "char": "冬",
+    "pinyin": "dōng",
+    "allPinyins": [
+      "dōng"
+    ],
+    "toneNumber": "dong1",
+    "fileName": "103_dong1.mp3",
+    "audio": "/audio/hanzi/103_dong1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "冬",
+    "note": ""
+  },
+  {
+    "id": 104,
+    "char": "百",
+    "pinyin": "bǎi",
+    "allPinyins": [
+      "bǎi"
+    ],
+    "toneNumber": "bai3",
+    "fileName": "104_bai3.mp3",
+    "audio": "/audio/hanzi/104_bai3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "百",
+    "note": ""
+  },
+  {
+    "id": 105,
+    "char": "齐",
+    "pinyin": "qí",
+    "allPinyins": [
+      "qí"
+    ],
+    "toneNumber": "qi2",
+    "fileName": "105_qi2.mp3",
+    "audio": "/audio/hanzi/105_qi2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "齐",
+    "note": ""
+  },
+  {
+    "id": 106,
+    "char": "说",
+    "pinyin": "shuō",
+    "allPinyins": [
+      "shuō"
+    ],
+    "toneNumber": "shuo1",
+    "fileName": "106_shuo1.mp3",
+    "audio": "/audio/hanzi/106_shuo1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "说",
+    "note": ""
+  },
+  {
+    "id": 107,
+    "char": "话",
+    "pinyin": "huà",
+    "allPinyins": [
+      "huà"
+    ],
+    "toneNumber": "hua4",
+    "fileName": "107_hua4.mp3",
+    "audio": "/audio/hanzi/107_hua4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "话",
+    "note": ""
+  },
+  {
+    "id": 108,
+    "char": "朋",
+    "pinyin": "péng",
+    "allPinyins": [
+      "péng"
+    ],
+    "toneNumber": "peng2",
+    "fileName": "108_peng2.mp3",
+    "audio": "/audio/hanzi/108_peng2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "朋",
+    "note": ""
+  },
+  {
+    "id": 109,
+    "char": "友",
+    "pinyin": "yǒu",
+    "allPinyins": [
+      "yǒu"
+    ],
+    "toneNumber": "you3",
+    "fileName": "109_you3.mp3",
+    "audio": "/audio/hanzi/109_you3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "友",
+    "note": ""
+  },
+  {
+    "id": 110,
+    "char": "春",
+    "pinyin": "chūn",
+    "allPinyins": [
+      "chūn"
+    ],
+    "toneNumber": "chun1",
+    "fileName": "110_chun1.mp3",
+    "audio": "/audio/hanzi/110_chun1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "春",
+    "note": ""
+  },
+  {
+    "id": 111,
+    "char": "高",
+    "pinyin": "gāo",
+    "allPinyins": [
+      "gāo"
+    ],
+    "toneNumber": "gao1",
+    "fileName": "111_gao1.mp3",
+    "audio": "/audio/hanzi/111_gao1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "高",
+    "note": ""
+  },
+  {
+    "id": 112,
+    "char": "你",
+    "pinyin": "nǐ",
+    "allPinyins": [
+      "nǐ"
+    ],
+    "toneNumber": "ni3",
+    "fileName": "112_ni3.mp3",
+    "audio": "/audio/hanzi/112_ni3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "你",
+    "note": ""
+  },
+  {
+    "id": 113,
+    "char": "们",
+    "pinyin": "men",
+    "allPinyins": [
+      "men"
+    ],
+    "toneNumber": "men5",
+    "fileName": "113_men5.mp3",
+    "audio": "/audio/hanzi/113_men5.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "们",
+    "note": ""
+  },
+  {
+    "id": 114,
+    "char": "红",
+    "pinyin": "hóng",
+    "allPinyins": [
+      "hóng"
+    ],
+    "toneNumber": "hong2",
+    "fileName": "114_hong2.mp3",
+    "audio": "/audio/hanzi/114_hong2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "红",
+    "note": ""
+  },
+  {
+    "id": 115,
+    "char": "绿",
+    "pinyin": "lǜ",
+    "allPinyins": [
+      "lǜ"
+    ],
+    "toneNumber": "lv4",
+    "fileName": "115_lv4.mp3",
+    "audio": "/audio/hanzi/115_lv4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "绿",
+    "note": ""
+  },
+  {
+    "id": 116,
+    "char": "花",
+    "pinyin": "huā",
+    "allPinyins": [
+      "huā"
+    ],
+    "toneNumber": "hua1",
+    "fileName": "116_hua1.mp3",
+    "audio": "/audio/hanzi/116_hua1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "花",
+    "note": ""
+  },
+  {
+    "id": 117,
+    "char": "草",
+    "pinyin": "cǎo",
+    "allPinyins": [
+      "cǎo"
+    ],
+    "toneNumber": "cao3",
+    "fileName": "117_cao3.mp3",
+    "audio": "/audio/hanzi/117_cao3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "草",
+    "note": ""
+  },
+  {
+    "id": 118,
+    "char": "爷",
+    "pinyin": "yé",
+    "allPinyins": [
+      "yé"
+    ],
+    "toneNumber": "ye2",
+    "fileName": "118_ye2.mp3",
+    "audio": "/audio/hanzi/118_ye2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "爷",
+    "note": ""
+  },
+  {
+    "id": 119,
+    "char": "节",
+    "pinyin": "jié",
+    "allPinyins": [
+      "jié"
+    ],
+    "toneNumber": "jie2",
+    "fileName": "119_jie2.mp3",
+    "audio": "/audio/hanzi/119_jie2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "节",
+    "note": ""
+  },
+  {
+    "id": 120,
+    "char": "岁",
+    "pinyin": "suì",
+    "allPinyins": [
+      "suì"
+    ],
+    "toneNumber": "sui4",
+    "fileName": "120_sui4.mp3",
+    "audio": "/audio/hanzi/120_sui4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "岁",
+    "note": ""
+  },
+  {
+    "id": 121,
+    "char": "亲",
+    "pinyin": "qīn",
+    "allPinyins": [
+      "qīn"
+    ],
+    "toneNumber": "qin1",
+    "fileName": "121_qin1.mp3",
+    "audio": "/audio/hanzi/121_qin1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "亲",
+    "note": ""
+  },
+  {
+    "id": 122,
+    "char": "的",
+    "pinyin": "de",
+    "allPinyins": [
+      "de",
+      "dí",
+      "dì"
+    ],
+    "toneNumber": "de5",
+    "fileName": "122_de5.mp3",
+    "audio": "/audio/hanzi/122_de5.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "的",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 123,
+    "char": "行",
+    "pinyin": "xíng",
+    "allPinyins": [
+      "xíng",
+      "háng",
+      "héng"
+    ],
+    "toneNumber": "xing2",
+    "fileName": "123_xing2.mp3",
+    "audio": "/audio/hanzi/123_xing2.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "行",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 124,
+    "char": "古",
+    "pinyin": "gǔ",
+    "allPinyins": [
+      "gǔ"
+    ],
+    "toneNumber": "gu3",
+    "fileName": "124_gu3.mp3",
+    "audio": "/audio/hanzi/124_gu3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "古",
+    "note": ""
+  },
+  {
+    "id": 125,
+    "char": "声",
+    "pinyin": "shēng",
+    "allPinyins": [
+      "shēng"
+    ],
+    "toneNumber": "sheng1",
+    "fileName": "125_sheng1.mp3",
+    "audio": "/audio/hanzi/125_sheng1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "声",
+    "note": ""
+  },
+  {
+    "id": 126,
+    "char": "多",
+    "pinyin": "duō",
+    "allPinyins": [
+      "duō"
+    ],
+    "toneNumber": "duo1",
+    "fileName": "126_duo1.mp3",
+    "audio": "/audio/hanzi/126_duo1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "多",
+    "note": ""
+  },
+  {
+    "id": 127,
+    "char": "处",
+    "pinyin": "chù",
+    "allPinyins": [
+      "chù",
+      "chǔ"
+    ],
+    "toneNumber": "chu4",
+    "fileName": "127_chu4.mp3",
+    "audio": "/audio/hanzi/127_chu4.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "处",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 128,
+    "char": "知",
+    "pinyin": "zhī",
+    "allPinyins": [
+      "zhī"
+    ],
+    "toneNumber": "zhi1",
+    "fileName": "128_zhi1.mp3",
+    "audio": "/audio/hanzi/128_zhi1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "知",
+    "note": ""
+  },
+  {
+    "id": 129,
+    "char": "忙",
+    "pinyin": "máng",
+    "allPinyins": [
+      "máng"
+    ],
+    "toneNumber": "mang2",
+    "fileName": "129_mang2.mp3",
+    "audio": "/audio/hanzi/129_mang2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "忙",
+    "note": ""
+  },
+  {
+    "id": 130,
+    "char": "洗",
+    "pinyin": "xǐ",
+    "allPinyins": [
+      "xǐ"
+    ],
+    "toneNumber": "xi3",
+    "fileName": "130_xi3.mp3",
+    "audio": "/audio/hanzi/130_xi3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "洗",
+    "note": ""
+  },
+  {
+    "id": 131,
+    "char": "认",
+    "pinyin": "rèn",
+    "allPinyins": [
+      "rèn"
+    ],
+    "toneNumber": "ren4",
+    "fileName": "131_ren4.mp3",
+    "audio": "/audio/hanzi/131_ren4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "认",
+    "note": ""
+  },
+  {
+    "id": 132,
+    "char": "扫",
+    "pinyin": "sǎo",
+    "allPinyins": [
+      "sǎo"
+    ],
+    "toneNumber": "sao3",
+    "fileName": "132_sao3.mp3",
+    "audio": "/audio/hanzi/132_sao3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "扫",
+    "note": ""
+  },
+  {
+    "id": 133,
+    "char": "真",
+    "pinyin": "zhēn",
+    "allPinyins": [
+      "zhēn"
+    ],
+    "toneNumber": "zhen1",
+    "fileName": "133_zhen1.mp3",
+    "audio": "/audio/hanzi/133_zhen1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "真",
+    "note": ""
+  },
+  {
+    "id": 134,
+    "char": "父",
+    "pinyin": "fù",
+    "allPinyins": [
+      "fù"
+    ],
+    "toneNumber": "fu4",
+    "fileName": "134_fu4.mp3",
+    "audio": "/audio/hanzi/134_fu4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "父",
+    "note": ""
+  },
+  {
+    "id": 135,
+    "char": "母",
+    "pinyin": "mǔ",
+    "allPinyins": [
+      "mǔ"
+    ],
+    "toneNumber": "mu3",
+    "fileName": "135_mu3.mp3",
+    "audio": "/audio/hanzi/135_mu3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "母",
+    "note": ""
+  },
+  {
+    "id": 136,
+    "char": "爸",
+    "pinyin": "bà",
+    "allPinyins": [
+      "bà"
+    ],
+    "toneNumber": "ba4",
+    "fileName": "136_ba4.mp3",
+    "audio": "/audio/hanzi/136_ba4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "爸",
+    "note": ""
+  },
+  {
+    "id": 137,
+    "char": "全",
+    "pinyin": "quán",
+    "allPinyins": [
+      "quán"
+    ],
+    "toneNumber": "quan2",
+    "fileName": "137_quan2.mp3",
+    "audio": "/audio/hanzi/137_quan2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "全",
+    "note": ""
+  },
+  {
+    "id": 138,
+    "char": "关",
+    "pinyin": "guān",
+    "allPinyins": [
+      "guān"
+    ],
+    "toneNumber": "guan1",
+    "fileName": "138_guan1.mp3",
+    "audio": "/audio/hanzi/138_guan1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "关",
+    "note": ""
+  },
+  {
+    "id": 139,
+    "char": "写",
+    "pinyin": "xiě",
+    "allPinyins": [
+      "xiě"
+    ],
+    "toneNumber": "xie3",
+    "fileName": "139_xie3.mp3",
+    "audio": "/audio/hanzi/139_xie3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "写",
+    "note": ""
+  },
+  {
+    "id": 140,
+    "char": "完",
+    "pinyin": "wán",
+    "allPinyins": [
+      "wán"
+    ],
+    "toneNumber": "wan2",
+    "fileName": "140_wan2.mp3",
+    "audio": "/audio/hanzi/140_wan2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "完",
+    "note": ""
+  },
+  {
+    "id": 141,
+    "char": "家",
+    "pinyin": "jiā",
+    "allPinyins": [
+      "jiā"
+    ],
+    "toneNumber": "jia1",
+    "fileName": "141_jia1.mp3",
+    "audio": "/audio/hanzi/141_jia1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "家",
+    "note": ""
+  },
+  {
+    "id": 142,
+    "char": "看",
+    "pinyin": "kàn",
+    "allPinyins": [
+      "kàn"
+    ],
+    "toneNumber": "kan4",
+    "fileName": "142_kan4.mp3",
+    "audio": "/audio/hanzi/142_kan4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "看",
+    "note": ""
+  },
+  {
+    "id": 143,
+    "char": "着",
+    "pinyin": "zhe",
+    "allPinyins": [
+      "zhe",
+      "zháo",
+      "zhuó",
+      "zhāo"
+    ],
+    "toneNumber": "zhe5",
+    "fileName": "143_zhe5.mp3",
+    "audio": "/audio/hanzi/143_zhe5.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "着",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 144,
+    "char": "画",
+    "pinyin": "huà",
+    "allPinyins": [
+      "huà"
+    ],
+    "toneNumber": "hua4",
+    "fileName": "144_hua4.mp3",
+    "audio": "/audio/hanzi/144_hua4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "画",
+    "note": ""
+  },
+  {
+    "id": 145,
+    "char": "笑",
+    "pinyin": "xiào",
+    "allPinyins": [
+      "xiào"
+    ],
+    "toneNumber": "xiao4",
+    "fileName": "145_xiao4.mp3",
+    "audio": "/audio/hanzi/145_xiao4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "笑",
+    "note": ""
+  },
+  {
+    "id": 146,
+    "char": "兴",
+    "pinyin": "xìng",
+    "allPinyins": [
+      "xìng",
+      "xīng"
+    ],
+    "toneNumber": "xing4",
+    "fileName": "146_xing4.mp3",
+    "audio": "/audio/hanzi/146_xing4.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "兴",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 147,
+    "char": "会",
+    "pinyin": "huì",
+    "allPinyins": [
+      "huì"
+    ],
+    "toneNumber": "hui4",
+    "fileName": "147_hui4.mp3",
+    "audio": "/audio/hanzi/147_hui4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "会",
+    "note": ""
+  },
+  {
+    "id": 148,
+    "char": "妈",
+    "pinyin": "mā",
+    "allPinyins": [
+      "mā"
+    ],
+    "toneNumber": "ma1",
+    "fileName": "148_ma1.mp3",
+    "audio": "/audio/hanzi/148_ma1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "妈",
+    "note": ""
+  },
+  {
+    "id": 149,
+    "char": "奶",
+    "pinyin": "nǎi",
+    "allPinyins": [
+      "nǎi"
+    ],
+    "toneNumber": "nai3",
+    "fileName": "149_nai3.mp3",
+    "audio": "/audio/hanzi/149_nai3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "奶",
+    "note": ""
+  },
+  {
+    "id": 150,
+    "char": "午",
+    "pinyin": "wǔ",
+    "allPinyins": [
+      "wǔ"
+    ],
+    "toneNumber": "wu3",
+    "fileName": "150_wu3.mp3",
+    "audio": "/audio/hanzi/150_wu3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "午",
+    "note": ""
+  },
+  {
+    "id": 151,
+    "char": "合",
+    "pinyin": "hé",
+    "allPinyins": [
+      "hé"
+    ],
+    "toneNumber": "he2",
+    "fileName": "151_he2.mp3",
+    "audio": "/audio/hanzi/151_he2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "合",
+    "note": ""
+  },
+  {
+    "id": 152,
+    "char": "放",
+    "pinyin": "fàng",
+    "allPinyins": [
+      "fàng"
+    ],
+    "toneNumber": "fang4",
+    "fileName": "152_fang4.mp3",
+    "audio": "/audio/hanzi/152_fang4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "放",
+    "note": ""
+  },
+  {
+    "id": 153,
+    "char": "收",
+    "pinyin": "shōu",
+    "allPinyins": [
+      "shōu"
+    ],
+    "toneNumber": "shou1",
+    "fileName": "153_shou1.mp3",
+    "audio": "/audio/hanzi/153_shou1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "收",
+    "note": ""
+  },
+  {
+    "id": 154,
+    "char": "女",
+    "pinyin": "nǚ",
+    "allPinyins": [
+      "nǚ"
+    ],
+    "toneNumber": "nv3",
+    "fileName": "154_nv3.mp3",
+    "audio": "/audio/hanzi/154_nv3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "女",
+    "note": ""
+  },
+  {
+    "id": 155,
+    "char": "太",
+    "pinyin": "tài",
+    "allPinyins": [
+      "tài"
+    ],
+    "toneNumber": "tai4",
+    "fileName": "155_tai4.mp3",
+    "audio": "/audio/hanzi/155_tai4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "太",
+    "note": ""
+  },
+  {
+    "id": 156,
+    "char": "气",
+    "pinyin": "qì",
+    "allPinyins": [
+      "qì"
+    ],
+    "toneNumber": "qi4",
+    "fileName": "156_qi4.mp3",
+    "audio": "/audio/hanzi/156_qi4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "气",
+    "note": ""
+  },
+  {
+    "id": 157,
+    "char": "早",
+    "pinyin": "zǎo",
+    "allPinyins": [
+      "zǎo"
+    ],
+    "toneNumber": "zao3",
+    "fileName": "157_zao3.mp3",
+    "audio": "/audio/hanzi/157_zao3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "早",
+    "note": ""
+  },
+  {
+    "id": 158,
+    "char": "去",
+    "pinyin": "qù",
+    "allPinyins": [
+      "qù"
+    ],
+    "toneNumber": "qu4",
+    "fileName": "158_qu4.mp3",
+    "audio": "/audio/hanzi/158_qu4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "去",
+    "note": ""
+  },
+  {
+    "id": 159,
+    "char": "亮",
+    "pinyin": "liàng",
+    "allPinyins": [
+      "liàng"
+    ],
+    "toneNumber": "liang4",
+    "fileName": "159_liang4.mp3",
+    "audio": "/audio/hanzi/159_liang4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "亮",
+    "note": ""
+  },
+  {
+    "id": 160,
+    "char": "和",
+    "pinyin": "hé",
+    "allPinyins": [
+      "hé",
+      "hè",
+      "huó",
+      "huò",
+      "hú"
+    ],
+    "toneNumber": "he2",
+    "fileName": "160_he2.mp3",
+    "audio": "/audio/hanzi/160_he2.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "和",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 161,
+    "char": "语",
+    "pinyin": "yǔ",
+    "allPinyins": [
+      "yǔ"
+    ],
+    "toneNumber": "yu3",
+    "fileName": "161_yu3.mp3",
+    "audio": "/audio/hanzi/161_yu3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "语",
+    "note": ""
+  },
+  {
+    "id": 162,
+    "char": "千",
+    "pinyin": "qiān",
+    "allPinyins": [
+      "qiān"
+    ],
+    "toneNumber": "qian1",
+    "fileName": "162_qian1.mp3",
+    "audio": "/audio/hanzi/162_qian1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "千",
+    "note": ""
+  },
+  {
+    "id": 163,
+    "char": "李",
+    "pinyin": "lǐ",
+    "allPinyins": [
+      "lǐ"
+    ],
+    "toneNumber": "li3",
+    "fileName": "163_li3.mp3",
+    "audio": "/audio/hanzi/163_li3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "李",
+    "note": ""
+  },
+  {
+    "id": 164,
+    "char": "秀",
+    "pinyin": "xiù",
+    "allPinyins": [
+      "xiù"
+    ],
+    "toneNumber": "xiu4",
+    "fileName": "164_xiu4.mp3",
+    "audio": "/audio/hanzi/164_xiu4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "秀",
+    "note": ""
+  },
+  {
+    "id": 165,
+    "char": "香",
+    "pinyin": "xiāng",
+    "allPinyins": [
+      "xiāng"
+    ],
+    "toneNumber": "xiang1",
+    "fileName": "165_xiang1.mp3",
+    "audio": "/audio/hanzi/165_xiang1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "香",
+    "note": ""
+  },
+  {
+    "id": 166,
+    "char": "听",
+    "pinyin": "tīng",
+    "allPinyins": [
+      "tīng"
+    ],
+    "toneNumber": "ting1",
+    "fileName": "166_ting1.mp3",
+    "audio": "/audio/hanzi/166_ting1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "听",
+    "note": ""
+  },
+  {
+    "id": 167,
+    "char": "唱",
+    "pinyin": "chàng",
+    "allPinyins": [
+      "chàng"
+    ],
+    "toneNumber": "chang4",
+    "fileName": "167_chang4.mp3",
+    "audio": "/audio/hanzi/167_chang4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "唱",
+    "note": ""
+  },
+  {
+    "id": 168,
+    "char": "连",
+    "pinyin": "lián",
+    "allPinyins": [
+      "lián"
+    ],
+    "toneNumber": "lian2",
+    "fileName": "168_lian2.mp3",
+    "audio": "/audio/hanzi/168_lian2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "连",
+    "note": ""
+  },
+  {
+    "id": 169,
+    "char": "远",
+    "pinyin": "yuǎn",
+    "allPinyins": [
+      "yuǎn"
+    ],
+    "toneNumber": "yuan3",
+    "fileName": "169_yuan3.mp3",
+    "audio": "/audio/hanzi/169_yuan3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "远",
+    "note": ""
+  },
+  {
+    "id": 170,
+    "char": "定",
+    "pinyin": "dìng",
+    "allPinyins": [
+      "dìng"
+    ],
+    "toneNumber": "ding4",
+    "fileName": "170_ding4.mp3",
+    "audio": "/audio/hanzi/170_ding4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "定",
+    "note": ""
+  },
+  {
+    "id": 171,
+    "char": "向",
+    "pinyin": "xiàng",
+    "allPinyins": [
+      "xiàng"
+    ],
+    "toneNumber": "xiang4",
+    "fileName": "171_xiang4.mp3",
+    "audio": "/audio/hanzi/171_xiang4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "向",
+    "note": ""
+  },
+  {
+    "id": 172,
+    "char": "以",
+    "pinyin": "yǐ",
+    "allPinyins": [
+      "yǐ"
+    ],
+    "toneNumber": "yi3",
+    "fileName": "172_yi3.mp3",
+    "audio": "/audio/hanzi/172_yi3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "以",
+    "note": ""
+  },
+  {
+    "id": 173,
+    "char": "后",
+    "pinyin": "hòu",
+    "allPinyins": [
+      "hòu"
+    ],
+    "toneNumber": "hou4",
+    "fileName": "173_hou4.mp3",
+    "audio": "/audio/hanzi/173_hou4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "后",
+    "note": ""
+  },
+  {
+    "id": 174,
+    "char": "更",
+    "pinyin": "gèng",
+    "allPinyins": [
+      "gèng",
+      "gēng"
+    ],
+    "toneNumber": "geng4",
+    "fileName": "174_geng4.mp3",
+    "audio": "/audio/hanzi/174_geng4.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "更",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 175,
+    "char": "主",
+    "pinyin": "zhǔ",
+    "allPinyins": [
+      "zhǔ"
+    ],
+    "toneNumber": "zhu3",
+    "fileName": "175_zhu3.mp3",
+    "audio": "/audio/hanzi/175_zhu3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "主",
+    "note": ""
+  },
+  {
+    "id": 176,
+    "char": "意",
+    "pinyin": "yì",
+    "allPinyins": [
+      "yì"
+    ],
+    "toneNumber": "yi4",
+    "fileName": "176_yi4.mp3",
+    "audio": "/audio/hanzi/176_yi4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "意",
+    "note": ""
+  },
+  {
+    "id": 177,
+    "char": "总",
+    "pinyin": "zǒng",
+    "allPinyins": [
+      "zǒng"
+    ],
+    "toneNumber": "zong3",
+    "fileName": "177_zong3.mp3",
+    "audio": "/audio/hanzi/177_zong3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "总",
+    "note": ""
+  },
+  {
+    "id": 178,
+    "char": "先",
+    "pinyin": "xiān",
+    "allPinyins": [
+      "xiān"
+    ],
+    "toneNumber": "xian1",
+    "fileName": "178_xian1.mp3",
+    "audio": "/audio/hanzi/178_xian1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "先",
+    "note": ""
+  },
+  {
+    "id": 179,
+    "char": "干",
+    "pinyin": "gān",
+    "allPinyins": [
+      "gān",
+      "gàn"
+    ],
+    "toneNumber": "gan1",
+    "fileName": "179_gan1.mp3",
+    "audio": "/audio/hanzi/179_gan1.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "干",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 180,
+    "char": "赶",
+    "pinyin": "gǎn",
+    "allPinyins": [
+      "gǎn"
+    ],
+    "toneNumber": "gan3",
+    "fileName": "180_gan3.mp3",
+    "audio": "/audio/hanzi/180_gan3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "赶",
+    "note": ""
+  },
+  {
+    "id": 181,
+    "char": "起",
+    "pinyin": "qǐ",
+    "allPinyins": [
+      "qǐ"
+    ],
+    "toneNumber": "qi3",
+    "fileName": "181_qi3.mp3",
+    "audio": "/audio/hanzi/181_qi3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "起",
+    "note": ""
+  },
+  {
+    "id": 182,
+    "char": "明",
+    "pinyin": "míng",
+    "allPinyins": [
+      "míng"
+    ],
+    "toneNumber": "ming2",
+    "fileName": "182_ming2.mp3",
+    "audio": "/audio/hanzi/182_ming2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "明",
+    "note": ""
+  },
+  {
+    "id": 183,
+    "char": "净",
+    "pinyin": "jìng",
+    "allPinyins": [
+      "jìng"
+    ],
+    "toneNumber": "jing4",
+    "fileName": "183_jing4.mp3",
+    "audio": "/audio/hanzi/183_jing4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "净",
+    "note": ""
+  },
+  {
+    "id": 184,
+    "char": "同",
+    "pinyin": "tóng",
+    "allPinyins": [
+      "tóng"
+    ],
+    "toneNumber": "tong2",
+    "fileName": "184_tong2.mp3",
+    "audio": "/audio/hanzi/184_tong2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "同",
+    "note": ""
+  },
+  {
+    "id": 185,
+    "char": "工",
+    "pinyin": "gōng",
+    "allPinyins": [
+      "gōng"
+    ],
+    "toneNumber": "gong1",
+    "fileName": "185_gong1.mp3",
+    "audio": "/audio/hanzi/185_gong1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "工",
+    "note": ""
+  },
+  {
+    "id": 186,
+    "char": "专",
+    "pinyin": "zhuān",
+    "allPinyins": [
+      "zhuān"
+    ],
+    "toneNumber": "zhuan1",
+    "fileName": "186_zhuan1.mp3",
+    "audio": "/audio/hanzi/186_zhuan1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "专",
+    "note": ""
+  },
+  {
+    "id": 187,
+    "char": "才",
+    "pinyin": "cái",
+    "allPinyins": [
+      "cái"
+    ],
+    "toneNumber": "cai2",
+    "fileName": "187_cai2.mp3",
+    "audio": "/audio/hanzi/187_cai2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "才",
+    "note": ""
+  },
+  {
+    "id": 188,
+    "char": "级",
+    "pinyin": "jí",
+    "allPinyins": [
+      "jí"
+    ],
+    "toneNumber": "ji2",
+    "fileName": "188_ji2.mp3",
+    "audio": "/audio/hanzi/188_ji2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "级",
+    "note": ""
+  },
+  {
+    "id": 189,
+    "char": "队",
+    "pinyin": "duì",
+    "allPinyins": [
+      "duì"
+    ],
+    "toneNumber": "dui4",
+    "fileName": "189_dui4.mp3",
+    "audio": "/audio/hanzi/189_dui4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "队",
+    "note": ""
+  },
+  {
+    "id": 190,
+    "char": "蚂",
+    "pinyin": "mǎ",
+    "allPinyins": [
+      "mǎ"
+    ],
+    "toneNumber": "ma3",
+    "fileName": "190_ma3.mp3",
+    "audio": "/audio/hanzi/190_ma3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "蚂",
+    "note": ""
+  },
+  {
+    "id": 191,
+    "char": "蚁",
+    "pinyin": "yǐ",
+    "allPinyins": [
+      "yǐ"
+    ],
+    "toneNumber": "yi3",
+    "fileName": "191_yi3.mp3",
+    "audio": "/audio/hanzi/191_yi3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "蚁",
+    "note": ""
+  },
+  {
+    "id": 192,
+    "char": "前",
+    "pinyin": "qián",
+    "allPinyins": [
+      "qián"
+    ],
+    "toneNumber": "qian2",
+    "fileName": "192_qian2.mp3",
+    "audio": "/audio/hanzi/192_qian2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "前",
+    "note": ""
+  },
+  {
+    "id": 193,
+    "char": "空",
+    "pinyin": "kōng",
+    "allPinyins": [
+      "kōng",
+      "kòng"
+    ],
+    "toneNumber": "kong1",
+    "fileName": "193_kong1.mp3",
+    "audio": "/audio/hanzi/193_kong1.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "空",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 194,
+    "char": "房",
+    "pinyin": "fáng",
+    "allPinyins": [
+      "fáng"
+    ],
+    "toneNumber": "fang2",
+    "fileName": "194_fang2.mp3",
+    "audio": "/audio/hanzi/194_fang2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "房",
+    "note": ""
+  },
+  {
+    "id": 195,
+    "char": "网",
+    "pinyin": "wǎng",
+    "allPinyins": [
+      "wǎng"
+    ],
+    "toneNumber": "wang3",
+    "fileName": "195_wang3.mp3",
+    "audio": "/audio/hanzi/195_wang3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "网",
+    "note": ""
+  },
+  {
+    "id": 196,
+    "char": "诗",
+    "pinyin": "shī",
+    "allPinyins": [
+      "shī"
+    ],
+    "toneNumber": "shi1",
+    "fileName": "196_shi1.mp3",
+    "audio": "/audio/hanzi/196_shi1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "诗",
+    "note": ""
+  },
+  {
+    "id": 197,
+    "char": "林",
+    "pinyin": "lín",
+    "allPinyins": [
+      "lín"
+    ],
+    "toneNumber": "lin2",
+    "fileName": "197_lin2.mp3",
+    "audio": "/audio/hanzi/197_lin2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "林",
+    "note": ""
+  },
+  {
+    "id": 198,
+    "char": "童",
+    "pinyin": "tóng",
+    "allPinyins": [
+      "tóng"
+    ],
+    "toneNumber": "tong2",
+    "fileName": "198_tong2.mp3",
+    "audio": "/audio/hanzi/198_tong2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "童",
+    "note": ""
+  },
+  {
+    "id": 199,
+    "char": "黄",
+    "pinyin": "huáng",
+    "allPinyins": [
+      "huáng"
+    ],
+    "toneNumber": "huang2",
+    "fileName": "199_huang2.mp3",
+    "audio": "/audio/hanzi/199_huang2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "黄",
+    "note": ""
+  },
+  {
+    "id": 200,
+    "char": "闭",
+    "pinyin": "bì",
+    "allPinyins": [
+      "bì"
+    ],
+    "toneNumber": "bi4",
+    "fileName": "200_bi4.mp3",
+    "audio": "/audio/hanzi/200_bi4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "闭",
+    "note": ""
+  },
+  {
+    "id": 201,
+    "char": "立",
+    "pinyin": "lì",
+    "allPinyins": [
+      "lì"
+    ],
+    "toneNumber": "li4",
+    "fileName": "201_li4.mp3",
+    "audio": "/audio/hanzi/201_li4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "立",
+    "note": ""
+  },
+  {
+    "id": 202,
+    "char": "是",
+    "pinyin": "shì",
+    "allPinyins": [
+      "shì"
+    ],
+    "toneNumber": "shi4",
+    "fileName": "202_shi4.mp3",
+    "audio": "/audio/hanzi/202_shi4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "是",
+    "note": ""
+  },
+  {
+    "id": 203,
+    "char": "朵",
+    "pinyin": "duǒ",
+    "allPinyins": [
+      "duǒ"
+    ],
+    "toneNumber": "duo3",
+    "fileName": "203_duo3.mp3",
+    "audio": "/audio/hanzi/203_duo3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "朵",
+    "note": ""
+  },
+  {
+    "id": 204,
+    "char": "美",
+    "pinyin": "měi",
+    "allPinyins": [
+      "měi"
+    ],
+    "toneNumber": "mei3",
+    "fileName": "204_mei3.mp3",
+    "audio": "/audio/hanzi/204_mei3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "美",
+    "note": ""
+  },
+  {
+    "id": 205,
+    "char": "我",
+    "pinyin": "wǒ",
+    "allPinyins": [
+      "wǒ"
+    ],
+    "toneNumber": "wo3",
+    "fileName": "205_wo3.mp3",
+    "audio": "/audio/hanzi/205_wo3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "我",
+    "note": ""
+  },
+  {
+    "id": 206,
+    "char": "叶",
+    "pinyin": "yè",
+    "allPinyins": [
+      "yè"
+    ],
+    "toneNumber": "ye4",
+    "fileName": "206_ye4.mp3",
+    "audio": "/audio/hanzi/206_ye4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "叶",
+    "note": ""
+  },
+  {
+    "id": 207,
+    "char": "机",
+    "pinyin": "jī",
+    "allPinyins": [
+      "jī"
+    ],
+    "toneNumber": "ji1",
+    "fileName": "207_ji1.mp3",
+    "audio": "/audio/hanzi/207_ji1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "机",
+    "note": ""
+  },
+  {
+    "id": 208,
+    "char": "她",
+    "pinyin": "tā",
+    "allPinyins": [
+      "tā"
+    ],
+    "toneNumber": "ta1",
+    "fileName": "208_ta1.mp3",
+    "audio": "/audio/hanzi/208_ta1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "她",
+    "note": ""
+  },
+  {
+    "id": 209,
+    "char": "他",
+    "pinyin": "tā",
+    "allPinyins": [
+      "tā"
+    ],
+    "toneNumber": "ta1",
+    "fileName": "209_ta1.mp3",
+    "audio": "/audio/hanzi/209_ta1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "他",
+    "note": ""
+  },
+  {
+    "id": 210,
+    "char": "送",
+    "pinyin": "sòng",
+    "allPinyins": [
+      "sòng"
+    ],
+    "toneNumber": "song4",
+    "fileName": "210_song4.mp3",
+    "audio": "/audio/hanzi/210_song4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "送",
+    "note": ""
+  },
+  {
+    "id": 211,
+    "char": "过",
+    "pinyin": "guò",
+    "allPinyins": [
+      "guò"
+    ],
+    "toneNumber": "guo4",
+    "fileName": "211_guo4.mp3",
+    "audio": "/audio/hanzi/211_guo4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "过",
+    "note": ""
+  },
+  {
+    "id": 212,
+    "char": "时",
+    "pinyin": "shí",
+    "allPinyins": [
+      "shí"
+    ],
+    "toneNumber": "shi2",
+    "fileName": "212_shi2.mp3",
+    "audio": "/audio/hanzi/212_shi2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "时",
+    "note": ""
+  },
+  {
+    "id": 213,
+    "char": "让",
+    "pinyin": "ràng",
+    "allPinyins": [
+      "ràng"
+    ],
+    "toneNumber": "rang4",
+    "fileName": "213_rang4.mp3",
+    "audio": "/audio/hanzi/213_rang4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "让",
+    "note": ""
+  },
+  {
+    "id": 214,
+    "char": "吗",
+    "pinyin": "ma",
+    "allPinyins": [
+      "ma"
+    ],
+    "toneNumber": "ma5",
+    "fileName": "214_ma5.mp3",
+    "audio": "/audio/hanzi/214_ma5.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "吗",
+    "note": ""
+  },
+  {
+    "id": 215,
+    "char": "吧",
+    "pinyin": "ba",
+    "allPinyins": [
+      "ba"
+    ],
+    "toneNumber": "ba5",
+    "fileName": "215_ba5.mp3",
+    "audio": "/audio/hanzi/215_ba5.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "吧",
+    "note": ""
+  },
+  {
+    "id": 216,
+    "char": "虫",
+    "pinyin": "chóng",
+    "allPinyins": [
+      "chóng"
+    ],
+    "toneNumber": "chong2",
+    "fileName": "216_chong2.mp3",
+    "audio": "/audio/hanzi/216_chong2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "虫",
+    "note": ""
+  },
+  {
+    "id": 217,
+    "char": "往",
+    "pinyin": "wǎng",
+    "allPinyins": [
+      "wǎng"
+    ],
+    "toneNumber": "wang3",
+    "fileName": "217_wang3.mp3",
+    "audio": "/audio/hanzi/217_wang3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "往",
+    "note": ""
+  },
+  {
+    "id": 218,
+    "char": "得",
+    "pinyin": "dé",
+    "allPinyins": [
+      "dé",
+      "de",
+      "děi"
+    ],
+    "toneNumber": "de2",
+    "fileName": "218_de2.mp3",
+    "audio": "/audio/hanzi/218_de2.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "得",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 219,
+    "char": "很",
+    "pinyin": "hěn",
+    "allPinyins": [
+      "hěn"
+    ],
+    "toneNumber": "hen3",
+    "fileName": "219_hen3.mp3",
+    "audio": "/audio/hanzi/219_hen3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "很",
+    "note": ""
+  },
+  {
+    "id": 220,
+    "char": "河",
+    "pinyin": "hé",
+    "allPinyins": [
+      "hé"
+    ],
+    "toneNumber": "he2",
+    "fileName": "220_he2.mp3",
+    "audio": "/audio/hanzi/220_he2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "河",
+    "note": ""
+  },
+  {
+    "id": 221,
+    "char": "姐",
+    "pinyin": "jiě",
+    "allPinyins": [
+      "jiě"
+    ],
+    "toneNumber": "jie3",
+    "fileName": "221_jie3.mp3",
+    "audio": "/audio/hanzi/221_jie3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "姐",
+    "note": ""
+  },
+  {
+    "id": 222,
+    "char": "借",
+    "pinyin": "jiè",
+    "allPinyins": [
+      "jiè"
+    ],
+    "toneNumber": "jie4",
+    "fileName": "222_jie4.mp3",
+    "audio": "/audio/hanzi/222_jie4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "借",
+    "note": ""
+  },
+  {
+    "id": 223,
+    "char": "呢",
+    "pinyin": "ne",
+    "allPinyins": [
+      "ne",
+      "ní"
+    ],
+    "toneNumber": "ne5",
+    "fileName": "223_ne5.mp3",
+    "audio": "/audio/hanzi/223_ne5.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "呢",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 224,
+    "char": "呀",
+    "pinyin": "ya",
+    "allPinyins": [
+      "ya"
+    ],
+    "toneNumber": "ya5",
+    "fileName": "224_ya5.mp3",
+    "audio": "/audio/hanzi/224_ya5.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "呀",
+    "note": ""
+  },
+  {
+    "id": 225,
+    "char": "哪",
+    "pinyin": "nǎ",
+    "allPinyins": [
+      "nǎ",
+      "na",
+      "něi"
+    ],
+    "toneNumber": "na3",
+    "fileName": "225_na3.mp3",
+    "audio": "/audio/hanzi/225_na3.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "哪",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 226,
+    "char": "谁",
+    "pinyin": "shuí",
+    "allPinyins": [
+      "shuí",
+      "shéi"
+    ],
+    "toneNumber": "shui2",
+    "fileName": "226_shui2.mp3",
+    "audio": "/audio/hanzi/226_shui2.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "谁",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 227,
+    "char": "怕",
+    "pinyin": "pà",
+    "allPinyins": [
+      "pà"
+    ],
+    "toneNumber": "pa4",
+    "fileName": "227_pa4.mp3",
+    "audio": "/audio/hanzi/227_pa4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "怕",
+    "note": ""
+  },
+  {
+    "id": 228,
+    "char": "跟",
+    "pinyin": "gēn",
+    "allPinyins": [
+      "gēn"
+    ],
+    "toneNumber": "gen1",
+    "fileName": "228_gen1.mp3",
+    "audio": "/audio/hanzi/228_gen1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "跟",
+    "note": ""
+  },
+  {
+    "id": 229,
+    "char": "凉",
+    "pinyin": "liáng",
+    "allPinyins": [
+      "liáng"
+    ],
+    "toneNumber": "liang2",
+    "fileName": "229_liang2.mp3",
+    "audio": "/audio/hanzi/229_liang2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "凉",
+    "note": ""
+  },
+  {
+    "id": 230,
+    "char": "量",
+    "pinyin": "liàng",
+    "allPinyins": [
+      "liàng",
+      "liáng"
+    ],
+    "toneNumber": "liang4",
+    "fileName": "230_liang4.mp3",
+    "audio": "/audio/hanzi/230_liang4.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "量",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 231,
+    "char": "最",
+    "pinyin": "zuì",
+    "allPinyins": [
+      "zuì"
+    ],
+    "toneNumber": "zui4",
+    "fileName": "231_zui4.mp3",
+    "audio": "/audio/hanzi/231_zui4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "最",
+    "note": ""
+  },
+  {
+    "id": 232,
+    "char": "园",
+    "pinyin": "yuán",
+    "allPinyins": [
+      "yuán"
+    ],
+    "toneNumber": "yuan2",
+    "fileName": "232_yuan2.mp3",
+    "audio": "/audio/hanzi/232_yuan2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "园",
+    "note": ""
+  },
+  {
+    "id": 233,
+    "char": "因",
+    "pinyin": "yīn",
+    "allPinyins": [
+      "yīn"
+    ],
+    "toneNumber": "yin1",
+    "fileName": "233_yin1.mp3",
+    "audio": "/audio/hanzi/233_yin1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "因",
+    "note": ""
+  },
+  {
+    "id": 234,
+    "char": "为",
+    "pinyin": "wèi",
+    "allPinyins": [
+      "wèi",
+      "wéi"
+    ],
+    "toneNumber": "wei4",
+    "fileName": "234_wei4.mp3",
+    "audio": "/audio/hanzi/234_wei4.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "为",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 235,
+    "char": "脸",
+    "pinyin": "liǎn",
+    "allPinyins": [
+      "liǎn"
+    ],
+    "toneNumber": "lian3",
+    "fileName": "235_lian3.mp3",
+    "audio": "/audio/hanzi/235_lian3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "脸",
+    "note": ""
+  },
+  {
+    "id": 236,
+    "char": "阳",
+    "pinyin": "yáng",
+    "allPinyins": [
+      "yáng"
+    ],
+    "toneNumber": "yang2",
+    "fileName": "236_yang2.mp3",
+    "audio": "/audio/hanzi/236_yang2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "阳",
+    "note": ""
+  },
+  {
+    "id": 237,
+    "char": "光",
+    "pinyin": "guāng",
+    "allPinyins": [
+      "guāng"
+    ],
+    "toneNumber": "guang1",
+    "fileName": "237_guang1.mp3",
+    "audio": "/audio/hanzi/237_guang1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "光",
+    "note": ""
+  },
+  {
+    "id": 238,
+    "char": "可",
+    "pinyin": "kě",
+    "allPinyins": [
+      "kě"
+    ],
+    "toneNumber": "ke3",
+    "fileName": "238_ke3.mp3",
+    "audio": "/audio/hanzi/238_ke3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "可",
+    "note": ""
+  },
+  {
+    "id": 239,
+    "char": "石",
+    "pinyin": "shí",
+    "allPinyins": [
+      "shí"
+    ],
+    "toneNumber": "shi2",
+    "fileName": "239_shi2.mp3",
+    "audio": "/audio/hanzi/239_shi2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "石",
+    "note": ""
+  },
+  {
+    "id": 240,
+    "char": "办",
+    "pinyin": "bàn",
+    "allPinyins": [
+      "bàn"
+    ],
+    "toneNumber": "ban4",
+    "fileName": "240_ban4.mp3",
+    "audio": "/audio/hanzi/240_ban4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "办",
+    "note": ""
+  },
+  {
+    "id": 241,
+    "char": "法",
+    "pinyin": "fǎ",
+    "allPinyins": [
+      "fǎ"
+    ],
+    "toneNumber": "fa3",
+    "fileName": "241_fa3.mp3",
+    "audio": "/audio/hanzi/241_fa3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "法",
+    "note": ""
+  },
+  {
+    "id": 242,
+    "char": "找",
+    "pinyin": "zhǎo",
+    "allPinyins": [
+      "zhǎo"
+    ],
+    "toneNumber": "zhao3",
+    "fileName": "242_zhao3.mp3",
+    "audio": "/audio/hanzi/242_zhao3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "找",
+    "note": ""
+  },
+  {
+    "id": 243,
+    "char": "许",
+    "pinyin": "xǔ",
+    "allPinyins": [
+      "xǔ"
+    ],
+    "toneNumber": "xu3",
+    "fileName": "243_xu3.mp3",
+    "audio": "/audio/hanzi/243_xu3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "许",
+    "note": ""
+  },
+  {
+    "id": 244,
+    "char": "别",
+    "pinyin": "bié",
+    "allPinyins": [
+      "bié"
+    ],
+    "toneNumber": "bie2",
+    "fileName": "244_bie2.mp3",
+    "audio": "/audio/hanzi/244_bie2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "别",
+    "note": ""
+  },
+  {
+    "id": 245,
+    "char": "到",
+    "pinyin": "dào",
+    "allPinyins": [
+      "dào"
+    ],
+    "toneNumber": "dao4",
+    "fileName": "245_dao4.mp3",
+    "audio": "/audio/hanzi/245_dao4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "到",
+    "note": ""
+  },
+  {
+    "id": 246,
+    "char": "那",
+    "pinyin": "nà",
+    "allPinyins": [
+      "nà"
+    ],
+    "toneNumber": "na4",
+    "fileName": "246_na4.mp3",
+    "audio": "/audio/hanzi/246_na4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "那",
+    "note": ""
+  },
+  {
+    "id": 247,
+    "char": "都",
+    "pinyin": "dōu",
+    "allPinyins": [
+      "dōu",
+      "dū"
+    ],
+    "toneNumber": "dou1",
+    "fileName": "247_dou1.mp3",
+    "audio": "/audio/hanzi/247_dou1.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "都",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 248,
+    "char": "吓",
+    "pinyin": "xià",
+    "allPinyins": [
+      "xià",
+      "hè"
+    ],
+    "toneNumber": "xia4",
+    "fileName": "248_xia4.mp3",
+    "audio": "/audio/hanzi/248_xia4.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "吓",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 249,
+    "char": "叫",
+    "pinyin": "jiào",
+    "allPinyins": [
+      "jiào"
+    ],
+    "toneNumber": "jiao4",
+    "fileName": "249_jiao4.mp3",
+    "audio": "/audio/hanzi/249_jiao4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "叫",
+    "note": ""
+  },
+  {
+    "id": 250,
+    "char": "再",
+    "pinyin": "zài",
+    "allPinyins": [
+      "zài"
+    ],
+    "toneNumber": "zai4",
+    "fileName": "250_zai4.mp3",
+    "audio": "/audio/hanzi/250_zai4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "再",
+    "note": ""
+  },
+  {
+    "id": 251,
+    "char": "象",
+    "pinyin": "xiàng",
+    "allPinyins": [
+      "xiàng"
+    ],
+    "toneNumber": "xiang4",
+    "fileName": "251_xiang4.mp3",
+    "audio": "/audio/hanzi/251_xiang4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "象",
+    "note": ""
+  },
+  {
+    "id": 252,
+    "char": "像",
+    "pinyin": "xiàng",
+    "allPinyins": [
+      "xiàng"
+    ],
+    "toneNumber": "xiang4",
+    "fileName": "252_xiang4.mp3",
+    "audio": "/audio/hanzi/252_xiang4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "像",
+    "note": ""
+  },
+  {
+    "id": 253,
+    "char": "做",
+    "pinyin": "zuò",
+    "allPinyins": [
+      "zuò"
+    ],
+    "toneNumber": "zuo4",
+    "fileName": "253_zuo4.mp3",
+    "audio": "/audio/hanzi/253_zuo4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "做",
+    "note": ""
+  },
+  {
+    "id": 254,
+    "char": "点",
+    "pinyin": "diǎn",
+    "allPinyins": [
+      "diǎn"
+    ],
+    "toneNumber": "dian3",
+    "fileName": "254_dian3.mp3",
+    "audio": "/audio/hanzi/254_dian3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "点",
+    "note": ""
+  },
+  {
+    "id": 255,
+    "char": "照",
+    "pinyin": "zhào",
+    "allPinyins": [
+      "zhào"
+    ],
+    "toneNumber": "zhao4",
+    "fileName": "255_zhao4.mp3",
+    "audio": "/audio/hanzi/255_zhao4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "照",
+    "note": ""
+  },
+  {
+    "id": 256,
+    "char": "沙",
+    "pinyin": "shā",
+    "allPinyins": [
+      "shā"
+    ],
+    "toneNumber": "sha1",
+    "fileName": "256_sha1.mp3",
+    "audio": "/audio/hanzi/256_sha1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "沙",
+    "note": ""
+  },
+  {
+    "id": 257,
+    "char": "海",
+    "pinyin": "hǎi",
+    "allPinyins": [
+      "hǎi"
+    ],
+    "toneNumber": "hai3",
+    "fileName": "257_hai3.mp3",
+    "audio": "/audio/hanzi/257_hai3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "海",
+    "note": ""
+  },
+  {
+    "id": 258,
+    "char": "桥",
+    "pinyin": "qiáo",
+    "allPinyins": [
+      "qiáo"
+    ],
+    "toneNumber": "qiao2",
+    "fileName": "258_qiao2.mp3",
+    "audio": "/audio/hanzi/258_qiao2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "桥",
+    "note": ""
+  },
+  {
+    "id": 259,
+    "char": "竹",
+    "pinyin": "zhú",
+    "allPinyins": [
+      "zhú"
+    ],
+    "toneNumber": "zhu2",
+    "fileName": "259_zhu2.mp3",
+    "audio": "/audio/hanzi/259_zhu2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "竹",
+    "note": ""
+  },
+  {
+    "id": 260,
+    "char": "军",
+    "pinyin": "jūn",
+    "allPinyins": [
+      "jūn"
+    ],
+    "toneNumber": "jun1",
+    "fileName": "260_jun1.mp3",
+    "audio": "/audio/hanzi/260_jun1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "军",
+    "note": ""
+  },
+  {
+    "id": 261,
+    "char": "苗",
+    "pinyin": "miáo",
+    "allPinyins": [
+      "miáo"
+    ],
+    "toneNumber": "miao2",
+    "fileName": "261_miao2.mp3",
+    "audio": "/audio/hanzi/261_miao2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "苗",
+    "note": ""
+  },
+  {
+    "id": 262,
+    "char": "井",
+    "pinyin": "jǐng",
+    "allPinyins": [
+      "jǐng"
+    ],
+    "toneNumber": "jing3",
+    "fileName": "262_jing3.mp3",
+    "audio": "/audio/hanzi/262_jing3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "井",
+    "note": ""
+  },
+  {
+    "id": 263,
+    "char": "乡",
+    "pinyin": "xiāng",
+    "allPinyins": [
+      "xiāng"
+    ],
+    "toneNumber": "xiang1",
+    "fileName": "263_xiang1.mp3",
+    "audio": "/audio/hanzi/263_xiang1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "乡",
+    "note": ""
+  },
+  {
+    "id": 264,
+    "char": "面",
+    "pinyin": "miàn",
+    "allPinyins": [
+      "miàn"
+    ],
+    "toneNumber": "mian4",
+    "fileName": "264_mian4.mp3",
+    "audio": "/audio/hanzi/264_mian4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "面",
+    "note": ""
+  },
+  {
+    "id": 265,
+    "char": "忘",
+    "pinyin": "wàng",
+    "allPinyins": [
+      "wàng"
+    ],
+    "toneNumber": "wang4",
+    "fileName": "265_wang4.mp3",
+    "audio": "/audio/hanzi/265_wang4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "忘",
+    "note": ""
+  },
+  {
+    "id": 266,
+    "char": "想",
+    "pinyin": "xiǎng",
+    "allPinyins": [
+      "xiǎng"
+    ],
+    "toneNumber": "xiang3",
+    "fileName": "266_xiang3.mp3",
+    "audio": "/audio/hanzi/266_xiang3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "想",
+    "note": ""
+  },
+  {
+    "id": 267,
+    "char": "念",
+    "pinyin": "niàn",
+    "allPinyins": [
+      "niàn"
+    ],
+    "toneNumber": "nian4",
+    "fileName": "267_nian4.mp3",
+    "audio": "/audio/hanzi/267_nian4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "念",
+    "note": ""
+  },
+  {
+    "id": 268,
+    "char": "王",
+    "pinyin": "wáng",
+    "allPinyins": [
+      "wáng"
+    ],
+    "toneNumber": "wang2",
+    "fileName": "268_wang2.mp3",
+    "audio": "/audio/hanzi/268_wang2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "王",
+    "note": ""
+  },
+  {
+    "id": 269,
+    "char": "从",
+    "pinyin": "cóng",
+    "allPinyins": [
+      "cóng"
+    ],
+    "toneNumber": "cong2",
+    "fileName": "269_cong2.mp3",
+    "audio": "/audio/hanzi/269_cong2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "从",
+    "note": ""
+  },
+  {
+    "id": 270,
+    "char": "边",
+    "pinyin": "biān",
+    "allPinyins": [
+      "biān"
+    ],
+    "toneNumber": "bian1",
+    "fileName": "270_bian1.mp3",
+    "audio": "/audio/hanzi/270_bian1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "边",
+    "note": ""
+  },
+  {
+    "id": 271,
+    "char": "这",
+    "pinyin": "zhè",
+    "allPinyins": [
+      "zhè",
+      "zhèi"
+    ],
+    "toneNumber": "zhe4",
+    "fileName": "271_zhe4.mp3",
+    "audio": "/audio/hanzi/271_zhe4.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "这",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 272,
+    "char": "进",
+    "pinyin": "jìn",
+    "allPinyins": [
+      "jìn"
+    ],
+    "toneNumber": "jin4",
+    "fileName": "272_jin4.mp3",
+    "audio": "/audio/hanzi/272_jin4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "进",
+    "note": ""
+  },
+  {
+    "id": 273,
+    "char": "道",
+    "pinyin": "dào",
+    "allPinyins": [
+      "dào"
+    ],
+    "toneNumber": "dao4",
+    "fileName": "273_dao4.mp3",
+    "audio": "/audio/hanzi/273_dao4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "道",
+    "note": ""
+  },
+  {
+    "id": 274,
+    "char": "贝",
+    "pinyin": "bèi",
+    "allPinyins": [
+      "bèi"
+    ],
+    "toneNumber": "bei4",
+    "fileName": "274_bei4.mp3",
+    "audio": "/audio/hanzi/274_bei4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "贝",
+    "note": ""
+  },
+  {
+    "id": 275,
+    "char": "原",
+    "pinyin": "yuán",
+    "allPinyins": [
+      "yuán"
+    ],
+    "toneNumber": "yuan2",
+    "fileName": "275_yuan2.mp3",
+    "audio": "/audio/hanzi/275_yuan2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "原",
+    "note": ""
+  },
+  {
+    "id": 276,
+    "char": "男",
+    "pinyin": "nán",
+    "allPinyins": [
+      "nán"
+    ],
+    "toneNumber": "nan2",
+    "fileName": "276_nan2.mp3",
+    "audio": "/audio/hanzi/276_nan2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "男",
+    "note": ""
+  },
+  {
+    "id": 277,
+    "char": "爱",
+    "pinyin": "ài",
+    "allPinyins": [
+      "ài"
+    ],
+    "toneNumber": "ai4",
+    "fileName": "277_ai4.mp3",
+    "audio": "/audio/hanzi/277_ai4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "爱",
+    "note": ""
+  },
+  {
+    "id": 278,
+    "char": "虾",
+    "pinyin": "xiā",
+    "allPinyins": [
+      "xiā"
+    ],
+    "toneNumber": "xia1",
+    "fileName": "278_xia1.mp3",
+    "audio": "/audio/hanzi/278_xia1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "虾",
+    "note": ""
+  },
+  {
+    "id": 279,
+    "char": "跑",
+    "pinyin": "pǎo",
+    "allPinyins": [
+      "pǎo"
+    ],
+    "toneNumber": "pao3",
+    "fileName": "279_pao3.mp3",
+    "audio": "/audio/hanzi/279_pao3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "跑",
+    "note": ""
+  },
+  {
+    "id": 280,
+    "char": "吹",
+    "pinyin": "chuī",
+    "allPinyins": [
+      "chuī"
+    ],
+    "toneNumber": "chui1",
+    "fileName": "280_chui1.mp3",
+    "audio": "/audio/hanzi/280_chui1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "吹",
+    "note": ""
+  },
+  {
+    "id": 281,
+    "char": "地",
+    "pinyin": "dì",
+    "allPinyins": [
+      "dì",
+      "de"
+    ],
+    "toneNumber": "di4",
+    "fileName": "281_di4.mp3",
+    "audio": "/audio/hanzi/281_di4.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "地",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 282,
+    "char": "快",
+    "pinyin": "kuài",
+    "allPinyins": [
+      "kuài"
+    ],
+    "toneNumber": "kuai4",
+    "fileName": "282_kuai4.mp3",
+    "audio": "/audio/hanzi/282_kuai4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "快",
+    "note": ""
+  },
+  {
+    "id": 283,
+    "char": "乐",
+    "pinyin": "lè",
+    "allPinyins": [
+      "lè",
+      "yuè"
+    ],
+    "toneNumber": "le4",
+    "fileName": "283_le4.mp3",
+    "audio": "/audio/hanzi/283_le4.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "乐",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 284,
+    "char": "老",
+    "pinyin": "lǎo",
+    "allPinyins": [
+      "lǎo"
+    ],
+    "toneNumber": "lao3",
+    "fileName": "284_lao3.mp3",
+    "audio": "/audio/hanzi/284_lao3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "老",
+    "note": ""
+  },
+  {
+    "id": 285,
+    "char": "师",
+    "pinyin": "shī",
+    "allPinyins": [
+      "shī"
+    ],
+    "toneNumber": "shi1",
+    "fileName": "285_shi1.mp3",
+    "audio": "/audio/hanzi/285_shi1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "师",
+    "note": ""
+  },
+  {
+    "id": 286,
+    "char": "短",
+    "pinyin": "duǎn",
+    "allPinyins": [
+      "duǎn"
+    ],
+    "toneNumber": "duan3",
+    "fileName": "286_duan3.mp3",
+    "audio": "/audio/hanzi/286_duan3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "短",
+    "note": ""
+  },
+  {
+    "id": 287,
+    "char": "对",
+    "pinyin": "duì",
+    "allPinyins": [
+      "duì"
+    ],
+    "toneNumber": "dui4",
+    "fileName": "287_dui4.mp3",
+    "audio": "/audio/hanzi/287_dui4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "对",
+    "note": ""
+  },
+  {
+    "id": 288,
+    "char": "冷",
+    "pinyin": "lěng",
+    "allPinyins": [
+      "lěng"
+    ],
+    "toneNumber": "leng3",
+    "fileName": "288_leng3.mp3",
+    "audio": "/audio/hanzi/288_leng3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "冷",
+    "note": ""
+  },
+  {
+    "id": 289,
+    "char": "淡",
+    "pinyin": "dàn",
+    "allPinyins": [
+      "dàn"
+    ],
+    "toneNumber": "dan4",
+    "fileName": "289_dan4.mp3",
+    "audio": "/audio/hanzi/289_dan4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "淡",
+    "note": ""
+  },
+  {
+    "id": 290,
+    "char": "热",
+    "pinyin": "rè",
+    "allPinyins": [
+      "rè"
+    ],
+    "toneNumber": "re4",
+    "fileName": "290_re4.mp3",
+    "audio": "/audio/hanzi/290_re4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "热",
+    "note": ""
+  },
+  {
+    "id": 291,
+    "char": "情",
+    "pinyin": "qíng",
+    "allPinyins": [
+      "qíng"
+    ],
+    "toneNumber": "qing2",
+    "fileName": "291_qing2.mp3",
+    "audio": "/audio/hanzi/291_qing2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "情",
+    "note": ""
+  },
+  {
+    "id": 292,
+    "char": "拉",
+    "pinyin": "lā",
+    "allPinyins": [
+      "lā"
+    ],
+    "toneNumber": "la1",
+    "fileName": "292_la1.mp3",
+    "audio": "/audio/hanzi/292_la1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "拉",
+    "note": ""
+  },
+  {
+    "id": 293,
+    "char": "把",
+    "pinyin": "bǎ",
+    "allPinyins": [
+      "bǎ"
+    ],
+    "toneNumber": "ba3",
+    "fileName": "293_ba3.mp3",
+    "audio": "/audio/hanzi/293_ba3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "把",
+    "note": ""
+  },
+  {
+    "id": 294,
+    "char": "给",
+    "pinyin": "gěi",
+    "allPinyins": [
+      "gěi",
+      "jǐ"
+    ],
+    "toneNumber": "gei3",
+    "fileName": "294_gei3.mp3",
+    "audio": "/audio/hanzi/294_gei3.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "给",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 295,
+    "char": "活",
+    "pinyin": "huó",
+    "allPinyins": [
+      "huó"
+    ],
+    "toneNumber": "huo2",
+    "fileName": "295_huo2.mp3",
+    "audio": "/audio/hanzi/295_huo2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "活",
+    "note": ""
+  },
+  {
+    "id": 296,
+    "char": "种",
+    "pinyin": "zhòng",
+    "allPinyins": [
+      "zhòng",
+      "zhǒng"
+    ],
+    "toneNumber": "zhong4",
+    "fileName": "296_zhong4.mp3",
+    "audio": "/audio/hanzi/296_zhong4.mp3",
+    "isPolyphonic": true,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "种",
+    "note": "多音字，请按 pinyin 字段录制当前指定读音。"
+  },
+  {
+    "id": 297,
+    "char": "吃",
+    "pinyin": "chī",
+    "allPinyins": [
+      "chī"
+    ],
+    "toneNumber": "chi1",
+    "fileName": "297_chi1.mp3",
+    "audio": "/audio/hanzi/297_chi1.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "吃",
+    "note": ""
+  },
+  {
+    "id": 298,
+    "char": "练",
+    "pinyin": "liàn",
+    "allPinyins": [
+      "liàn"
+    ],
+    "toneNumber": "lian4",
+    "fileName": "298_lian4.mp3",
+    "audio": "/audio/hanzi/298_lian4.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "练",
+    "note": ""
+  },
+  {
+    "id": 299,
+    "char": "习",
+    "pinyin": "xí",
+    "allPinyins": [
+      "xí"
+    ],
+    "toneNumber": "xi2",
+    "fileName": "299_xi2.mp3",
+    "audio": "/audio/hanzi/299_xi2.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "习",
+    "note": ""
+  },
+  {
+    "id": 300,
+    "char": "苦",
+    "pinyin": "kǔ",
+    "allPinyins": [
+      "kǔ"
+    ],
+    "toneNumber": "ku3",
+    "fileName": "300_ku3.mp3",
+    "audio": "/audio/hanzi/300_ku3.mp3",
+    "isPolyphonic": false,
+    "source": "一年级下册常见字节选",
+    "recommendedText": "苦",
+    "note": ""
+  }
+]

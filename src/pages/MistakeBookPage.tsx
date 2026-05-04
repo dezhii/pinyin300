@@ -4,7 +4,7 @@ import type { GameStyle } from "../data/gameStyles";
 import type { CharacterItem, MistakeRecord, PracticeStats } from "../types";
 import { renderStars } from "../utils/game";
 import { formatPinyin } from "../utils/pinyin";
-import { useSpeech } from "../hooks/useSpeech";
+import { usePronunciation } from "../hooks/usePronunciation";
 
 interface MistakeBookPageProps {
   mistakes: MistakeRecord[];
@@ -25,6 +25,7 @@ function recordToItem(record: MistakeRecord): CharacterItem {
     pinyins: record.pinyins,
     answers: record.answers,
     source: record.source,
+    audio: record.audio,
   };
 }
 
@@ -52,7 +53,7 @@ export function MistakeBookPage({
   onSetMastered,
   onWrong,
 }: MistakeBookPageProps) {
-  const { speak } = useSpeech();
+  const { speakItem } = usePronunciation();
   const [reviewItems, setReviewItems] = useState<CharacterItem[] | null>(null);
   const [reviewResult, setReviewResult] = useState<PracticeStats | null>(null);
 
@@ -209,7 +210,7 @@ export function MistakeBookPage({
               <div className="mistake-actions">
                 <button
                   className="secondary-button small"
-                  onClick={() => void speak(record.char, 3)}
+                  onClick={() => void speakItem(recordToItem(record), 3)}
                   type="button"
                 >
                   听三遍

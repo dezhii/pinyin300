@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
-import { useSpeech } from "../hooks/useSpeech";
+import { usePronunciation } from "../hooks/usePronunciation";
 import type { GameStyle } from "../data/gameStyles";
 import type { CharacterItem, PracticeStats } from "../types";
 import {
@@ -55,7 +55,7 @@ export function PracticeSession({
   const [stats, setStats] = useState<PracticeStats>(DEFAULT_STATS);
   const [currentStreak, setCurrentStreak] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-  const { cancel, speak, supported } = useSpeech();
+  const { cancel, speakItem, supported } = usePronunciation();
 
   const item = items[currentIndex];
   const completionText =
@@ -95,10 +95,10 @@ export function PracticeSession({
     setCurrentSolved(false);
     setWrongTimesForCurrent(0);
     inputRef.current?.focus();
-    void speak(item.char, 3);
+    void speakItem(item, 3);
 
     return () => cancel();
-  }, [cancel, item, speak]);
+  }, [cancel, item, speakItem]);
 
   if (!item) {
     return (
@@ -235,7 +235,7 @@ export function PracticeSession({
           </div>
           <button
             className="listen-button"
-            onClick={() => void speak(item.char, 3)}
+            onClick={() => void speakItem(item, 3)}
             type="button"
           >
             🔊 再听三遍

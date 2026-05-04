@@ -1,4 +1,61 @@
-import type { CharacterItem } from '../types';
+import type { CharacterItem } from "../types";
+
+const AUDIO_BASE_PATH = "/audio/hanzi";
+
+const TONE_MARKS: Record<string, { plain: string; tone: number }> = {
+  ā: { plain: "a", tone: 1 },
+  á: { plain: "a", tone: 2 },
+  ǎ: { plain: "a", tone: 3 },
+  à: { plain: "a", tone: 4 },
+  ē: { plain: "e", tone: 1 },
+  é: { plain: "e", tone: 2 },
+  ě: { plain: "e", tone: 3 },
+  è: { plain: "e", tone: 4 },
+  ī: { plain: "i", tone: 1 },
+  í: { plain: "i", tone: 2 },
+  ǐ: { plain: "i", tone: 3 },
+  ì: { plain: "i", tone: 4 },
+  ō: { plain: "o", tone: 1 },
+  ó: { plain: "o", tone: 2 },
+  ǒ: { plain: "o", tone: 3 },
+  ò: { plain: "o", tone: 4 },
+  ū: { plain: "u", tone: 1 },
+  ú: { plain: "u", tone: 2 },
+  ǔ: { plain: "u", tone: 3 },
+  ù: { plain: "u", tone: 4 },
+  ǖ: { plain: "v", tone: 1 },
+  ǘ: { plain: "v", tone: 2 },
+  ǚ: { plain: "v", tone: 3 },
+  ǜ: { plain: "v", tone: 4 },
+  ü: { plain: "v", tone: 5 },
+};
+
+export function toToneNumberPinyin(pinyin: string): string {
+  let tone = 5;
+  const plain = Array.from(pinyin.toLowerCase())
+    .map((char) => {
+      const toneMark = TONE_MARKS[char];
+      if (!toneMark) {
+        return char;
+      }
+
+      tone = toneMark.tone;
+      return toneMark.plain;
+    })
+    .join("")
+    .replace(/u:/g, "v")
+    .replace(/[^a-zv]/g, "");
+
+  return `${plain}${tone}`;
+}
+
+function buildAudioFileName(id: number, pinyin: string): string {
+  return `${String(id).padStart(3, "0")}_${toToneNumberPinyin(pinyin)}.mp3`;
+}
+
+function buildAudioPath(id: number, pinyin: string): string {
+  return `${AUDIO_BASE_PATH}/${buildAudioFileName(id, pinyin)}`;
+}
 
 const RAW_GRADE_1_UP = `
 一:yī 二:èr 三:sān 十:shí 木:mù 禾:hé 上:shàng 下:xià 土:tǔ 个:gè
@@ -32,16 +89,20 @@ const RAW_GRADE_1_DOWN_FIRST_200 = `
 拉:lā 把:bǎ 给:gěi|jǐ 活:huó 种:zhòng|zhǒng 吃:chī 练:liàn 习:xí 苦:kǔ
 `;
 
-function parseRawEntries(raw: string, source: string, startId: number): CharacterItem[] {
+function parseRawEntries(
+  raw: string,
+  source: string,
+  startId: number,
+): CharacterItem[] {
   return raw
     .trim()
     .split(/\s+/)
     .filter(Boolean)
     .map((token, index) => {
-      const separatorIndex = token.indexOf(':');
+      const separatorIndex = token.indexOf(":");
       const char = token.slice(0, separatorIndex);
       const pinyinSpec = token.slice(separatorIndex + 1);
-      const pinyins = pinyinSpec.split('|').filter(Boolean);
+      const pinyins = pinyinSpec.split("|").filter(Boolean);
 
       return {
         id: startId + index,
@@ -50,13 +111,17 @@ function parseRawEntries(raw: string, source: string, startId: number): Characte
         pinyins,
         answers: pinyins,
         source,
-        audio: undefined,
+        audio: buildAudioPath(startId + index, pinyins[0]),
       };
     });
 }
 
-const grade1Up = parseRawEntries(RAW_GRADE_1_UP, '一年级上册常见字', 1);
-const grade1Down = parseRawEntries(RAW_GRADE_1_DOWN_FIRST_200, '一年级下册常见字节选', grade1Up.length + 1);
+const grade1Up = parseRawEntries(RAW_GRADE_1_UP, "一年级上册常见字", 1);
+const grade1Down = parseRawEntries(
+  RAW_GRADE_1_DOWN_FIRST_200,
+  "一年级下册常见字节选",
+  grade1Up.length + 1,
+);
 
 export const CHARACTERS: CharacterItem[] = [...grade1Up, ...grade1Down];
 

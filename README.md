@@ -1,4 +1,66 @@
-# 拼音小游戏
+# 拼音小游戏 / Pinyin300
+
+A gamified pinyin learning tool for early elementary students — 300 essential Chinese characters, 100 levels, 4 game themes. Built with React + TypeScript + Vite.
+
+[中文文档](#中文文档)
+
+## Quick Look
+
+> **📸 Add a screenshot here:** run `npm run dev`, capture the game interface, and drop it below.
+>
+> `![Pinyin300 Screenshot](./screenshot.png)`
+
+## Features
+
+- **4 game themes**: Pinyin Train, Monster Battle, Pinyin Garden, Pinyin Planet
+- **300 essential characters** aligned with early elementary curriculum
+- **100 levels**, 3 characters per level
+- **Auto-read aloud** 3× per character (local MP3 preferred, Web Speech API fallback)
+- **Pinyin input** without tone marks; `ü` friendly input (`lv` → `lǜ`)
+- **Smart mistake book**: auto-collects errors, review mode with spaced repetition (auto-mastery after 2 consecutive correct answers)
+- **Progress persistence** via localStorage (star ratings, level progress, mistake records)
+- **Responsive design**: works on desktop, tablet, and mobile
+- **Printable A4 worksheets** with pinyin displayed above each character
+
+## Tech Stack
+
+| Category   | Choice                      |
+|------------|-----------------------------|
+| Framework  | React 18 + TypeScript       |
+| Bundler    | Vite 5                      |
+| Audio      | HTMLAudioElement + Web Speech API fallback |
+| Storage    | localStorage                |
+| Styling    | Vanilla CSS (zero dependencies) |
+
+## Quick Start
+
+```bash
+npm install
+npm run dev
+```
+
+Production build:
+
+```bash
+npm run build
+```
+
+## Why This Project Matters
+
+Pinyin300 is built with one goal: **make quality Chinese literacy tools accessible to every child, regardless of their access to paid software or stable internet.** The entire app runs offline after initial load — no backend, no subscription, no ads. It's designed to work on low-end devices common in rural classrooms and developing regions.
+
+For the open-source community, this project serves as a practical reference for:
+
+- Integrating local audio playback with TTS fallback in React
+- Building spaced-repetition review systems for educational apps
+- Generating printable educational worksheets programmatically
+- Designing child-friendly, responsive game UIs without heavy frameworks
+
+If you're an educator, parent, or developer interested in Chinese literacy tools, contributions and feedback are welcome.
+
+---
+
+## 中文文档
 
 一个面向小学生的拼音闯关网页游戏：300 个常见汉字，100 关，每关 3 个汉字。孩子可以选择小火车、打怪兽、拼音花园、拼音星球等不同游戏风格；看到汉字后先听 3 遍读音，再输入不带声调的拼音。答错的汉字会自动加入错题本，方便复习。
 

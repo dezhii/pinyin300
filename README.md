@@ -6,9 +6,7 @@ A gamified pinyin learning tool for early elementary students — 300 essential 
 
 ## Quick Look
 
-> **📸 Add a screenshot here:** run `npm run dev`, capture the game interface, and drop it below.
->
-> `![Pinyin300 Screenshot](./screenshot.png)`
+![Pinyin300 Screenshot](screenshot.png)
 
 ## Features
 
